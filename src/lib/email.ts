@@ -1,24 +1,23 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
-// SMTP Configuration
-const transporter = nodemailer.createTransport({
-  host: 'mail.cod-st.com',
-  port: 465,
-  secure: true, // Use SSL
-  auth: {
-    user: 'info@cod-st.com',
-    pass: 'Admin@web123'
-  }
-});
+// Initialize Resend with API key
+const resend = new Resend(process.env.RESEND_API_KEY || 're_BMUdMxzs_6Jz6fNarqwvZ5wvpcbWEDVyw');
 
-// Verify SMTP connection
+// Verify Resend connection
 export const verifySMTP = async () => {
   try {
-    await transporter.verify();
-    console.log('SMTP server is ready to take our messages');
+    // Test Resend by sending a simple email to verify connection
+    const result = await resend.emails.send({
+      from: 'Code Studio <info@cod-st.com>',
+      to: ['info@cod-st.com'],
+      subject: 'Resend Connection Test',
+      html: '<p>This is a test email to verify Resend connection.</p>'
+    });
+    
+    console.log('Resend connection successful:', result.data?.id);
     return true;
   } catch (error) {
-    console.error('SMTP verification failed:', error);
+    console.error('Resend verification failed:', error);
     return false;
   }
 };
@@ -33,9 +32,9 @@ export const sendContactEmail = async (formData: {
   phone?: string;
 }) => {
   try {
-    const mailOptions = {
-      from: 'info@cod-st.com',
-      to: 'info@cod-st.com',
+    const result = await resend.emails.send({
+      from: 'Code Studio <info@cod-st.com>',
+      to: ['info@cod-st.com'],
       replyTo: formData.email,
       subject: `New Contact Form Submission: ${formData.subject || 'General Inquiry'}`,
       html: `
@@ -64,12 +63,11 @@ export const sendContactEmail = async (formData: {
           </div>
         </div>
       `
-    };
+    });
 
-    const result = await transporter.sendMail(mailOptions);
-    return { success: true, messageId: result.messageId };
+    return { success: true, messageId: result.data?.id };
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error sending contact email:', error);
     return { success: false, error: error.message };
   }
 };
@@ -85,9 +83,9 @@ export const sendMeetingEmail = async (formData: {
   message?: string;
 }) => {
   try {
-    const mailOptions = {
-      from: 'info@cod-st.com',
-      to: 'info@cod-st.com',
+    const result = await resend.emails.send({
+      from: 'Code Studio <info@cod-st.com>',
+      to: ['info@cod-st.com'],
       replyTo: formData.email,
       subject: `Meeting Booking Request: ${formData.service}`,
       html: `
@@ -119,14 +117,13 @@ export const sendMeetingEmail = async (formData: {
           </div>
         </div>
       `
-    };
+    });
 
-    const result = await transporter.sendMail(mailOptions);
-    return { success: true, messageId: result.messageId };
+    return { success: true, messageId: result.data?.id };
   } catch (error) {
     console.error('Error sending meeting email:', error);
     return { success: false, error: error.message };
   }
 };
 
-export default transporter;
+export default resend;

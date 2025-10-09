@@ -14,7 +14,8 @@
     "next-intl": "^4.3.9",
     "nodemailer": "^7.0.9",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "resend": "^6.1.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
