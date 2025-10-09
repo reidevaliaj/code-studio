@@ -18,11 +18,46 @@ function MeetingBookingSection() {
     time: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Meeting booking form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/meeting', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          service: '',
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          date: '',
+          time: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -184,8 +219,23 @@ function MeetingBookingSection() {
             </div>
 
             <div className="text-center">
-              <Button type="submit" variant="primary" size="lg">
-                {t('form.submit')}
+              {submitStatus === 'success' && (
+                <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                  Terminbuchung erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                  Fehler beim Senden der Terminbuchung. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.
+                </div>
+              )}
+              <Button 
+                type="submit" 
+                variant="primary" 
+                size="lg"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Wird gesendet...' : t('form.submit')}
               </Button>
             </div>
           </form>
@@ -219,11 +269,42 @@ function QuickContactSection() {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Quick contact form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -315,8 +396,23 @@ function QuickContactSection() {
               </div>
 
               <div className="text-center">
-                <Button type="submit" variant="primary" size="lg">
-                  {t('form.submit')}
+                {submitStatus === 'success' && (
+                  <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                    Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen.
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                    Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.
+                  </div>
+                )}
+                <Button 
+                  type="submit" 
+                  variant="primary" 
+                  size="lg"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Wird gesendet...' : t('form.submit')}
                 </Button>
               </div>
             </form>
