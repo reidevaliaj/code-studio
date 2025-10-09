@@ -8,7 +8,7 @@ export const verifySMTP = async () => {
   try {
     // Test Resend by sending a simple email to verify connection
     const result = await resend.emails.send({
-      from: 'Code Studio <info@cod-st.com>',
+      from: 'Code Studio <info@updates.cod-st.com>',
       to: ['info@cod-st.com'],
       subject: 'Resend Connection Test',
       html: '<p>This is a test email to verify Resend connection.</p>'
@@ -33,7 +33,7 @@ export const sendContactEmail = async (formData: {
 }) => {
   try {
     const result = await resend.emails.send({
-      from: 'Code Studio <info@cod-st.com>',
+      from: 'Code Studio <info@updates.cod-st.com>',
       to: ['info@cod-st.com'],
       replyTo: formData.email,
       subject: `New Contact Form Submission: ${formData.subject || 'General Inquiry'}`,
@@ -84,7 +84,7 @@ export const sendMeetingEmail = async (formData: {
 }) => {
   try {
     const result = await resend.emails.send({
-      from: 'Code Studio <info@cod-st.com>',
+      from: 'Code Studio <info@updates.cod-st.com>',
       to: ['info@cod-st.com'],
       replyTo: formData.email,
       subject: `Meeting Booking Request: ${formData.service}`,
