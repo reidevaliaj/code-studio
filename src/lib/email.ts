@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 
 // SMTP Configuration
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
   host: 'mail.cod-st.com',
   port: 465,
   secure: true, // Use SSL
