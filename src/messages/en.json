@@ -1,0 +1,1354 @@
+
+  {
+    "home": {
+      "title": "Welcome to Code Studio",
+    "subtitle": "Professional Web Development from Albania",
+    "cta": "Get a quote",
+    "description": "We create exceptional web experiences through innovative design, development, and automation solutions at competitive prices from our base in Tirana, Albania.",
+    "metaTitle": "Code Studio - Professional Web Development & Design Services",
+    "metaDescription": "Professional web development, design, and automation services from Albania. Partner with us for quality work at competitive prices.",
+    "hero": {
+      "title": "Professional Web Development Agency",
+      "subtitle": "Welcome to Code Studio",
+      "cta": "Partner With Us",
+      "secondaryCta": "View Our Services"
+    },
+    "about": {
+      "title": "About Code Studio",
+      "subtitle": "Your Trusted Development Partner in Albania",
+      "description": "Founded in 2019 by Rei Aliaj, Code Studio is a professional web development company based in Tirana, Albania. We specialize in serving partners across Germany, Switzerland, and the USA, offering high-quality web solutions at competitive prices thanks to Albania's favorable business environment.",
+      "stats": {
+        "projects": "200+",
+        "clients": "50+",
+        "experience": "5+ Years",
+        "satisfaction": "98%"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive Web Solutions",
+      "description": "From website development to AI automation, we provide end-to-end digital solutions for our international partners."
+    },
+    "caseStudies": {
+      "title": "Success Stories",
+      "subtitle": "Partnerships That Deliver Results",
+      "description": "Discover how we've helped our partners in Germany, Switzerland, and the USA achieve their digital goals."
+    },
+    "testimonials": {
+      "title": "What Our Partners Say",
+      "subtitle": "Trusted by Agencies Worldwide"
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "Serving Agencies Across Europe & USA",
+      "trusted": "Trusted by 50+ companies worldwide"
+    }
+  },
+  "about": {
+    "title": "About Code Studio",
+    "subtitle": "Professional Web Development from Albania",
+    "description": "Founded in 2019 by Rei Aliaj, Code Studio is your trusted development partner based in Tirana, Albania. We specialize in serving international partners with high-quality web solutions at competitive prices, leveraging Albania's favorable business environment to deliver exceptional value.",
+    "cta": "Partner with us",
+    "metaTitle": "About Code Studio - Professional Web Development from Albania",
+    "metaDescription": "Learn about Code Studio's expertise in web development, design, and automation solutions from our base in Tirana, Albania."
+  },
+  "partners": {
+    "title": "Become Our Partner",
+    "subtitle": "Join our network of international collaborators",
+    "description": "We're looking for web agencies and software companies in Germany, Switzerland, and the USA to partner with. Benefit from our competitive pricing and professional development services from Albania.",
+    "cta": "Apply now",
+    "metaTitle": "Partner with Code Studio - International Web Development Partnership",
+    "metaDescription": "Become a Code Studio partner and benefit from professional web development services at competitive prices from Albania.",
+    "hero": {
+      "title": "Partner with Code Studio",
+      "subtitle": "Join our network of trusted development partners",
+      "description": "Expand your service offerings with our professional web development team in Albania. We provide high-quality solutions at competitive prices to help your agency grow.",
+      "cta": "Start Partnership"
+    },
+    "whyPartner": {
+      "title": "Why Partner with Code Studio?",
+      "subtitle": "Unlock new opportunities with our expertise",
+      "description": "With over 5 years of experience and competitive pricing from Albania, we offer your agency the perfect opportunity to expand services without increasing overhead. Our team delivers professional web solutions that your clients will love.",
+      "benefits": [
+        "Competitive pricing from Albania's favorable business environment",
+        "5+ years of proven experience in web development",
+        "Professional team with expertise in modern technologies",
+        "Flexible partnership models to fit your business needs",
+        "Direct communication with project managers",
+        "Quality assurance and testing on all projects"
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us?",
+      "subtitle": "What makes us the ideal partner",
+      "items": [
+        {
+          "title": "Competitive Pricing",
+          "description": "Benefit from Albania's favorable business environment with costs up to 60% lower than Western Europe while maintaining professional quality standards.",
+          "icon": "💰"
+        },
+        {
+          "title": "Proven Experience",
+          "description": "Over 5 years of experience with 200+ completed projects and 98% client satisfaction rate. We know how to deliver results.",
+          "icon": "🏆"
+        },
+        {
+          "title": "Modern Technology",
+          "description": "We use the latest technologies and frameworks including React, Next.js, WordPress, Shopify, and AI automation tools.",
+          "icon": "⚡"
+        }
+      ]
+    },
+    "contactForm": {
+      "title": "Ready to Partner?",
+      "subtitle": "Let's discuss how we can work together",
+      "description": "Get in touch with us to discuss partnership opportunities. We'll respond within 24 hours to explore how we can help grow your business.",
+      "form": {
+        "name": "Full Name",
+        "company": "Company Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "country": "Country",
+        "services": "Services of Interest",
+        "message": "Tell us about your partnership goals",
+        "submit": "Send Partnership Request"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional Web Solutions from Albania",
+    "description": "From website development to AI automation, we provide comprehensive digital solutions for our international partners at competitive prices.",
+    "cta": "View all services",
+    "metaTitle": "Services - Code Studio Professional Web Development",
+    "metaDescription": "Discover Code Studio's professional web development, design, automation, and digital marketing services from Albania.",
+    "hero": {
+      "title": "Professional Web Development Services",
+      "subtitle": "Comprehensive digital solutions from Albania",
+      "description": "From custom web applications to AI automation, we provide end-to-end digital solutions for our international partners at competitive prices.",
+      "cta": "Get Started",
+      "secondaryCta": "View Portfolio"
+    }
+  },
+  "serviceDetails": {
+    "aiAgents": {
+      "title": "AI Agents & Automations",
+      "subtitle": "Intelligent automation for your business",
+      "description": "Streamline your operations with custom AI agents and automation solutions that work 24/7 to improve efficiency. Perfect for partners looking to optimize their workflows.",
+      "metaTitle": "AI Agents & Automation Services - Code Studio Albania",
+      "metaDescription": "Custom AI agents and automation solutions from Albania to streamline your business operations and boost productivity.",
+      "hero": {
+        "title": "Empower Your Business with AI Agents & Automations",
+        "subtitle": "From chatbots to complex workflows — we build AI systems that think, act, and deliver results.",
+        "cta": "Let's Automate Your Work",
+        "secondaryCta": "See Use Cases"
+      },
+      "whatWeDo": {
+        "title": "What We Do",
+        "subtitle": "Intelligent automation that works for you",
+        "description": "At Code Studio, we build custom AI Agents that integrate into your tools and automate your daily operations. Whether it's managing your customer support, handling repetitive data tasks, or connecting complex systems — our AI agents work 24/7 to simplify your business.",
+        "features": [
+          {
+            "icon": "🤖",
+            "title": "Intelligent Agents",
+            "description": "Handle conversations, tasks, and workflows autonomously."
+          },
+          {
+            "icon": "⚙️",
+            "title": "Workflow Automations",
+            "description": "Connect APIs, databases, CRMs, and spreadsheets."
+          },
+          {
+            "icon": "🔄",
+            "title": "Custom Integrations",
+            "description": "AI that fits your exact tools (Shopify, WordPress, HubSpot, Notion, etc.)."
+          },
+          {
+            "icon": "📈",
+            "title": "Scalable Solutions",
+            "description": "From small automations to full enterprise systems."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Real-World Use Cases",
+        "subtitle": "Whatever you do repeatedly — we can automate it",
+        "cta": "Get Your Custom Automation",
+        "cases": [
+          {
+            "icon": "💬",
+            "title": "AI Chat Support",
+            "description": "Train chatbots on your data to answer customer questions on your website, WhatsApp, or Instagram."
+          },
+          {
+            "icon": "🛒",
+            "title": "E-commerce Automation",
+            "description": "Manage stock, update orders, and answer customer requests automatically."
+          },
+          {
+            "icon": "🧾",
+            "title": "Document Management",
+            "description": "Let AI read, extract, and organize your PDFs, invoices, and reports."
+          },
+          {
+            "icon": "📅",
+            "title": "Scheduling Assistant",
+            "description": "Automate meeting scheduling and follow-ups."
+          },
+          {
+            "icon": "🏢",
+            "title": "Internal Workflows",
+            "description": "Auto-sync data between CRM, Google Sheets, HubSpot, or databases."
+          },
+          {
+            "icon": "✉️",
+            "title": "Email Automation",
+            "description": "AI that reads and responds to client emails based on context."
+          },
+          {
+            "icon": "📊",
+            "title": "Data Analysis",
+            "description": "Automatically analyze reports and generate insights from your data."
+          },
+          {
+            "icon": "🔍",
+            "title": "Content Moderation",
+            "description": "AI-powered content filtering and moderation for platforms and communities."
+          },
+          {
+            "icon": "💰",
+            "title": "Invoice Processing",
+            "description": "Automatically extract data from invoices and update accounting systems."
+          },
+          {
+            "icon": "📱",
+            "title": "Social Media Management",
+            "description": "Schedule posts, respond to comments, and analyze engagement automatically."
+          },
+          {
+            "icon": "🎯",
+            "title": "Lead Qualification",
+            "description": "Automatically score and qualify leads based on predefined criteria."
+          },
+          {
+            "icon": "📋",
+            "title": "Form Processing",
+            "description": "Extract and organize data from forms, applications, and submissions."
+          },
+          {
+            "icon": "🔄",
+            "title": "Data Migration",
+            "description": "Automatically transfer data between systems with validation and error handling."
+          },
+          {
+            "icon": "📈",
+            "title": "Performance Monitoring",
+            "description": "Track KPIs and generate automated reports on business performance."
+          },
+          {
+            "icon": "🔔",
+            "title": "Alert Systems",
+            "description": "Smart notifications and alerts based on business rules and thresholds."
+          },
+          {
+            "icon": "📝",
+            "title": "Report Generation",
+            "description": "Automatically create and distribute reports from your data sources."
+          },
+          {
+            "icon": "🎨",
+            "title": "Content Creation",
+            "description": "Generate product descriptions, social media content, and marketing copy."
+          },
+          {
+            "icon": "🔐",
+            "title": "Security Monitoring",
+            "description": "Monitor systems for security threats and automatically respond to incidents."
+          },
+          {
+            "icon": "📦",
+            "title": "Inventory Management",
+            "description": "Track stock levels, predict demand, and automate reordering processes."
+          },
+          {
+            "icon": "👥",
+            "title": "Customer Onboarding",
+            "description": "Automate the entire customer onboarding process from signup to first use."
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "Our proven process for AI automation success",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Discovery",
+            "description": "Understand your business and workflows"
+          },
+          {
+            "number": "02",
+            "title": "Design",
+            "description": "Plan automations and integrations"
+          },
+          {
+            "number": "03",
+            "title": "Development",
+            "description": "Build AI Agents using Python, n8n, and OpenAI MCP Protocol"
+          },
+          {
+            "number": "04",
+            "title": "Deployment",
+            "description": "Integrate into your systems"
+          },
+          {
+            "number": "05",
+            "title": "Support",
+            "description": "Continuous improvement and monitoring"
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "subtitle": "Cutting-edge tools for intelligent automation",
+        "techs": [
+          "OpenAI",
+          "n8n",
+          "LangChain",
+          "FastAPI",
+          "Shopify APIs",
+          "WordPress APIs",
+          "HubSpot APIs",
+          "Qdrant",
+          "Pinecone",
+          "PostgreSQL",
+          "MCP Protocol",
+          "Web Scraping",
+          "Data Organization"
+        ]
+      },
+      "results": {
+        "title": "Results You Can Expect",
+        "subtitle": "Measurable impact on your business operations",
+        "metrics": [
+          {
+            "icon": "⏱",
+            "value": "70%",
+            "description": "Save up to 70% of manual time"
+          },
+          {
+            "icon": "💰",
+            "value": "40%",
+            "description": "Reduce operational costs"
+          },
+          {
+            "icon": "🤖",
+            "value": "24/7",
+            "description": "Intelligent availability"
+          },
+          {
+            "icon": "🚀",
+            "value": "5x",
+            "description": "Faster response and scalability"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Let's Build Your AI Assistant",
+        "subtitle": "Ready to make AI work for you?",
+        "description": "Let's discuss your workflow and build a smart automation plan.",
+        "cta": "Book a Free Consultation"
+      }
+    },
+    "webApps": {
+      "title": "Web Applications",
+      "subtitle": "Custom web solutions built to scale",
+      "description": "From simple websites to complex web applications, we build robust, scalable solutions using modern technologies. Ideal for partners needing reliable web solutions.",
+      "metaTitle": "Web Application Development - Code Studio Albania",
+      "metaDescription": "Professional web application development services from Albania. Custom solutions built with modern technologies.",
+      "hero": {
+        "title": "Build Powerful Web Applications That Scale",
+        "subtitle": "From Next.js to Python — we create robust, scalable web solutions that drive your business forward",
+        "cta": "Start Your Project",
+        "secondaryCta": "View Portfolio"
+      },
+      "whatWeDo": {
+        "title": "What We Do",
+        "subtitle": "Full-stack web development expertise",
+        "description": "At Code Studio, we specialize in building custom web applications using modern technologies. Whether you need a simple website, a complex web application, or a full-stack solution, we deliver scalable, maintainable code that performs.",
+        "features": [
+          {
+            "icon": "⚡",
+            "title": "Modern Frameworks",
+            "description": "Next.js, React, Python, FastAPI, Django for cutting-edge applications."
+          },
+          {
+            "icon": "🔧",
+            "title": "Custom Development",
+            "description": "Tailored solutions built specifically for your business requirements."
+          },
+          {
+            "icon": "📱",
+            "title": "Responsive Design",
+            "description": "Mobile-first approach ensuring perfect experience across all devices."
+          },
+          {
+            "icon": "🚀",
+            "title": "Performance Optimized",
+            "description": "Fast loading, SEO-friendly applications that convert visitors to customers."
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "Our proven development process",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Discovery",
+            "description": "Understand your requirements and technical specifications"
+          },
+          {
+            "number": "02",
+            "title": "Planning",
+            "description": "Create architecture and choose the best technology stack"
+          },
+          {
+            "number": "03",
+            "title": "Development",
+            "description": "Build your application using modern frameworks and best practices"
+          },
+          {
+            "number": "04",
+            "title": "Testing",
+            "description": "Comprehensive testing to ensure quality and performance"
+          },
+          {
+            "number": "05",
+            "title": "Deployment",
+            "description": "Launch your application with monitoring and support"
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies We Use",
+        "subtitle": "Modern tools for exceptional web applications",
+        "techs": [
+          "Next.js",
+          "React",
+          "Python",
+          "FastAPI",
+          "Django",
+          "TypeScript",
+          "Tailwind CSS",
+          "PostgreSQL",
+          "MongoDB",
+          "Redis",
+          "Docker",
+          "AWS",
+          "Vercel"
+        ]
+      },
+      "results": {
+        "title": "Results You Can Expect",
+        "subtitle": "Measurable impact on your digital presence",
+        "metrics": [
+          {
+            "icon": "⚡",
+            "value": "3x",
+            "description": "Faster page load times"
+          },
+          {
+            "icon": "📈",
+            "value": "50%",
+            "description": "Increase in user engagement"
+          },
+          {
+            "icon": "🔍",
+            "value": "90%",
+            "description": "Better SEO performance"
+          },
+          {
+            "icon": "💼",
+            "value": "24/7",
+            "description": "Reliable uptime and support"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Build Your Web Application?",
+        "subtitle": "Let's create something amazing together",
+        "description": "Get in touch to discuss your project and see how we can bring your vision to life with modern web technologies.",
+        "cta": "Start Your Project"
+      }
+    },
+    "wordpress": {
+      "title": "WordPress Development",
+      "subtitle": "Powerful WordPress solutions",
+      "description": "Custom WordPress themes, plugins, and full-site development. We make WordPress work exactly how you need it, delivering quality at competitive prices.",
+      "metaTitle": "WordPress Development Services - Code Studio Albania",
+      "metaDescription": "Professional WordPress development from Albania including custom themes, plugins, and full-site solutions.",
+      "hero": {
+        "title": "Professional WordPress Development That Converts",
+        "subtitle": "From custom themes to e-commerce solutions — we build WordPress websites that drive results",
+        "cta": "Start Your WordPress Project",
+        "secondaryCta": "View Our Work"
+      },
+      "whatWeDo": {
+        "title": "What We Do",
+        "subtitle": "Complete WordPress development services",
+        "description": "At Code Studio, we specialize in creating powerful WordPress websites that deliver exceptional user experiences. From custom plugin development to advanced e-commerce solutions, we handle every aspect of your WordPress project.",
+        "features": [
+          {
+            "icon": "🔌",
+            "title": "Plugin Development",
+            "description": "Custom WordPress plugins tailored to your specific business needs and requirements."
+          },
+          {
+            "icon": "🎨",
+            "title": "Custom Design",
+            "description": "Unique, responsive designs that reflect your brand and engage your audience."
+          },
+          {
+            "icon": "⚙️",
+            "title": "Advanced Configuration",
+            "description": "Complex setups, integrations, and optimizations for maximum performance."
+          },
+          {
+            "icon": "🛒",
+            "title": "E-commerce Solutions",
+            "description": "WooCommerce stores with custom functionality and seamless payment integration."
+          }
+        ]
+      },
+      "portfolio": {
+        "title": "Websites We've Built",
+        "subtitle": "Over 150+ WordPress websites delivered successfully",
+        "description": "Our portfolio showcases the diversity and quality of our WordPress development work across various industries and use cases.",
+        "websites": [
+          "youngeuropeanfilm.com",
+          "e-conext.com",
+          "produkte-beschriften.de",
+          "caredox.de",
+          "massundmoritz.de",
+          "futurewealthgroup.ch",
+          "mx-maint.com",
+          "lensandframe.co",
+          "heliservice.com",
+          "nextcom-art.com",
+          "evilseven.com",
+          "megatec-kunststofftechnik.de",
+          "weitblick.space",
+          "ring-traum.de",
+          "praxis-lebensrhythmus.de",
+          "scholztransporte.de",
+          "hks-jur.de",
+          "mybody-x.com",
+          "alte-feuerwache-re.de",
+          "dejavu-clublounge.at",
+          "concept-duelmen.de",
+          "bernd-ungerer.com",
+          "heroldhandel.de",
+          "quadtouren-burgenland.at",
+          "comiti.co",
+          "scheidungsanwalt-bonelli.at",
+          "junitim.de",
+          "dachdecker-grisse.de",
+          "flexicares.de",
+          "pension-staude.de",
+          "baeckerei-imping.de",
+          "heilpraktiker-beigert.de",
+          "terrassendach-bau.de",
+          "queens-and-gentlemen.com",
+          "tuttocasa.de",
+          "webschutzversicherung.de",
+          "top-faltenunterspritzung.berlin",
+          "pw-ag.de",
+          "mewus-partner.com",
+          "ssss247.com",
+          "onlinewebprojekte.de",
+          "picker-bedachungen.de",
+          "nisma-arsis.org",
+          "miermanns-scheune.de",
+          "nextcom-rz.com",
+          "esb-net.de",
+          "video-kommunikation.at",
+          "koiteiche.com",
+          "kaufingerstrasse.de",
+          "w-innovation.de",
+          "heitmann-stahl.de",
+          "dachdecker-rasokat.de",
+          "tiefenbacher-law.at",
+          "algorhythm.al",
+          "bodan-kosmetik.de",
+          "liska-wp.de"
+        ]
+      },
+      "technologies": {
+        "title": "What We Use",
+        "subtitle": "Premium tools and technologies for WordPress excellence",
+        "description": "We leverage the best WordPress plugins, themes, and development tools to create powerful, scalable websites that perform.",
+        "categories": [
+          {
+            "title": "Page Builders & Design",
+            "items": ["Elementor Pro", "Gutenberg", "Custom Blocks", "Elementor Custom Widgets", "Beaver Builder", "Divi"]
+          },
+          {
+            "title": "E-commerce & Functionality",
+            "items": ["WooCommerce", "Advanced Custom Fields (ACF)", "Custom Post Types", "Gravity Forms", "Contact Form 7", "WPML"]
+          },
+          {
+            "title": "Performance & SEO",
+            "items": ["Yoast SEO", "RankMath", "WP Rocket", "W3 Total Cache", "Smush", "Autoptimize"]
+          },
+          {
+            "title": "Development & Backend",
+            "items": ["PHP", "MySQL", "JavaScript", "CSS3", "HTML5", "REST API"]
+          }
+        ]
+      },
+      "expectations": {
+        "title": "What Can You Expect",
+        "subtitle": "Professional results that drive business growth",
+        "description": "When you work with Code Studio for your WordPress project, you can expect professional service, high-quality deliverables, and ongoing support.",
+        "benefits": [
+          {
+            "icon": "⚡",
+            "title": "Fast Loading Times",
+            "description": "Optimized WordPress sites that load in under 3 seconds for better user experience and SEO."
+          },
+          {
+            "icon": "📱",
+            "title": "Mobile Responsive",
+            "description": "Perfect display and functionality across all devices, from desktop to mobile."
+          },
+          {
+            "icon": "🔍",
+            "title": "SEO Optimized",
+            "description": "Built-in SEO best practices to help your website rank higher in search results."
+          },
+          {
+            "icon": "🛡️",
+            "title": "Secure & Updated",
+            "description": "Regular security updates and maintenance to keep your website safe and current."
+          },
+          {
+            "icon": "🎨",
+            "title": "Custom Design",
+            "description": "Unique, professional design that reflects your brand and stands out from competitors."
+          },
+          {
+            "icon": "📞",
+            "title": "Ongoing Support",
+            "description": "Dedicated support and maintenance to ensure your website continues to perform optimally."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Build Your WordPress Website?",
+        "subtitle": "Let's create something amazing together",
+        "description": "Get in touch to discuss your WordPress project and see how we can bring your vision to life with professional development and design.",
+        "cta": "Start Your Project"
+      }
+    },
+    "shopify": {
+      "title": "Shopify Solutions",
+      "subtitle": "E-commerce that converts",
+      "description": "Custom Shopify stores, apps, and integrations. We help you create an online store that drives sales and growth, perfect for e-commerce partners.",
+      "metaTitle": "Shopify Development & E-commerce Solutions - Code Studio Albania",
+      "metaDescription": "Professional Shopify development services from Albania including custom stores, apps, and e-commerce integrations.",
+      "hero": {
+        "title": "Build High-Converting Shopify Stores That Drive Sales",
+        "subtitle": "From custom themes to advanced apps — we create Shopify stores that turn visitors into customers",
+        "cta": "Start Your Shopify Store",
+        "secondaryCta": "View Our Work"
+      },
+      "whatWeDo": {
+        "title": "What We Do",
+        "subtitle": "Complete Shopify development services",
+        "description": "At Code Studio, we specialize in creating powerful Shopify stores that deliver exceptional shopping experiences. From custom theme development to advanced app integrations, we handle every aspect of your e-commerce project.",
+        "features": [
+          {
+            "icon": "🛍️",
+            "title": "Custom Store Development",
+            "description": "Unique Shopify stores tailored to your brand and business requirements."
+          },
+          {
+            "icon": "🎨",
+            "title": "Theme Design & Development",
+            "description": "Custom themes that reflect your brand and optimize for conversions."
+          },
+          {
+            "icon": "📱",
+            "title": "Mobile Optimization",
+            "description": "Perfect mobile experience that drives sales on all devices."
+          },
+          {
+            "icon": "⚡",
+            "title": "Performance Optimization",
+            "description": "Fast-loading stores that rank higher and convert better."
+          }
+        ]
+      },
+      "portfolio": {
+        "title": "Stores We've Built",
+        "subtitle": "Over 150+ Shopify stores delivered successfully",
+        "description": "Our portfolio showcases the diversity and quality of our Shopify development work across various industries and e-commerce use cases.",
+        "websites": [
+          "youngeuropeanfilm.com",
+          "e-conext.com",
+          "produkte-beschriften.de",
+          "caredox.de",
+          "massundmoritz.de",
+          "futurewealthgroup.ch",
+          "mx-maint.com",
+          "lensandframe.co",
+          "heliservice.com",
+          "nextcom-art.com",
+          "evilseven.com",
+          "megatec-kunststofftechnik.de",
+          "weitblick.space",
+          "ring-traum.de",
+          "praxis-lebensrhythmus.de",
+          "scholztransporte.de",
+          "hks-jur.de",
+          "mybody-x.com",
+          "alte-feuerwache-re.de",
+          "dejavu-clublounge.at",
+          "concept-duelmen.de",
+          "bernd-ungerer.com",
+          "heroldhandel.de",
+          "quadtouren-burgenland.at",
+          "comiti.co",
+          "scheidungsanwalt-bonelli.at",
+          "junitim.de",
+          "dachdecker-grisse.de",
+          "flexicares.de",
+          "pension-staude.de",
+          "baeckerei-imping.de",
+          "heilpraktiker-beigert.de",
+          "terrassendach-bau.de",
+          "queens-and-gentlemen.com",
+          "tuttocasa.de",
+          "webschutzversicherung.de",
+          "top-faltenunterspritzung.berlin",
+          "pw-ag.de",
+          "mewus-partner.com",
+          "ssss247.com",
+          "onlinewebprojekte.de",
+          "picker-bedachungen.de",
+          "nisma-arsis.org",
+          "miermanns-scheune.de",
+          "nextcom-rz.com",
+          "esb-net.de",
+          "video-kommunikation.at",
+          "koiteiche.com",
+          "kaufingerstrasse.de",
+          "w-innovation.de",
+          "heitmann-stahl.de",
+          "dachdecker-rasokat.de",
+          "tiefenbacher-law.at",
+          "algorhythm.al",
+          "bodan-kosmetik.de",
+          "liska-wp.de"
+        ]
+      },
+      "technologies": {
+        "title": "What We Use",
+        "subtitle": "Premium tools and technologies for Shopify excellence",
+        "description": "We leverage the best Shopify apps, themes, and development tools to create powerful, scalable e-commerce stores that perform.",
+        "categories": [
+          {
+            "title": "Store Builders & Themes",
+            "items": ["Shopify 2.0", "Dawn Theme", "Custom Liquid", "Shopify CLI", "Theme Kit", "Shopify Plus"]
+          },
+          {
+            "title": "E-commerce & Apps",
+            "items": ["Shopify Apps", "Shopify Scripts", "Shopify Flow", "Shopify Functions", "Shopify Plus", "Shopify Markets"]
+          },
+          {
+            "title": "Performance & SEO",
+            "items": ["Shopify SEO", "PageSpeed Optimization", "Core Web Vitals", "Google Analytics", "Facebook Pixel", "Google Ads"]
+          },
+          {
+            "title": "Development & Backend",
+            "items": ["Liquid", "JavaScript", "CSS3", "HTML5", "Shopify API", "GraphQL"]
+          }
+        ]
+      },
+      "expectations": {
+        "title": "What Can You Expect",
+        "subtitle": "Professional results that drive sales growth",
+        "description": "When you work with Code Studio for your Shopify project, you can expect professional service, high-converting stores, and ongoing support.",
+        "benefits": [
+          {
+            "icon": "💰",
+            "title": "Higher Conversion Rates",
+            "description": "Optimized stores that convert visitors into customers more effectively."
+          },
+          {
+            "icon": "📱",
+            "title": "Mobile-First Design",
+            "description": "Perfect shopping experience across all devices, especially mobile."
+          },
+          {
+            "icon": "🔍",
+            "title": "SEO Optimized",
+            "description": "Built-in SEO features to help your store rank higher in search results."
+          },
+          {
+            "icon": "⚡",
+            "title": "Fast Loading",
+            "description": "Lightning-fast stores that keep customers engaged and reduce bounce rates."
+          },
+          {
+            "icon": "🛒",
+            "title": "Easy Management",
+            "description": "User-friendly admin panel for easy store management and updates."
+          },
+          {
+            "icon": "📞",
+            "title": "Ongoing Support",
+            "description": "Dedicated support and maintenance to ensure your store continues to perform optimally."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Build Your Shopify Store?",
+        "subtitle": "Let's create something amazing together",
+        "description": "Get in touch to discuss your Shopify project and see how we can bring your e-commerce vision to life with professional development and design.",
+        "cta": "Start Your Store"
+      }
+    },
+    "typo3": {
+      "title": "TYPO3 Development",
+      "subtitle": "Enterprise-grade content management",
+      "description": "TYPO3 CMS development for large-scale websites and applications. Robust, secure, and highly customizable solutions for enterprise partners.",
+      "metaTitle": "TYPO3 Development Services - Code Studio Albania",
+      "metaDescription": "Professional TYPO3 CMS development from Albania for enterprise websites and large-scale applications.",
+      "hero": {
+        "title": "Build Enterprise-Grade TYPO3 Solutions That Scale",
+        "subtitle": "From content management to complex integrations — we create TYPO3 systems that power large organizations",
+        "cta": "Start Your TYPO3 Project",
+        "secondaryCta": "View Our Work"
+      },
+      "whatWeDo": {
+        "title": "What We Do",
+        "subtitle": "Complete TYPO3 development services",
+        "description": "At Code Studio, we specialize in creating powerful TYPO3 CMS solutions that deliver exceptional content management experiences. From custom extensions to enterprise integrations, we handle every aspect of your TYPO3 project.",
+        "features": [
+          {
+            "icon": "🏢",
+            "title": "Enterprise CMS Development",
+            "description": "Robust TYPO3 solutions designed for large organizations and complex requirements."
+          },
+          {
+            "icon": "🔧",
+            "title": "Custom Extensions",
+            "description": "Tailored TYPO3 extensions and plugins built specifically for your business needs."
+          },
+          {
+            "icon": "🔒",
+            "title": "Security & Compliance",
+            "description": "Enterprise-grade security features and compliance with industry standards."
+          },
+          {
+            "icon": "📈",
+            "title": "Performance Optimization",
+            "description": "High-performance TYPO3 installations optimized for speed and scalability."
+          }
+        ]
+      },
+      "portfolio": {
+        "title": "Projects We've Built",
+        "subtitle": "Over 150+ TYPO3 projects delivered successfully",
+        "description": "Our portfolio showcases the diversity and quality of our TYPO3 development work across various industries and enterprise use cases.",
+        "websites": [
+          "youngeuropeanfilm.com",
+          "e-conext.com",
+          "produkte-beschriften.de",
+          "caredox.de",
+          "massundmoritz.de",
+          "futurewealthgroup.ch",
+          "mx-maint.com",
+          "lensandframe.co",
+          "heliservice.com",
+          "nextcom-art.com",
+          "evilseven.com",
+          "megatec-kunststofftechnik.de",
+          "weitblick.space",
+          "ring-traum.de",
+          "praxis-lebensrhythmus.de",
+          "scholztransporte.de",
+          "hks-jur.de",
+          "mybody-x.com",
+          "alte-feuerwache-re.de",
+          "dejavu-clublounge.at",
+          "concept-duelmen.de",
+          "bernd-ungerer.com",
+          "heroldhandel.de",
+          "quadtouren-burgenland.at",
+          "comiti.co",
+          "scheidungsanwalt-bonelli.at",
+          "junitim.de",
+          "dachdecker-grisse.de",
+          "flexicares.de",
+          "pension-staude.de",
+          "baeckerei-imping.de",
+          "heilpraktiker-beigert.de",
+          "terrassendach-bau.de",
+          "queens-and-gentlemen.com",
+          "tuttocasa.de",
+          "webschutzversicherung.de",
+          "top-faltenunterspritzung.berlin",
+          "pw-ag.de",
+          "mewus-partner.com",
+          "ssss247.com",
+          "onlinewebprojekte.de",
+          "picker-bedachungen.de",
+          "nisma-arsis.org",
+          "miermanns-scheune.de",
+          "nextcom-rz.com",
+          "esb-net.de",
+          "video-kommunikation.at",
+          "koiteiche.com",
+          "kaufingerstrasse.de",
+          "w-innovation.de",
+          "heitmann-stahl.de",
+          "dachdecker-rasokat.de",
+          "tiefenbacher-law.at",
+          "algorhythm.al",
+          "bodan-kosmetik.de",
+          "liska-wp.de"
+        ]
+      },
+      "technologies": {
+        "title": "What We Use",
+        "subtitle": "Enterprise tools and technologies for TYPO3 excellence",
+        "description": "We leverage the best TYPO3 extensions, frameworks, and development tools to create powerful, scalable enterprise solutions that perform.",
+        "categories": [
+          {
+            "title": "TYPO3 Core & Extensions",
+            "items": ["TYPO3 v12", "TYPO3 v11", "Fluid Templates", "Extbase", "Scheduler", "Workspaces"]
+          },
+          {
+            "title": "Content Management",
+            "items": ["Page Tree", "Content Elements", "File Management", "User Management", "Access Control", "Multi-language"]
+          },
+          {
+            "title": "Performance & SEO",
+            "items": ["Caching", "CDN Integration", "SEO Extensions", "Sitemap", "Meta Tags", "URL Management"]
+          },
+          {
+            "title": "Development & Backend",
+            "items": ["PHP", "MySQL", "Composer", "Docker", "Git", "TYPO3 API"]
+          }
+        ]
+      },
+      "expectations": {
+        "title": "What Can You Expect",
+        "subtitle": "Professional results that power enterprise operations",
+        "description": "When you work with Code Studio for your TYPO3 project, you can expect professional service, enterprise-grade solutions, and ongoing support.",
+        "benefits": [
+          {
+            "icon": "🏢",
+            "title": "Enterprise Scalability",
+            "description": "TYPO3 solutions that scale with your organization's growth and requirements."
+          },
+          {
+            "icon": "🔒",
+            "title": "Advanced Security",
+            "description": "Enterprise-grade security features and compliance with industry standards."
+          },
+          {
+            "icon": "👥",
+            "title": "Multi-user Management",
+            "description": "Sophisticated user roles and permissions for large teams and workflows."
+          },
+          {
+            "icon": "🌍",
+            "title": "Multi-language Support",
+            "description": "Built-in internationalization features for global organizations."
+          },
+          {
+            "icon": "📊",
+            "title": "Content Workflow",
+            "description": "Advanced content management workflows for enterprise publishing."
+          },
+          {
+            "icon": "📞",
+            "title": "Enterprise Support",
+            "description": "Dedicated support and maintenance for mission-critical enterprise applications."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Build Your TYPO3 Solution?",
+        "subtitle": "Let's create something powerful together",
+        "description": "Get in touch to discuss your TYPO3 project and see how we can bring your enterprise vision to life with professional development and design.",
+        "cta": "Start Your Project"
+      }
+    },
+    "seoAdwords": {
+      "title": "SEO & Google Ads",
+      "subtitle": "Drive traffic and conversions",
+      "description": "Comprehensive SEO optimization and Google Ads management to increase your online visibility and drive qualified traffic. Essential for digital marketing partners.",
+      "metaTitle": "SEO & Google Ads Services - Code Studio Albania",
+      "metaDescription": "Professional SEO optimization and Google Ads management from Albania to increase online visibility and drive conversions.",
+      "hero": {
+        "title": "Boost Your Online Visibility with Professional SEO & Google Ads",
+        "subtitle": "From organic search optimization to paid advertising — we drive qualified traffic that converts into customers",
+        "cta": "Start Your SEO Campaign",
+        "secondaryCta": "View Our Results"
+      },
+      "whatWeDo": {
+        "title": "What We Do",
+        "subtitle": "Complete digital marketing services",
+        "description": "At Code Studio, we specialize in creating powerful SEO and Google Ads campaigns that deliver exceptional results. From technical SEO optimization to strategic paid advertising, we handle every aspect of your digital marketing.",
+        "features": [
+          {
+            "icon": "🔍",
+            "title": "SEO Optimization",
+            "description": "Comprehensive SEO strategies to improve your search engine rankings and organic visibility."
+          },
+          {
+            "icon": "📈",
+            "title": "Google Ads Management",
+            "description": "Strategic Google Ads campaigns that drive qualified traffic and maximize ROI."
+          },
+          {
+            "icon": "📊",
+            "title": "Analytics & Reporting",
+            "description": "Detailed performance tracking and reporting to measure campaign success."
+          },
+          {
+            "icon": "🎯",
+            "title": "Conversion Optimization",
+            "description": "Optimize your website and campaigns to convert more visitors into customers."
+          }
+        ]
+      },
+      "portfolio": {
+        "title": "Campaigns We've Managed",
+        "subtitle": "Over 150+ successful SEO and Google Ads campaigns",
+        "description": "Our portfolio showcases the diversity and quality of our digital marketing work across various industries and business types.",
+        "websites": [
+          "youngeuropeanfilm.com",
+          "e-conext.com",
+          "produkte-beschriften.de",
+          "caredox.de",
+          "massundmoritz.de",
+          "futurewealthgroup.ch",
+          "mx-maint.com",
+          "lensandframe.co",
+          "heliservice.com",
+          "nextcom-art.com",
+          "evilseven.com",
+          "megatec-kunststofftechnik.de",
+          "weitblick.space",
+          "ring-traum.de",
+          "praxis-lebensrhythmus.de",
+          "scholztransporte.de",
+          "hks-jur.de",
+          "mybody-x.com",
+          "alte-feuerwache-re.de",
+          "dejavu-clublounge.at",
+          "concept-duelmen.de",
+          "bernd-ungerer.com",
+          "heroldhandel.de",
+          "quadtouren-burgenland.at",
+          "comiti.co",
+          "scheidungsanwalt-bonelli.at",
+          "junitim.de",
+          "dachdecker-grisse.de",
+          "flexicares.de",
+          "pension-staude.de",
+          "baeckerei-imping.de",
+          "heilpraktiker-beigert.de",
+          "terrassendach-bau.de",
+          "queens-and-gentlemen.com",
+          "tuttocasa.de",
+          "webschutzversicherung.de",
+          "top-faltenunterspritzung.berlin",
+          "pw-ag.de",
+          "mewus-partner.com",
+          "ssss247.com",
+          "onlinewebprojekte.de",
+          "picker-bedachungen.de",
+          "nisma-arsis.org",
+          "miermanns-scheune.de",
+          "nextcom-rz.com",
+          "esb-net.de",
+          "video-kommunikation.at",
+          "koiteiche.com",
+          "kaufingerstrasse.de",
+          "w-innovation.de",
+          "heitmann-stahl.de",
+          "dachdecker-rasokat.de",
+          "tiefenbacher-law.at",
+          "algorhythm.al",
+          "bodan-kosmetik.de",
+          "liska-wp.de"
+        ]
+      },
+      "technologies": {
+        "title": "What We Use",
+        "subtitle": "Professional tools and technologies for digital marketing excellence",
+        "description": "We leverage the best SEO and advertising tools to create powerful, data-driven campaigns that deliver measurable results.",
+        "categories": [
+          {
+            "title": "SEO Tools & Platforms",
+            "items": ["Google Search Console", "Google Analytics", "SEMrush", "Ahrefs", "Screaming Frog", "Yoast SEO"]
+          },
+          {
+            "title": "Google Ads & PPC",
+            "items": ["Google Ads", "Google Tag Manager", "Facebook Ads", "LinkedIn Ads", "Bing Ads", "Display Network"]
+          },
+          {
+            "title": "Analytics & Tracking",
+            "items": ["Google Analytics 4", "Google Tag Manager", "Heatmap Tools", "Conversion Tracking", "UTM Parameters", "Goal Tracking"]
+          },
+          {
+            "title": "Content & Technical",
+            "items": ["Keyword Research", "Content Optimization", "Technical SEO", "Schema Markup", "Core Web Vitals", "Mobile Optimization"]
+          }
+        ]
+      },
+      "expectations": {
+        "title": "What Can You Expect",
+        "subtitle": "Professional results that drive business growth",
+        "description": "When you work with Code Studio for your SEO and Google Ads campaigns, you can expect professional service, measurable results, and ongoing optimization.",
+        "benefits": [
+          {
+            "icon": "📈",
+            "title": "Higher Search Rankings",
+            "description": "Improved organic search visibility and higher rankings for target keywords."
+          },
+          {
+            "icon": "💰",
+            "title": "Increased Traffic",
+            "description": "More qualified visitors to your website from both organic and paid sources."
+          },
+          {
+            "icon": "🎯",
+            "title": "Better Conversions",
+            "description": "Optimized campaigns that convert more visitors into leads and customers."
+          },
+          {
+            "icon": "📊",
+            "title": "Detailed Reporting",
+            "description": "Comprehensive analytics and reporting to track campaign performance."
+          },
+          {
+            "icon": "⚡",
+            "title": "Faster Results",
+            "description": "Strategic campaigns that deliver quick wins and long-term growth."
+          },
+          {
+            "icon": "📞",
+            "title": "Ongoing Optimization",
+            "description": "Continuous campaign optimization and strategy refinement for maximum ROI."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Boost Your Online Visibility?",
+        "subtitle": "Let's create something powerful together",
+        "description": "Get in touch to discuss your SEO and Google Ads needs and see how we can bring your digital marketing vision to life with professional strategies and execution.",
+        "cta": "Start Your Campaign"
+      }
+    }
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "partners": "Become Our Partner",
+      "services": "Services",
+      "contact": "Contact"
+  },
+  "caseStudies": {
+    "lensandframe": {
+      "hero": {
+        "title": "Lens & Frame: Premium Eyewear E-commerce Success",
+        "subtitle": "Building a successful glasses retailer in Los Angeles with custom Shopify development and advanced integrations",
+        "cta": "View Project Details",
+        "secondaryCta": "Get Similar Solution"
+      },
+      "description": {
+        "title": "Project Overview",
+        "subtitle": "Complete Shopify E-commerce Solution",
+        "content": "We built a comprehensive e-commerce platform for Lens & Frame, a premium eyewear retailer in Los Angeles. The project involved custom theme development, API integrations, HubSpot connections, private apps, and custom scripts to create a seamless shopping experience for customers seeking high-quality glasses and frames.",
+        "challenges": [
+          "Complex product catalog with multiple variants",
+          "Integration with multiple third-party services",
+          "Custom checkout and payment processing",
+          "Advanced inventory management",
+          "Customer relationship management"
+        ],
+        "solutions": [
+          "Custom Shopify theme with advanced product filtering",
+          "HubSpot CRM integration for lead management",
+          "Custom API connections for inventory sync",
+          "Private Shopify apps for specialized functionality",
+          "Automated scripts for order processing and fulfillment"
+        ],
+        "results": [
+          "Significant increase in online sales",
+          "Streamlined inventory management",
+          "Improved customer experience",
+          "Automated lead generation and nurturing",
+          "Enhanced operational efficiency"
+        ]
+      }
+    },
+    "econext": {
+      "hero": {
+        "title": "E-Connext: Advanced Job Scraping System",
+        "subtitle": "Next.js and FastAPI solution for competitive job market intelligence in Switzerland",
+        "cta": "View Project Details",
+        "secondaryCta": "Get Similar Solution"
+      },
+      "description": {
+        "title": "Project Overview",
+        "subtitle": "Intelligent Job Market Intelligence Platform",
+        "content": "We developed an advanced system using Next.js and FastAPI that scrapes through all Swiss job websites, providing real-time job market intelligence. The system gives recruiting agencies a competitive advantage by delivering job opportunities before they become widely available, with automated updates and comprehensive dashboard analytics.",
+        "challenges": [
+          "Scraping multiple job websites with different structures",
+          "Real-time data processing and updates",
+          "Handling large volumes of job data",
+          "Ensuring data accuracy and reliability",
+          "Creating intuitive dashboard interface"
+        ],
+        "solutions": [
+          "Custom web scraping algorithms for each job site",
+          "FastAPI backend for high-performance data processing",
+          "Next.js frontend with real-time updates",
+          "Automated data validation and cleaning",
+          "Advanced filtering and search capabilities"
+        ],
+        "results": [
+          "Faster job discovery for recruiting agencies",
+          "Competitive advantage in job market",
+          "Automated data collection and processing",
+          "Real-time dashboard with job insights",
+          "Improved recruitment efficiency"
+        ]
+      }
+    },
+    "futurewealth": {
+      "hero": {
+        "title": "Future Wealth Group: AI Knowledge Management",
+        "subtitle": "Advanced AI agent for internal knowledge sharing and banking resource management",
+        "cta": "View Project Details",
+        "secondaryCta": "Get Similar Solution"
+      },
+      "description": {
+        "title": "Project Overview",
+        "subtitle": "AI-Powered Internal Knowledge System",
+        "content": "We created an advanced AI-powered chat system for Future Wealth Group that enables all personnel to share knowledge and access company banking resources. The system integrates with n8n for workflow automation and uses vector databases for intelligent knowledge retrieval, creating a comprehensive internal knowledge management platform.",
+        "challenges": [
+          "Managing vast amounts of banking knowledge",
+          "Enabling knowledge sharing across teams",
+          "Integrating with existing systems",
+          "Ensuring data security and compliance",
+          "Creating intuitive user interface"
+        ],
+        "solutions": [
+          "AI-powered chat interface for knowledge queries",
+          "n8n integration for automated workflows",
+          "Vector database for intelligent search",
+          "Secure access controls and permissions",
+          "Real-time collaboration features"
+        ],
+        "results": [
+          "Improved knowledge sharing across teams",
+          "Faster access to banking resources",
+          "Enhanced collaboration and communication",
+          "Automated workflow processes",
+          "Better decision-making capabilities"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Let's Work Together",
+      "subtitle": "Ready to start your next project? Get in touch and let's discuss how we can help your business grow.",
+      "cta": "Book a Meeting",
+      "secondaryCta": "Quick Contact"
+    },
+    "meeting": {
+      "title": "Book a Meeting",
+      "subtitle": "Schedule a consultation to discuss your project needs",
+      "description": "Choose a service and select a convenient time for your consultation. We'll discuss your requirements and provide a detailed proposal.",
+      "form": {
+        "service": "Select Service",
+        "name": "Your Name",
+        "email": "Email Address",
+        "company": "Company Name",
+        "phone": "Phone Number",
+        "date": "Preferred Date",
+        "time": "Preferred Time",
+        "message": "Project Details",
+        "submit": "Book Meeting",
+        "services": [
+          "AI Agents & Automations",
+          "Web Applications",
+          "WordPress Development",
+          "Shopify Development",
+          "TYPO3 Development",
+          "SEO & Google Ads"
+        ]
+      }
+    },
+    "quickContact": {
+      "title": "Quick Questions?",
+      "subtitle": "Get in touch directly",
+      "description": "Have a quick question or want to discuss your project? Use the form below or contact us directly.",
+      "form": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "subject": "Subject",
+        "message": "Your Message",
+        "submit": "Send Message"
+      },
+      "contactInfo": {
+        "title": "Contact Information",
+        "address": "Bulevardi Gjergj Fishta, Rruga Nikolla Jorga Ap1 Zyra 3, Tirana, Albania",
+        "phone": "+355 67 58 52 355",
+        "email": "info@code-studio.eu",
+        "whatsapp": "+355 67 58 52 355",
+        "telegram": "+355 67 58 52 355",
+        "instagram": "https://www.instagram.com/codestudio.eu/",
+        "linkedin": "https://www.linkedin.com/in/rei-aliaj-28a951172/"
+      }
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Code Studio",
+      "description": "Professional web development company based in Tirana, Albania. Serving partners worldwide with quality solutions at competitive prices."
+    },
+    "services": {
+      "title": "Our Services",
+      "aiAgents": "AI Agents & Automations",
+      "webApps": "Web Applications",
+      "wordpress": "WordPress Development",
+      "shopify": "Shopify Solutions",
+      "typo3": "TYPO3 Development",
+      "seoAdwords": "SEO & Google Ads"
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "email": "info@code-studio.eu",
+      "phone": "+355 67 58 52 355",
+      "address": "Bulevardi Gjergj Fishta, Rruga Nikolla Jorga Ap1 Zyra 3, Tirana, Albania"
+    },
+    "copyright": "© 2025 Code Studio. All rights reserved."
+  },
+  "locale": {
+    "en": "English",
+    "de": "Deutsch"
+    }
+  }
+  

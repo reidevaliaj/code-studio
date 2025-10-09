@@ -1,15 +1,12 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./next-intl.config.ts');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export', // enables `next export`
-    images: {
-      unoptimized: true, // required if you use next/image in static export
-    },
-    i18n: {
-      locales: ['en', 'de'],
-      defaultLocale: 'en',
-      localeDetection: true, // optional
-    },
-  };
-  
-  export default nextConfig;
-  
+  images: { unoptimized: true },
+  // Note: Removed 'output: export' to allow middleware usage
+  // If you need static export, you'll need to remove the middleware.ts file
+};
+
+export default withNextIntl(nextConfig);

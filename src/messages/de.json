@@ -1,0 +1,1352 @@
+{
+  "home": {
+    "title": "Willkommen bei Code Studio",
+    "subtitle": "Professionelle Webentwicklung aus Albanien",
+    "cta": "Angebot anfragen",
+    "description": "Wir schaffen außergewöhnliche Web-Erlebnisse durch innovative Design-, Entwicklungs- und Automatisierungslösungen zu wettbewerbsfähigen Preisen von unserem Standort in Tirana, Albanien.",
+    "metaTitle": "Code Studio - Professionelle Webentwicklung & Design-Dienstleistungen",
+    "metaDescription": "Professionelle Webentwicklung, Design und Automatisierungsdienstleistungen aus Albanien. Arbeiten Sie mit uns für Qualitätsarbeit zu wettbewerbsfähigen Preisen.",
+    "hero": {
+      "title": "Professionelle Webentwicklung zu wettbewerbsfähigen Preisen",
+      "subtitle": "Willkommen bei Code Studio",
+      "cta": "Partner werden",
+      "secondaryCta": "Unsere Leistungen ansehen"
+    },
+    "about": {
+      "title": "Über Code Studio",
+      "subtitle": "Ihr vertrauensvoller Entwicklungspartner in Albanien",
+      "description": "Gegründet 2019 von Rei Aliaj, ist Code Studio ein professionelles Webentwicklungsunternehmen mit Sitz in Tirana, Albanien. Wir spezialisieren uns auf die Bedienung von Partnern in Deutschland, der Schweiz und den USA und bieten hochwertige Web-Lösungen zu wettbewerbsfähigen Preisen dank Albaniens günstigem Geschäftsumfeld.",
+      "stats": {
+        "projects": "200+",
+        "clients": "50+",
+        "experience": "5+ Jahre",
+        "satisfaction": "98%"
+      }
+    },
+    "services": {
+      "title": "Unsere Leistungen",
+      "subtitle": "Umfassende Web-Lösungen",
+      "description": "Von der Website-Entwicklung bis zur KI-Automatisierung bieten wir maßgeschneiderte digitale End-to-End-Lösungen für unsere internationalen Partner."
+    },
+    "caseStudies": {
+      "title": "Erfolgsgeschichten",
+      "subtitle": "Partnerschaften, die Ergebnisse liefern",
+      "description": "Entdecken Sie, wie wir unseren Partnern in Deutschland, der Schweiz und den USA dabei geholfen haben, ihre digitalen Ziele zu erreichen."
+    },
+    "testimonials": {
+      "title": "Was unsere Partner sagen",
+      "subtitle": "Vertraut von Agenturen weltweit"
+    },
+    "partners": {
+      "title": "Unsere Partner",
+      "subtitle": "Bedienung von Agenturen in Europa & USA",
+      "trusted": "Mehr als 50 Unternehmen weltweit vertrauen uns"
+    }
+  },
+  "about": {
+    "title": "Über Code Studio",
+    "subtitle": "Professionelle Webentwicklung aus Albanien",
+    "description": "Gegründet 2019 von Rei Aliaj, ist Code Studio Ihr vertrauensvoller Entwicklungspartner mit Sitz in Tirana, Albanien. Wir spezialisieren uns auf die Bedienung internationaler Partner mit hochwertigen Web-Lösungen zu wettbewerbsfähigen Preisen und nutzen Albaniens günstiges Geschäftsumfeld, um außergewöhnlichen Wert zu liefern.",
+    "cta": "Partner werden",
+    "metaTitle": "Über Code Studio - Professionelle Webentwicklung aus Albanien",
+    "metaDescription": "Erfahren Sie mehr über Code Studios Expertise in Webentwicklung, Design und Automatisierungslösungen von unserem Standort in Tirana, Albanien."
+  },
+  "partners": {
+    "title": "Werden Sie unser Partner",
+    "subtitle": "Treten Sie unserem Netzwerk internationaler Partner bei",
+    "description": "Wir suchen Web-Agenturen und Software-Unternehmen in Deutschland, der Schweiz und den USA, mit denen wir zusammenarbeiten können. Profitieren Sie von unseren wettbewerbsfähigen Preisen und professionellen Entwicklungsdienstleistungen aus Albanien.",
+    "cta": "Jetzt bewerben",
+    "metaTitle": "Partner mit Code Studio - Internationale Webentwicklungspartnerschaft",
+    "metaDescription": "Werden Sie Code Studio-Partner und profitieren Sie von professionellen Webentwicklungsdienstleistungen zu wettbewerbsfähigen Preisen aus Albanien.",
+    "hero": {
+      "title": "Partner mit Code Studio werden",
+      "subtitle": "Treten Sie unserem Netzwerk vertrauensvoller Entwicklungspartner bei",
+      "description": "Erweitern Sie Ihr Dienstleistungsangebot mit unserem professionellen Webentwicklungsteam in Albanien. Wir bieten hochwertige Lösungen zu wettbewerbsfähigen Preisen, um Ihr Unternehmen wachsen zu lassen.",
+      "cta": "Partnerschaft starten"
+    },
+    "whyPartner": {
+      "title": "Warum Partner mit Code Studio werden?",
+      "subtitle": "Erschließen Sie neue Möglichkeiten mit unserer Expertise",
+      "description": "Mit über 5 Jahren Erfahrung und wettbewerbsfähigen Preisen aus Albanien bieten wir Ihrer Agentur die perfekte Gelegenheit, Dienstleistungen zu erweitern, ohne die Gemeinkosten zu erhöhen. Unser Team liefert professionelle Web-Lösungen, die Ihre Kunden lieben werden.",
+      "benefits": [
+        "Wettbewerbsfähige Preise durch Albaniens günstiges Geschäftsumfeld",
+        "5+ Jahre bewährte Erfahrung in der Webentwicklung",
+        "Professionelles Team mit Expertise in modernen Technologien",
+        "Flexible Partnerschaftsmodelle für Ihre Geschäftsanforderungen",
+        "Direkte Kommunikation mit Projektmanagern",
+        "Qualitätssicherung und Tests bei allen Projekten"
+      ]
+    },
+    "whyChooseUs": {
+      "title": "Warum uns wählen?",
+      "subtitle": "Was macht uns zum idealen Partner",
+      "items": [
+        {
+          "title": "Wettbewerbsfähige Preise",
+          "description": "Profitieren Sie von Albaniens günstigem Geschäftsumfeld mit Kosten bis zu 60% niedriger als in Westeuropa bei gleichbleibenden professionellen Qualitätsstandards.",
+          "icon": "💰"
+        },
+        {
+          "title": "Bewährte Erfahrung",
+          "description": "Über 5 Jahre Erfahrung mit 200+ abgeschlossenen Projekten und 98% Kundenzufriedenheit. Wir wissen, wie man Ergebnisse liefert.",
+          "icon": "🏆"
+        },
+        {
+          "title": "Moderne Technologie",
+          "description": "Wir verwenden die neuesten Technologien und Frameworks einschließlich React, Next.js, WordPress, Shopify und KI-Automatisierungstools.",
+          "icon": "⚡"
+        }
+      ]
+    },
+    "contactForm": {
+      "title": "Bereit für eine Partnerschaft?",
+      "subtitle": "Lassen Sie uns besprechen, wie wir zusammenarbeiten können",
+      "description": "Nehmen Sie Kontakt mit uns auf, um Partnerschaftsmöglichkeiten zu besprechen. Wir antworten innerhalb von 24 Stunden, um zu erkunden, wie wir Ihr Unternehmen wachsen lassen können.",
+      "form": {
+        "name": "Vollständiger Name",
+        "company": "Firmenname",
+        "email": "E-Mail-Adresse",
+        "phone": "Telefonnummer",
+        "country": "Land",
+        "services": "Interessierte Dienstleistungen",
+        "message": "Erzählen Sie uns von Ihren Partnerschaftszielen",
+        "submit": "Partnerschaftsanfrage senden"
+      }
+    }
+  },
+  "services": {
+    "title": "Unsere Leistungen",
+    "subtitle": "Professionelle Web-Lösungen aus Albanien",
+    "description": "Von der Website-Entwicklung bis zur KI-Automatisierung bieten wir umfassende digitale Lösungen für unsere internationalen Partner zu wettbewerbsfähigen Preisen.",
+    "cta": "Alle Leistungen ansehen",
+    "metaTitle": "Leistungen - Code Studio Professionelle Webentwicklung",
+    "metaDescription": "Entdecken Sie Code Studios professionelle Webentwicklungs-, Design-, Automatisierungs- und Digitalmarketing-Dienstleistungen aus Albanien.",
+    "hero": {
+      "title": "Professionelle Webentwicklungsdienstleistungen",
+      "subtitle": "Umfassende digitale Lösungen aus Albanien",
+      "description": "Von maßgeschneiderten Webanwendungen bis zur KI-Automatisierung bieten wir End-to-End digitale Lösungen für unsere internationalen Partner zu wettbewerbsfähigen Preisen.",
+      "cta": "Loslegen",
+      "secondaryCta": "Portfolio ansehen"
+    }
+  },
+  "serviceDetails": {
+    "aiAgents": {
+      "title": "KI-Agenten & Automatisierungen",
+      "subtitle": "Intelligente Automatisierung für Ihr Unternehmen",
+      "description": "Optimieren Sie Ihre Abläufe mit maßgeschneiderten KI-Agenten und Automatisierungslösungen, die 24/7 arbeiten, um die Effizienz zu steigern.",
+      "metaTitle": "KI-Agenten & Automatisierungsdienstleistungen - Code Studio",
+      "metaDescription": "Maßgeschneiderte KI-Agenten und Automatisierungslösungen zur Optimierung Ihrer Geschäftsabläufe und Steigerung der Produktivität.",
+      "hero": {
+        "title": "Stärken Sie Ihr Unternehmen mit KI-Agenten & Automatisierungen",
+        "subtitle": "Von Chatbots bis hin zu komplexen Workflows — wir entwickeln KI-Systeme, die denken, handeln und Ergebnisse liefern.",
+        "cta": "Lassen Sie uns Ihre Arbeit automatisieren",
+        "secondaryCta": "Anwendungsfälle ansehen"
+      },
+      "whatWeDo": {
+        "title": "Was wir tun",
+        "subtitle": "Intelligente Automatisierung, die für Sie arbeitet",
+        "description": "Bei Code Studio entwickeln wir maßgeschneiderte KI-Agenten, die sich in Ihre Tools integrieren und Ihre täglichen Abläufe automatisieren. Ob es um die Verwaltung Ihres Kundensupports, die Bearbeitung wiederholender Datentasks oder die Verbindung komplexer Systeme geht — unsere KI-Agenten arbeiten 24/7, um Ihr Unternehmen zu vereinfachen.",
+        "features": [
+          {
+            "icon": "🤖",
+            "title": "Intelligente Agenten",
+            "description": "Bewältigen Gespräche, Aufgaben und Workflows autonom."
+          },
+          {
+            "icon": "⚙️",
+            "title": "Workflow-Automatisierungen",
+            "description": "Verbinden APIs, Datenbanken, CRMs und Tabellenkalkulationen."
+          },
+          {
+            "icon": "🔄",
+            "title": "Maßgeschneiderte Integrationen",
+            "description": "KI, die zu Ihren exakten Tools passt (Shopify, WordPress, HubSpot, Notion, etc.)."
+          },
+          {
+            "icon": "📈",
+            "title": "Skalierbare Lösungen",
+            "description": "Von kleinen Automatisierungen bis hin zu vollständigen Enterprise-Systemen."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Echte Anwendungsfälle",
+        "subtitle": "Was auch immer Sie wiederholt tun — wir können es automatisieren",
+        "cta": "Ihre maßgeschneiderte Automatisierung erhalten",
+        "cases": [
+          {
+            "icon": "💬",
+            "title": "KI-Chat-Support",
+            "description": "Trainieren Sie Chatbots mit Ihren Daten, um Kundenfragen auf Ihrer Website, WhatsApp oder Instagram zu beantworten."
+          },
+          {
+            "icon": "🛒",
+            "title": "E-Commerce-Automatisierung",
+            "description": "Verwalten Sie Lagerbestände, aktualisieren Sie Bestellungen und beantworten Sie Kundenanfragen automatisch."
+          },
+          {
+            "icon": "🧾",
+            "title": "Dokumentenverwaltung",
+            "description": "Lassen Sie KI Ihre PDFs, Rechnungen und Berichte lesen, extrahieren und organisieren."
+          },
+          {
+            "icon": "📅",
+            "title": "Terminplanungs-Assistent",
+            "description": "Automatisieren Sie Terminplanung und Follow-ups."
+          },
+          {
+            "icon": "🏢",
+            "title": "Interne Workflows",
+            "description": "Automatische Synchronisation von Daten zwischen CRM, Google Sheets, HubSpot oder Datenbanken."
+          },
+          {
+            "icon": "✉️",
+            "title": "E-Mail-Automatisierung",
+            "description": "KI, die Kunden-E-Mails basierend auf dem Kontext liest und beantwortet."
+          },
+          {
+            "icon": "📊",
+            "title": "Datenanalyse",
+            "description": "Analysieren Sie Berichte automatisch und generieren Sie Erkenntnisse aus Ihren Daten."
+          },
+          {
+            "icon": "🔍",
+            "title": "Content-Moderation",
+            "description": "KI-gestützte Content-Filterung und Moderation für Plattformen und Communities."
+          },
+          {
+            "icon": "💰",
+            "title": "Rechnungsverarbeitung",
+            "description": "Extrahieren Sie automatisch Daten aus Rechnungen und aktualisieren Sie Buchhaltungssysteme."
+          },
+          {
+            "icon": "📱",
+            "title": "Social Media Management",
+            "description": "Planen Sie Posts, beantworten Sie Kommentare und analysieren Sie das Engagement automatisch."
+          },
+          {
+            "icon": "🎯",
+            "title": "Lead-Qualifizierung",
+            "description": "Bewerten und qualifizieren Sie Leads automatisch basierend auf vordefinierten Kriterien."
+          },
+          {
+            "icon": "📋",
+            "title": "Formularverarbeitung",
+            "description": "Extrahieren und organisieren Sie Daten aus Formularen, Bewerbungen und Einreichungen."
+          },
+          {
+            "icon": "🔄",
+            "title": "Datenmigration",
+            "description": "Übertragen Sie Daten automatisch zwischen Systemen mit Validierung und Fehlerbehandlung."
+          },
+          {
+            "icon": "📈",
+            "title": "Performance-Monitoring",
+            "description": "Verfolgen Sie KPIs und generieren Sie automatisierte Berichte über die Geschäftsleistung."
+          },
+          {
+            "icon": "🔔",
+            "title": "Alarm-Systeme",
+            "description": "Intelligente Benachrichtigungen und Alarme basierend auf Geschäftsregeln und Schwellenwerten."
+          },
+          {
+            "icon": "📝",
+            "title": "Berichtserstellung",
+            "description": "Erstellen und verteilen Sie automatisch Berichte aus Ihren Datenquellen."
+          },
+          {
+            "icon": "🎨",
+            "title": "Content-Erstellung",
+            "description": "Generieren Sie Produktbeschreibungen, Social Media Content und Marketing-Texte."
+          },
+          {
+            "icon": "🔐",
+            "title": "Sicherheitsüberwachung",
+            "description": "Überwachen Sie Systeme auf Sicherheitsbedrohungen und reagieren Sie automatisch auf Vorfälle."
+          },
+          {
+            "icon": "📦",
+            "title": "Bestandsverwaltung",
+            "description": "Verfolgen Sie Lagerbestände, prognostizieren Sie die Nachfrage und automatisieren Sie Nachbestellungsprozesse."
+          },
+          {
+            "icon": "👥",
+            "title": "Kunden-Onboarding",
+            "description": "Automatisieren Sie den gesamten Kunden-Onboarding-Prozess von der Anmeldung bis zur ersten Nutzung."
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "Wie es funktioniert",
+        "subtitle": "Unser bewährter Prozess für KI-Automatisierungserfolg",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Entdeckung",
+            "description": "Verstehen Sie Ihr Unternehmen und Ihre Workflows"
+          },
+          {
+            "number": "02",
+            "title": "Design",
+            "description": "Planen Sie Automatisierungen und Integrationen"
+          },
+          {
+            "number": "03",
+            "title": "Entwicklung",
+            "description": "Entwickeln Sie KI-Agenten mit Python, n8n und OpenAI MCP Protocol"
+          },
+          {
+            "number": "04",
+            "title": "Bereitstellung",
+            "description": "Integration in Ihre Systeme"
+          },
+          {
+            "number": "05",
+            "title": "Support",
+            "description": "Kontinuierliche Verbesserung und Überwachung"
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologien, die wir verwenden",
+        "subtitle": "Modernste Tools für intelligente Automatisierung",
+        "techs": [
+          "OpenAI",
+          "n8n",
+          "LangChain",
+          "FastAPI",
+          "Shopify APIs",
+          "WordPress APIs",
+          "HubSpot APIs",
+          "Qdrant",
+          "Pinecone",
+          "PostgreSQL",
+          "MCP Protocol",
+          "Web Scraping",
+          "Datenorganisation"
+        ]
+      },
+      "results": {
+        "title": "Ergebnisse, die Sie erwarten können",
+        "subtitle": "Messbare Auswirkungen auf Ihre Geschäftsabläufe",
+        "metrics": [
+          {
+            "icon": "⏱",
+            "value": "70%",
+            "description": "Sparen Sie bis zu 70% der manuellen Zeit"
+          },
+          {
+            "icon": "💰",
+            "value": "40%",
+            "description": "Reduzieren Sie Betriebskosten"
+          },
+          {
+            "icon": "🤖",
+            "value": "24/7",
+            "description": "Intelligente Verfügbarkeit"
+          },
+          {
+            "icon": "🚀",
+            "value": "5x",
+            "description": "Schnellere Reaktion und Skalierbarkeit"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Lassen Sie uns Ihren KI-Assistenten entwickeln",
+        "subtitle": "Bereit, KI für Sie arbeiten zu lassen?",
+        "description": "Lassen Sie uns über Ihren Workflow sprechen und einen intelligenten Automatisierungsplan erstellen.",
+        "cta": "Kostenlose Beratung buchen"
+      }
+    },
+    "webApps": {
+      "title": "Web-Anwendungen",
+      "subtitle": "Maßgeschneiderte Web-Lösungen, die skalieren",
+      "description": "Von einfachen Websites bis hin zu komplexen Webanwendungen entwickeln wir robuste, skalierbare Lösungen mit modernen Technologien.",
+      "metaTitle": "Webanwendungsentwicklung - Code Studio",
+      "metaDescription": "Professionelle Webanwendungsentwicklungsdienstleistungen. Maßgeschneiderte Lösungen mit modernen Technologien entwickelt.",
+      "hero": {
+        "title": "Entwickeln Sie leistungsstarke Webanwendungen, die skalieren",
+        "subtitle": "Von Next.js bis Python — wir erstellen robuste, skalierbare Web-Lösungen, die Ihr Unternehmen voranbringen",
+        "cta": "Ihr Projekt starten",
+        "secondaryCta": "Portfolio ansehen"
+      },
+      "whatWeDo": {
+        "title": "Was wir tun",
+        "subtitle": "Full-Stack Webentwicklungsexpertise",
+        "description": "Bei Code Studio spezialisieren wir uns auf die Entwicklung maßgeschneiderter Webanwendungen mit modernen Technologien. Ob Sie eine einfache Website, eine komplexe Webanwendung oder eine Full-Stack-Lösung benötigen, wir liefern skalierbaren, wartbaren Code, der performt.",
+        "features": [
+          {
+            "icon": "⚡",
+            "title": "Moderne Frameworks",
+            "description": "Next.js, React, Python, FastAPI, Django für zukunftsweisende Anwendungen."
+          },
+          {
+            "icon": "🔧",
+            "title": "Maßgeschneiderte Entwicklung",
+            "description": "Angepasste Lösungen, die speziell für Ihre Geschäftsanforderungen entwickelt wurden."
+          },
+          {
+            "icon": "📱",
+            "title": "Responsive Design",
+            "description": "Mobile-First-Ansatz für perfekte Erfahrung auf allen Geräten."
+          },
+          {
+            "icon": "🚀",
+            "title": "Performance-optimiert",
+            "description": "Schnell ladende, SEO-freundliche Anwendungen, die Besucher in Kunden verwandeln."
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "Wie es funktioniert",
+        "subtitle": "Unser bewährter Entwicklungsprozess",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Entdeckung",
+            "description": "Verstehen Sie Ihre Anforderungen und technischen Spezifikationen"
+          },
+          {
+            "number": "02",
+            "title": "Planung",
+            "description": "Erstellen Sie Architektur und wählen Sie den besten Technologie-Stack"
+          },
+          {
+            "number": "03",
+            "title": "Entwicklung",
+            "description": "Erstellen Sie Ihre Anwendung mit modernen Frameworks und Best Practices"
+          },
+          {
+            "number": "04",
+            "title": "Testing",
+            "description": "Umfassende Tests zur Sicherstellung von Qualität und Performance"
+          },
+          {
+            "number": "05",
+            "title": "Bereitstellung",
+            "description": "Starten Sie Ihre Anwendung mit Monitoring und Support"
+          }
+        ]
+      },
+      "technologies": {
+        "title": "Technologien, die wir verwenden",
+        "subtitle": "Moderne Tools für außergewöhnliche Webanwendungen",
+        "techs": [
+          "Next.js",
+          "React",
+          "Python",
+          "FastAPI",
+          "Django",
+          "TypeScript",
+          "Tailwind CSS",
+          "PostgreSQL",
+          "MongoDB",
+          "Redis",
+          "Docker",
+          "AWS",
+          "Vercel"
+        ]
+      },
+      "results": {
+        "title": "Ergebnisse, die Sie erwarten können",
+        "subtitle": "Messbare Auswirkungen auf Ihre digitale Präsenz",
+        "metrics": [
+          {
+            "icon": "⚡",
+            "value": "3x",
+            "description": "Schnellere Ladezeiten"
+          },
+          {
+            "icon": "📈",
+            "value": "50%",
+            "description": "Steigerung der Benutzerinteraktion"
+          },
+          {
+            "icon": "🔍",
+            "value": "90%",
+            "description": "Bessere SEO-Performance"
+          },
+          {
+            "icon": "💼",
+            "value": "24/7",
+            "description": "Zuverlässige Verfügbarkeit und Support"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bereit, Ihre Webanwendung zu entwickeln?",
+        "subtitle": "Lassen Sie uns gemeinsam etwas Großartiges schaffen",
+        "description": "Nehmen Sie Kontakt auf, um Ihr Projekt zu besprechen und zu sehen, wie wir Ihre Vision mit modernen Webtechnologien zum Leben erwecken können.",
+        "cta": "Ihr Projekt starten"
+      }
+    },
+    "wordpress": {
+      "title": "WordPress-Entwicklung",
+      "subtitle": "Leistungsstarke WordPress-Lösungen",
+      "description": "Maßgeschneiderte WordPress-Themes, Plugins und vollständige Website-Entwicklung. Wir sorgen dafür, dass WordPress genau so funktioniert, wie Sie es benötigen.",
+      "metaTitle": "WordPress-Entwicklungsdienstleistungen - Code Studio",
+      "metaDescription": "Professionelle WordPress-Entwicklung einschließlich maßgeschneiderter Themes, Plugins und vollständiger Website-Lösungen.",
+      "hero": {
+        "title": "Professionelle WordPress-Entwicklung, die konvertiert",
+        "subtitle": "Von maßgeschneiderten Themes bis zu E-Commerce-Lösungen — wir entwickeln WordPress-Websites, die Ergebnisse liefern",
+        "cta": "Ihr WordPress-Projekt starten",
+        "secondaryCta": "Unsere Arbeit ansehen"
+      },
+      "whatWeDo": {
+        "title": "Was wir tun",
+        "subtitle": "Vollständige WordPress-Entwicklungsdienstleistungen",
+        "description": "Bei Code Studio spezialisieren wir uns auf die Erstellung leistungsstarker WordPress-Websites, die außergewöhnliche Benutzererfahrungen bieten. Von der Entwicklung maßgeschneiderter Plugins bis hin zu fortgeschrittenen E-Commerce-Lösungen übernehmen wir jeden Aspekt Ihres WordPress-Projekts.",
+        "features": [
+          {
+            "icon": "🔌",
+            "title": "Plugin-Entwicklung",
+            "description": "Maßgeschneiderte WordPress-Plugins, die auf Ihre spezifischen Geschäftsanforderungen zugeschnitten sind."
+          },
+          {
+            "icon": "🎨",
+            "title": "Maßgeschneidertes Design",
+            "description": "Einzigartige, responsive Designs, die Ihre Marke widerspiegeln und Ihr Publikum ansprechen."
+          },
+          {
+            "icon": "⚙️",
+            "title": "Erweiterte Konfiguration",
+            "description": "Komplexe Setups, Integrationen und Optimierungen für maximale Performance."
+          },
+          {
+            "icon": "🛒",
+            "title": "E-Commerce-Lösungen",
+            "description": "WooCommerce-Shops mit maßgeschneiderter Funktionalität und nahtloser Zahlungsintegration."
+          }
+        ]
+      },
+      "portfolio": {
+        "title": "Websites, die wir entwickelt haben",
+        "subtitle": "Über 150+ WordPress-Websites erfolgreich geliefert",
+        "description": "Unser Portfolio zeigt die Vielfalt und Qualität unserer WordPress-Entwicklungsarbeit in verschiedenen Branchen und Anwendungsfällen.",
+        "websites": [
+          "youngeuropeanfilm.com",
+          "e-conext.com",
+          "produkte-beschriften.de",
+          "caredox.de",
+          "massundmoritz.de",
+          "futurewealthgroup.ch",
+          "mx-maint.com",
+          "lensandframe.co",
+          "heliservice.com",
+          "nextcom-art.com",
+          "evilseven.com",
+          "megatec-kunststofftechnik.de",
+          "weitblick.space",
+          "ring-traum.de",
+          "praxis-lebensrhythmus.de",
+          "scholztransporte.de",
+          "hks-jur.de",
+          "mybody-x.com",
+          "alte-feuerwache-re.de",
+          "dejavu-clublounge.at",
+          "concept-duelmen.de",
+          "bernd-ungerer.com",
+          "heroldhandel.de",
+          "quadtouren-burgenland.at",
+          "comiti.co",
+          "scheidungsanwalt-bonelli.at",
+          "junitim.de",
+          "dachdecker-grisse.de",
+          "flexicares.de",
+          "pension-staude.de",
+          "baeckerei-imping.de",
+          "heilpraktiker-beigert.de",
+          "terrassendach-bau.de",
+          "queens-and-gentlemen.com",
+          "tuttocasa.de",
+          "webschutzversicherung.de",
+          "top-faltenunterspritzung.berlin",
+          "pw-ag.de",
+          "mewus-partner.com",
+          "ssss247.com",
+          "onlinewebprojekte.de",
+          "picker-bedachungen.de",
+          "nisma-arsis.org",
+          "miermanns-scheune.de",
+          "nextcom-rz.com",
+          "esb-net.de",
+          "video-kommunikation.at",
+          "koiteiche.com",
+          "kaufingerstrasse.de",
+          "w-innovation.de",
+          "heitmann-stahl.de",
+          "dachdecker-rasokat.de",
+          "tiefenbacher-law.at",
+          "algorhythm.al",
+          "bodan-kosmetik.de",
+          "liska-wp.de"
+        ]
+      },
+      "technologies": {
+        "title": "Was wir verwenden",
+        "subtitle": "Premium-Tools und Technologien für WordPress-Exzellenz",
+        "description": "Wir nutzen die besten WordPress-Plugins, Themes und Entwicklungstools, um leistungsstarke, skalierbare Websites zu erstellen, die performen.",
+        "categories": [
+          {
+            "title": "Page Builder & Design",
+            "items": ["Elementor Pro", "Gutenberg", "Custom Blocks", "Elementor Custom Widgets", "Beaver Builder", "Divi"]
+          },
+          {
+            "title": "E-Commerce & Funktionalität",
+            "items": ["WooCommerce", "Advanced Custom Fields (ACF)", "Custom Post Types", "Gravity Forms", "Contact Form 7", "WPML"]
+          },
+          {
+            "title": "Performance & SEO",
+            "items": ["Yoast SEO", "RankMath", "WP Rocket", "W3 Total Cache", "Smush", "Autoptimize"]
+          },
+          {
+            "title": "Entwicklung & Backend",
+            "items": ["PHP", "MySQL", "JavaScript", "CSS3", "HTML5", "REST API"]
+          }
+        ]
+      },
+      "expectations": {
+        "title": "Was Sie erwarten können",
+        "subtitle": "Professionelle Ergebnisse, die Geschäftswachstum fördern",
+        "description": "Wenn Sie mit Code Studio für Ihr WordPress-Projekt arbeiten, können Sie professionellen Service, hochwertige Lieferungen und kontinuierlichen Support erwarten.",
+        "benefits": [
+          {
+            "icon": "⚡",
+            "title": "Schnelle Ladezeiten",
+            "description": "Optimierte WordPress-Sites, die in unter 3 Sekunden laden für bessere Benutzererfahrung und SEO."
+          },
+          {
+            "icon": "📱",
+            "title": "Mobile Responsive",
+            "description": "Perfekte Darstellung und Funktionalität auf allen Geräten, vom Desktop bis zum Handy."
+          },
+          {
+            "icon": "🔍",
+            "title": "SEO-optimiert",
+            "description": "Integrierte SEO-Best-Practices, um Ihrer Website zu helfen, höher in den Suchergebnissen zu ranken."
+          },
+          {
+            "icon": "🛡️",
+            "title": "Sicher & Aktualisiert",
+            "description": "Regelmäßige Sicherheitsupdates und Wartung, um Ihre Website sicher und aktuell zu halten."
+          },
+          {
+            "icon": "🎨",
+            "title": "Maßgeschneidertes Design",
+            "description": "Einzigartiges, professionelles Design, das Ihre Marke widerspiegelt und sich von der Konkurrenz abhebt."
+          },
+          {
+            "icon": "📞",
+            "title": "Kontinuierlicher Support",
+            "description": "Dedizierter Support und Wartung, um sicherzustellen, dass Ihre Website weiterhin optimal funktioniert."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bereit, Ihre WordPress-Website zu entwickeln?",
+        "subtitle": "Lassen Sie uns gemeinsam etwas Großartiges schaffen",
+        "description": "Nehmen Sie Kontakt auf, um Ihr WordPress-Projekt zu besprechen und zu sehen, wie wir Ihre Vision mit professioneller Entwicklung und Design zum Leben erwecken können.",
+        "cta": "Ihr Projekt starten"
+      }
+    },
+    "shopify": {
+      "title": "Shopify-Lösungen",
+      "subtitle": "E-Commerce, der konvertiert",
+      "description": "Maßgeschneiderte Shopify-Shops, Apps und Integrationen. Wir helfen Ihnen dabei, einen Online-Shop zu erstellen, der Verkäufe und Wachstum fördert.",
+      "metaTitle": "Shopify-Entwicklung & E-Commerce-Lösungen - Code Studio",
+      "metaDescription": "Professionelle Shopify-Entwicklungsdienstleistungen einschließlich maßgeschneiderter Shops, Apps und E-Commerce-Integrationen.",
+      "hero": {
+        "title": "Entwickeln Sie hochkonvertierende Shopify-Stores, die Verkäufe generieren",
+        "subtitle": "Von maßgeschneiderten Themes bis zu fortgeschrittenen Apps — wir erstellen Shopify-Stores, die Besucher in Kunden verwandeln",
+        "cta": "Ihren Shopify-Store starten",
+        "secondaryCta": "Unsere Arbeit ansehen"
+      },
+      "whatWeDo": {
+        "title": "Was wir tun",
+        "subtitle": "Vollständige Shopify-Entwicklungsdienstleistungen",
+        "description": "Bei Code Studio spezialisieren wir uns auf die Erstellung leistungsstarker Shopify-Stores, die außergewöhnliche Einkaufserfahrungen bieten. Von der Entwicklung maßgeschneiderter Themes bis hin zu fortgeschrittenen App-Integrationen übernehmen wir jeden Aspekt Ihres E-Commerce-Projekts.",
+        "features": [
+          {
+            "icon": "🛍️",
+            "title": "Maßgeschneiderte Store-Entwicklung",
+            "description": "Einzigartige Shopify-Stores, die auf Ihre Marke und Geschäftsanforderungen zugeschnitten sind."
+          },
+          {
+            "icon": "🎨",
+            "title": "Theme-Design & Entwicklung",
+            "description": "Maßgeschneiderte Themes, die Ihre Marke widerspiegeln und für Konversionen optimieren."
+          },
+          {
+            "icon": "📱",
+            "title": "Mobile-Optimierung",
+            "description": "Perfekte mobile Erfahrung, die Verkäufe auf allen Geräten fördert."
+          },
+          {
+            "icon": "⚡",
+            "title": "Performance-Optimierung",
+            "description": "Schnell ladende Stores, die höher ranken und besser konvertieren."
+          }
+        ]
+      },
+      "portfolio": {
+        "title": "Stores, die wir entwickelt haben",
+        "subtitle": "Über 150+ Shopify-Stores erfolgreich geliefert",
+        "description": "Unser Portfolio zeigt die Vielfalt und Qualität unserer Shopify-Entwicklungsarbeit in verschiedenen Branchen und E-Commerce-Anwendungsfällen.",
+        "websites": [
+          "youngeuropeanfilm.com",
+          "e-conext.com",
+          "produkte-beschriften.de",
+          "caredox.de",
+          "massundmoritz.de",
+          "futurewealthgroup.ch",
+          "mx-maint.com",
+          "lensandframe.co",
+          "heliservice.com",
+          "nextcom-art.com",
+          "evilseven.com",
+          "megatec-kunststofftechnik.de",
+          "weitblick.space",
+          "ring-traum.de",
+          "praxis-lebensrhythmus.de",
+          "scholztransporte.de",
+          "hks-jur.de",
+          "mybody-x.com",
+          "alte-feuerwache-re.de",
+          "dejavu-clublounge.at",
+          "concept-duelmen.de",
+          "bernd-ungerer.com",
+          "heroldhandel.de",
+          "quadtouren-burgenland.at",
+          "comiti.co",
+          "scheidungsanwalt-bonelli.at",
+          "junitim.de",
+          "dachdecker-grisse.de",
+          "flexicares.de",
+          "pension-staude.de",
+          "baeckerei-imping.de",
+          "heilpraktiker-beigert.de",
+          "terrassendach-bau.de",
+          "queens-and-gentlemen.com",
+          "tuttocasa.de",
+          "webschutzversicherung.de",
+          "top-faltenunterspritzung.berlin",
+          "pw-ag.de",
+          "mewus-partner.com",
+          "ssss247.com",
+          "onlinewebprojekte.de",
+          "picker-bedachungen.de",
+          "nisma-arsis.org",
+          "miermanns-scheune.de",
+          "nextcom-rz.com",
+          "esb-net.de",
+          "video-kommunikation.at",
+          "koiteiche.com",
+          "kaufingerstrasse.de",
+          "w-innovation.de",
+          "heitmann-stahl.de",
+          "dachdecker-rasokat.de",
+          "tiefenbacher-law.at",
+          "algorhythm.al",
+          "bodan-kosmetik.de",
+          "liska-wp.de"
+        ]
+      },
+      "technologies": {
+        "title": "Was wir verwenden",
+        "subtitle": "Premium-Tools und Technologien für Shopify-Exzellenz",
+        "description": "Wir nutzen die besten Shopify-Apps, Themes und Entwicklungstools, um leistungsstarke, skalierbare E-Commerce-Stores zu erstellen, die performen.",
+        "categories": [
+          {
+            "title": "Store Builder & Themes",
+            "items": ["Shopify 2.0", "Dawn Theme", "Custom Liquid", "Shopify CLI", "Theme Kit", "Shopify Plus"]
+          },
+          {
+            "title": "E-Commerce & Apps",
+            "items": ["Shopify Apps", "Shopify Scripts", "Shopify Flow", "Shopify Functions", "Shopify Plus", "Shopify Markets"]
+          },
+          {
+            "title": "Performance & SEO",
+            "items": ["Shopify SEO", "PageSpeed Optimization", "Core Web Vitals", "Google Analytics", "Facebook Pixel", "Google Ads"]
+          },
+          {
+            "title": "Entwicklung & Backend",
+            "items": ["Liquid", "JavaScript", "CSS3", "HTML5", "Shopify API", "GraphQL"]
+          }
+        ]
+      },
+      "expectations": {
+        "title": "Was Sie erwarten können",
+        "subtitle": "Professionelle Ergebnisse, die Verkaufswachstum fördern",
+        "description": "Wenn Sie mit Code Studio für Ihr Shopify-Projekt arbeiten, können Sie professionellen Service, hochkonvertierende Stores und kontinuierlichen Support erwarten.",
+        "benefits": [
+          {
+            "icon": "💰",
+            "title": "Höhere Konversionsraten",
+            "description": "Optimierte Stores, die Besucher effektiver in Kunden verwandeln."
+          },
+          {
+            "icon": "📱",
+            "title": "Mobile-First-Design",
+            "description": "Perfekte Einkaufserfahrung auf allen Geräten, besonders auf dem Handy."
+          },
+          {
+            "icon": "🔍",
+            "title": "SEO-optimiert",
+            "description": "Integrierte SEO-Features, um Ihrem Store zu helfen, höher in den Suchergebnissen zu ranken."
+          },
+          {
+            "icon": "⚡",
+            "title": "Schnelles Laden",
+            "description": "Blitzschnelle Stores, die Kunden engagiert halten und Absprungraten reduzieren."
+          },
+          {
+            "icon": "🛒",
+            "title": "Einfache Verwaltung",
+            "description": "Benutzerfreundliches Admin-Panel für einfache Store-Verwaltung und Updates."
+          },
+          {
+            "icon": "📞",
+            "title": "Kontinuierlicher Support",
+            "description": "Dedizierter Support und Wartung, um sicherzustellen, dass Ihr Store weiterhin optimal funktioniert."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bereit, Ihren Shopify-Store zu entwickeln?",
+        "subtitle": "Lassen Sie uns gemeinsam etwas Großartiges schaffen",
+        "description": "Nehmen Sie Kontakt auf, um Ihr Shopify-Projekt zu besprechen und zu sehen, wie wir Ihre E-Commerce-Vision mit professioneller Entwicklung und Design zum Leben erwecken können.",
+        "cta": "Ihren Store starten"
+      }
+    },
+    "typo3": {
+      "title": "TYPO3-Entwicklung",
+      "subtitle": "Enterprise-Grade Content Management",
+      "description": "TYPO3 CMS-Entwicklung für großangelegte Websites und Anwendungen. Robuste, sichere und hochgradig anpassbare Lösungen.",
+      "metaTitle": "TYPO3-Entwicklungsdienstleistungen - Code Studio",
+      "metaDescription": "Professionelle TYPO3 CMS-Entwicklung für Enterprise-Websites und großangelegte Anwendungen.",
+      "hero": {
+        "title": "Entwickeln Sie Enterprise-Grade TYPO3-Lösungen, die skalieren",
+        "subtitle": "Von Content Management bis zu komplexen Integrationen — wir erstellen TYPO3-Systeme, die große Organisationen antreiben",
+        "cta": "Ihr TYPO3-Projekt starten",
+        "secondaryCta": "Unsere Arbeit ansehen"
+      },
+      "whatWeDo": {
+        "title": "Was wir tun",
+        "subtitle": "Vollständige TYPO3-Entwicklungsdienstleistungen",
+        "description": "Bei Code Studio spezialisieren wir uns auf die Erstellung leistungsstarker TYPO3 CMS-Lösungen, die außergewöhnliche Content-Management-Erfahrungen bieten. Von maßgeschneiderten Extensions bis hin zu Enterprise-Integrationen übernehmen wir jeden Aspekt Ihres TYPO3-Projekts.",
+        "features": [
+          {
+            "icon": "🏢",
+            "title": "Enterprise CMS-Entwicklung",
+            "description": "Robuste TYPO3-Lösungen für große Organisationen und komplexe Anforderungen."
+          },
+          {
+            "icon": "🔧",
+            "title": "Maßgeschneiderte Extensions",
+            "description": "Angepasste TYPO3-Extensions und Plugins, die speziell für Ihre Geschäftsanforderungen entwickelt wurden."
+          },
+          {
+            "icon": "🔒",
+            "title": "Sicherheit & Compliance",
+            "description": "Enterprise-Grade-Sicherheitsfeatures und Compliance mit Branchenstandards."
+          },
+          {
+            "icon": "📈",
+            "title": "Performance-Optimierung",
+            "description": "Hochperformante TYPO3-Installationen, optimiert für Geschwindigkeit und Skalierbarkeit."
+          }
+        ]
+      },
+      "portfolio": {
+        "title": "Projekte, die wir entwickelt haben",
+        "subtitle": "Über 150+ TYPO3-Projekte erfolgreich geliefert",
+        "description": "Unser Portfolio zeigt die Vielfalt und Qualität unserer TYPO3-Entwicklungsarbeit in verschiedenen Branchen und Enterprise-Anwendungsfällen.",
+        "websites": [
+          "youngeuropeanfilm.com",
+          "e-conext.com",
+          "produkte-beschriften.de",
+          "caredox.de",
+          "massundmoritz.de",
+          "futurewealthgroup.ch",
+          "mx-maint.com",
+          "lensandframe.co",
+          "heliservice.com",
+          "nextcom-art.com",
+          "evilseven.com",
+          "megatec-kunststofftechnik.de",
+          "weitblick.space",
+          "ring-traum.de",
+          "praxis-lebensrhythmus.de",
+          "scholztransporte.de",
+          "hks-jur.de",
+          "mybody-x.com",
+          "alte-feuerwache-re.de",
+          "dejavu-clublounge.at",
+          "concept-duelmen.de",
+          "bernd-ungerer.com",
+          "heroldhandel.de",
+          "quadtouren-burgenland.at",
+          "comiti.co",
+          "scheidungsanwalt-bonelli.at",
+          "junitim.de",
+          "dachdecker-grisse.de",
+          "flexicares.de",
+          "pension-staude.de",
+          "baeckerei-imping.de",
+          "heilpraktiker-beigert.de",
+          "terrassendach-bau.de",
+          "queens-and-gentlemen.com",
+          "tuttocasa.de",
+          "webschutzversicherung.de",
+          "top-faltenunterspritzung.berlin",
+          "pw-ag.de",
+          "mewus-partner.com",
+          "ssss247.com",
+          "onlinewebprojekte.de",
+          "picker-bedachungen.de",
+          "nisma-arsis.org",
+          "miermanns-scheune.de",
+          "nextcom-rz.com",
+          "esb-net.de",
+          "video-kommunikation.at",
+          "koiteiche.com",
+          "kaufingerstrasse.de",
+          "w-innovation.de",
+          "heitmann-stahl.de",
+          "dachdecker-rasokat.de",
+          "tiefenbacher-law.at",
+          "algorhythm.al",
+          "bodan-kosmetik.de",
+          "liska-wp.de"
+        ]
+      },
+      "technologies": {
+        "title": "Was wir verwenden",
+        "subtitle": "Enterprise-Tools und Technologien für TYPO3-Exzellenz",
+        "description": "Wir nutzen die besten TYPO3-Extensions, Frameworks und Entwicklungstools, um leistungsstarke, skalierbare Enterprise-Lösungen zu erstellen, die performen.",
+        "categories": [
+          {
+            "title": "TYPO3 Core & Extensions",
+            "items": ["TYPO3 v12", "TYPO3 v11", "Fluid Templates", "Extbase", "Scheduler", "Workspaces"]
+          },
+          {
+            "title": "Content Management",
+            "items": ["Page Tree", "Content Elements", "File Management", "User Management", "Access Control", "Multi-language"]
+          },
+          {
+            "title": "Performance & SEO",
+            "items": ["Caching", "CDN Integration", "SEO Extensions", "Sitemap", "Meta Tags", "URL Management"]
+          },
+          {
+            "title": "Entwicklung & Backend",
+            "items": ["PHP", "MySQL", "Composer", "Docker", "Git", "TYPO3 API"]
+          }
+        ]
+      },
+      "expectations": {
+        "title": "Was Sie erwarten können",
+        "subtitle": "Professionelle Ergebnisse, die Enterprise-Operationen antreiben",
+        "description": "Wenn Sie mit Code Studio für Ihr TYPO3-Projekt arbeiten, können Sie professionellen Service, Enterprise-Grade-Lösungen und kontinuierlichen Support erwarten.",
+        "benefits": [
+          {
+            "icon": "🏢",
+            "title": "Enterprise-Skalierbarkeit",
+            "description": "TYPO3-Lösungen, die mit dem Wachstum und den Anforderungen Ihrer Organisation skalieren."
+          },
+          {
+            "icon": "🔒",
+            "title": "Erweiterte Sicherheit",
+            "description": "Enterprise-Grade-Sicherheitsfeatures und Compliance mit Branchenstandards."
+          },
+          {
+            "icon": "👥",
+            "title": "Multi-User-Management",
+            "description": "Ausgeklügelte Benutzerrollen und Berechtigungen für große Teams und Workflows."
+          },
+          {
+            "icon": "🌍",
+            "title": "Mehrsprachige Unterstützung",
+            "description": "Integrierte Internationalisierungsfeatures für globale Organisationen."
+          },
+          {
+            "icon": "📊",
+            "title": "Content-Workflow",
+            "description": "Erweiterte Content-Management-Workflows für Enterprise-Publishing."
+          },
+          {
+            "icon": "📞",
+            "title": "Enterprise-Support",
+            "description": "Dedizierter Support und Wartung für mission-kritische Enterprise-Anwendungen."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bereit, Ihre TYPO3-Lösung zu entwickeln?",
+        "subtitle": "Lassen Sie uns gemeinsam etwas Mächtiges schaffen",
+        "description": "Nehmen Sie Kontakt auf, um Ihr TYPO3-Projekt zu besprechen und zu sehen, wie wir Ihre Enterprise-Vision mit professioneller Entwicklung und Design zum Leben erwecken können.",
+        "cta": "Ihr Projekt starten"
+      }
+    },
+    "seoAdwords": {
+      "title": "SEO & Google Ads",
+      "subtitle": "Traffic und Conversions steigern",
+      "description": "Umfassende SEO-Optimierung und Google Ads-Management zur Steigerung Ihrer Online-Sichtbarkeit und Gewinnung qualifizierter Besucher.",
+      "metaTitle": "SEO & Google Ads Dienstleistungen - Code Studio",
+      "metaDescription": "Professionelle SEO-Optimierung und Google Ads-Management zur Steigerung der Online-Sichtbarkeit und Conversions.",
+      "hero": {
+        "title": "Steigern Sie Ihre Online-Sichtbarkeit mit professionellem SEO & Google Ads",
+        "subtitle": "Von organischer Suchoptimierung bis zu bezahlter Werbung — wir generieren qualifizierten Traffic, der sich in Kunden verwandelt",
+        "cta": "Ihre SEO-Kampagne starten",
+        "secondaryCta": "Unsere Ergebnisse ansehen"
+      },
+      "whatWeDo": {
+        "title": "Was wir tun",
+        "subtitle": "Vollständige Digital-Marketing-Dienstleistungen",
+        "description": "Bei Code Studio spezialisieren wir uns auf die Erstellung leistungsstarker SEO- und Google Ads-Kampagnen, die außergewöhnliche Ergebnisse liefern. Von technischer SEO-Optimierung bis hin zu strategischer bezahlter Werbung übernehmen wir jeden Aspekt Ihres Digital Marketings.",
+        "features": [
+          {
+            "icon": "🔍",
+            "title": "SEO-Optimierung",
+            "description": "Umfassende SEO-Strategien zur Verbesserung Ihrer Suchmaschinenrankings und organischen Sichtbarkeit."
+          },
+          {
+            "icon": "📈",
+            "title": "Google Ads-Management",
+            "description": "Strategische Google Ads-Kampagnen, die qualifizierten Traffic generieren und ROI maximieren."
+          },
+          {
+            "icon": "📊",
+            "title": "Analytics & Reporting",
+            "description": "Detaillierte Performance-Verfolgung und Berichterstattung zur Messung des Kampagnenerfolgs."
+          },
+          {
+            "icon": "🎯",
+            "title": "Conversion-Optimierung",
+            "description": "Optimieren Sie Ihre Website und Kampagnen, um mehr Besucher in Kunden zu verwandeln."
+          }
+        ]
+      },
+      "portfolio": {
+        "title": "Kampagnen, die wir verwaltet haben",
+        "subtitle": "Über 150+ erfolgreiche SEO- und Google Ads-Kampagnen",
+        "description": "Unser Portfolio zeigt die Vielfalt und Qualität unserer Digital-Marketing-Arbeit in verschiedenen Branchen und Geschäftstypen.",
+        "websites": [
+          "youngeuropeanfilm.com",
+          "e-conext.com",
+          "produkte-beschriften.de",
+          "caredox.de",
+          "massundmoritz.de",
+          "futurewealthgroup.ch",
+          "mx-maint.com",
+          "lensandframe.co",
+          "heliservice.com",
+          "nextcom-art.com",
+          "evilseven.com",
+          "megatec-kunststofftechnik.de",
+          "weitblick.space",
+          "ring-traum.de",
+          "praxis-lebensrhythmus.de",
+          "scholztransporte.de",
+          "hks-jur.de",
+          "mybody-x.com",
+          "alte-feuerwache-re.de",
+          "dejavu-clublounge.at",
+          "concept-duelmen.de",
+          "bernd-ungerer.com",
+          "heroldhandel.de",
+          "quadtouren-burgenland.at",
+          "comiti.co",
+          "scheidungsanwalt-bonelli.at",
+          "junitim.de",
+          "dachdecker-grisse.de",
+          "flexicares.de",
+          "pension-staude.de",
+          "baeckerei-imping.de",
+          "heilpraktiker-beigert.de",
+          "terrassendach-bau.de",
+          "queens-and-gentlemen.com",
+          "tuttocasa.de",
+          "webschutzversicherung.de",
+          "top-faltenunterspritzung.berlin",
+          "pw-ag.de",
+          "mewus-partner.com",
+          "ssss247.com",
+          "onlinewebprojekte.de",
+          "picker-bedachungen.de",
+          "nisma-arsis.org",
+          "miermanns-scheune.de",
+          "nextcom-rz.com",
+          "esb-net.de",
+          "video-kommunikation.at",
+          "koiteiche.com",
+          "kaufingerstrasse.de",
+          "w-innovation.de",
+          "heitmann-stahl.de",
+          "dachdecker-rasokat.de",
+          "tiefenbacher-law.at",
+          "algorhythm.al",
+          "bodan-kosmetik.de",
+          "liska-wp.de"
+        ]
+      },
+      "technologies": {
+        "title": "Was wir verwenden",
+        "subtitle": "Professionelle Tools und Technologien für Digital-Marketing-Exzellenz",
+        "description": "Wir nutzen die besten SEO- und Werbetools, um leistungsstarke, datengetriebene Kampagnen zu erstellen, die messbare Ergebnisse liefern.",
+        "categories": [
+          {
+            "title": "SEO-Tools & Plattformen",
+            "items": ["Google Search Console", "Google Analytics", "SEMrush", "Ahrefs", "Screaming Frog", "Yoast SEO"]
+          },
+          {
+            "title": "Google Ads & PPC",
+            "items": ["Google Ads", "Google Tag Manager", "Facebook Ads", "LinkedIn Ads", "Bing Ads", "Display Network"]
+          },
+          {
+            "title": "Analytics & Tracking",
+            "items": ["Google Analytics 4", "Google Tag Manager", "Heatmap Tools", "Conversion Tracking", "UTM Parameters", "Goal Tracking"]
+          },
+          {
+            "title": "Content & Technisch",
+            "items": ["Keyword-Recherche", "Content-Optimierung", "Technisches SEO", "Schema Markup", "Core Web Vitals", "Mobile Optimierung"]
+          }
+        ]
+      },
+      "expectations": {
+        "title": "Was Sie erwarten können",
+        "subtitle": "Professionelle Ergebnisse, die Geschäftswachstum fördern",
+        "description": "Wenn Sie mit Code Studio für Ihre SEO- und Google Ads-Kampagnen arbeiten, können Sie professionellen Service, messbare Ergebnisse und kontinuierliche Optimierung erwarten.",
+        "benefits": [
+          {
+            "icon": "📈",
+            "title": "Höhere Suchrankings",
+            "description": "Verbesserte organische Suchsichtbarkeit und höhere Rankings für Ziel-Keywords."
+          },
+          {
+            "icon": "💰",
+            "title": "Erhöhter Traffic",
+            "description": "Mehr qualifizierte Besucher auf Ihrer Website aus organischen und bezahlten Quellen."
+          },
+          {
+            "icon": "🎯",
+            "title": "Bessere Conversions",
+            "description": "Optimierte Kampagnen, die mehr Besucher in Leads und Kunden verwandeln."
+          },
+          {
+            "icon": "📊",
+            "title": "Detaillierte Berichterstattung",
+            "description": "Umfassende Analytics und Berichterstattung zur Verfolgung der Kampagnenperformance."
+          },
+          {
+            "icon": "⚡",
+            "title": "Schnellere Ergebnisse",
+            "description": "Strategische Kampagnen, die schnelle Erfolge und langfristiges Wachstum liefern."
+          },
+          {
+            "icon": "📞",
+            "title": "Kontinuierliche Optimierung",
+            "description": "Kontinuierliche Kampagnenoptimierung und Strategieverfeinerung für maximalen ROI."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Bereit, Ihre Online-Sichtbarkeit zu steigern?",
+        "subtitle": "Lassen Sie uns gemeinsam etwas Mächtiges schaffen",
+        "description": "Nehmen Sie Kontakt auf, um Ihre SEO- und Google Ads-Bedürfnisse zu besprechen und zu sehen, wie wir Ihre Digital-Marketing-Vision mit professionellen Strategien und Umsetzung zum Leben erwecken können.",
+        "cta": "Ihre Kampagne starten"
+      }
+    }
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "partners": "Partner werden",
+    "services": "Leistungen",
+    "contact": "Kontakt"
+  },
+  "caseStudies": {
+    "lensandframe": {
+      "hero": {
+        "title": "Lens & Frame: Premium-Brillen E-Commerce Erfolg",
+        "subtitle": "Aufbau eines erfolgreichen Brillenhändlers in Los Angeles mit maßgeschneiderter Shopify-Entwicklung und erweiterten Integrationen",
+        "cta": "Projektdetails ansehen",
+        "secondaryCta": "Ähnliche Lösung erhalten"
+      },
+      "description": {
+        "title": "Projektübersicht",
+        "subtitle": "Vollständige Shopify E-Commerce-Lösung",
+        "content": "Wir haben eine umfassende E-Commerce-Plattform für Lens & Frame, einen Premium-Brillenhändler in Los Angeles, entwickelt. Das Projekt umfasste maßgeschneiderte Theme-Entwicklung, API-Integrationen, HubSpot-Verbindungen, private Apps und benutzerdefinierte Skripte, um ein nahtloses Einkaufserlebnis für Kunden zu schaffen, die hochwertige Brillen und Fassungen suchen.",
+        "challenges": [
+          "Komplexer Produktkatalog mit mehreren Varianten",
+          "Integration mit mehreren Drittanbieterdiensten",
+          "Benutzerdefinierte Kasse und Zahlungsabwicklung",
+          "Erweiterte Bestandsverwaltung",
+          "Kundenbeziehungsmanagement"
+        ],
+        "solutions": [
+          "Maßgeschneidertes Shopify-Theme mit erweiterten Produktfiltern",
+          "HubSpot CRM-Integration für Lead-Management",
+          "Benutzerdefinierte API-Verbindungen für Bestandssynchronisation",
+          "Private Shopify-Apps für spezialisierte Funktionalität",
+          "Automatisierte Skripte für Bestellabwicklung und Erfüllung"
+        ],
+        "results": [
+          "Deutliche Steigerung der Online-Verkäufe",
+          "Streamlined Bestandsverwaltung",
+          "Verbessertes Kundenerlebnis",
+          "Automatisierte Lead-Generierung und -Pflege",
+          "Erhöhte operative Effizienz"
+        ]
+      }
+    },
+    "econext": {
+      "hero": {
+        "title": "E-Connext: Erweiterte Job-Scraping-System",
+        "subtitle": "Next.js und FastAPI-Lösung für wettbewerbsfähige Jobmarkt-Intelligenz in der Schweiz",
+        "cta": "Projektdetails ansehen",
+        "secondaryCta": "Ähnliche Lösung erhalten"
+      },
+      "description": {
+        "title": "Projektübersicht",
+        "subtitle": "Intelligente Jobmarkt-Intelligenz-Plattform",
+        "content": "Wir entwickelten ein fortschrittliches System mit Next.js und FastAPI, das alle Schweizer Job-Websites durchsucht und Echtzeit-Jobmarkt-Intelligenz liefert. Das System gibt Personalvermittlungsagenturen einen Wettbewerbsvorteil, indem es Stellenangebote liefert, bevor sie allgemein verfügbar werden, mit automatisierten Updates und umfassenden Dashboard-Analysen.",
+        "challenges": [
+          "Scraping mehrerer Job-Websites mit unterschiedlichen Strukturen",
+          "Echtzeit-Datenverarbeitung und -Updates",
+          "Handhabung großer Datenmengen",
+          "Gewährleistung von Datenqualität und -zuverlässigkeit",
+          "Erstellung einer intuitiven Dashboard-Oberfläche"
+        ],
+        "solutions": [
+          "Benutzerdefinierte Web-Scraping-Algorithmen für jede Job-Website",
+          "FastAPI-Backend für hochperformante Datenverarbeitung",
+          "Next.js-Frontend mit Echtzeit-Updates",
+          "Automatisierte Datenvalidierung und -bereinigung",
+          "Erweiterte Filter- und Suchfunktionen"
+        ],
+        "results": [
+          "Schnellere Job-Entdeckung für Personalvermittlungsagenturen",
+          "Wettbewerbsvorteil im Jobmarkt",
+          "Automatisierte Datensammlung und -verarbeitung",
+          "Echtzeit-Dashboard mit Job-Insights",
+          "Verbesserte Rekrutierungseffizienz"
+        ]
+      }
+    },
+    "futurewealth": {
+      "hero": {
+        "title": "Future Wealth Group: KI-Wissensmanagement",
+        "subtitle": "Fortschrittlicher KI-Agent für internes Wissensmanagement und Banking-Ressourcenverwaltung",
+        "cta": "Projektdetails ansehen",
+        "secondaryCta": "Ähnliche Lösung erhalten"
+      },
+      "description": {
+        "title": "Projektübersicht",
+        "subtitle": "KI-gestütztes internes Wissenssystem",
+        "content": "Wir erstellten ein fortschrittliches KI-gestütztes Chat-System für Future Wealth Group, das es allen Mitarbeitern ermöglicht, Wissen zu teilen und auf Unternehmens-Banking-Ressourcen zuzugreifen. Das System integriert sich mit n8n für Workflow-Automatisierung und verwendet Vektordatenbanken für intelligente Wissensabfrage, wodurch eine umfassende interne Wissensmanagement-Plattform entsteht.",
+        "challenges": [
+          "Verwaltung großer Mengen von Banking-Wissen",
+          "Ermöglichung von Wissensaustausch zwischen Teams",
+          "Integration in bestehende Systeme",
+          "Gewährleistung von Datensicherheit und Compliance",
+          "Erstellung einer intuitiven Benutzeroberfläche"
+        ],
+        "solutions": [
+          "KI-gestützte Chat-Oberfläche für Wissensabfragen",
+          "n8n-Integration für automatisierte Workflows",
+          "Vektordatenbank für intelligente Suche",
+          "Sichere Zugriffskontrollen und Berechtigungen",
+          "Echtzeit-Kollaborationsfunktionen"
+        ],
+        "results": [
+          "Verbesserter Wissensaustausch zwischen Teams",
+          "Schnellerer Zugriff auf Banking-Ressourcen",
+          "Erweiterte Zusammenarbeit und Kommunikation",
+          "Automatisierte Workflow-Prozesse",
+          "Bessere Entscheidungsfähigkeiten"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Lassen Sie uns zusammenarbeiten",
+      "subtitle": "Bereit, Ihr nächstes Projekt zu starten? Nehmen Sie Kontakt auf und lassen Sie uns besprechen, wie wir Ihrem Unternehmen beim Wachstum helfen können.",
+      "cta": "Termin vereinbaren",
+      "secondaryCta": "Schneller Kontakt"
+    },
+    "meeting": {
+      "title": "Termin vereinbaren",
+      "subtitle": "Planen Sie eine Beratung, um Ihre Projektanforderungen zu besprechen",
+      "description": "Wählen Sie eine Dienstleistung und wählen Sie eine passende Zeit für Ihre Beratung. Wir besprechen Ihre Anforderungen und erstellen ein detailliertes Angebot.",
+      "form": {
+        "service": "Dienstleistung auswählen",
+        "name": "Ihr Name",
+        "email": "E-Mail-Adresse",
+        "company": "Firmenname",
+        "phone": "Telefonnummer",
+        "date": "Bevorzugtes Datum",
+        "time": "Bevorzugte Uhrzeit",
+        "message": "Projektdetails",
+        "submit": "Termin vereinbaren",
+        "services": [
+          "KI-Agenten & Automatisierung",
+          "Web-Anwendungen",
+          "WordPress-Entwicklung",
+          "Shopify-Entwicklung",
+          "TYPO3-Entwicklung",
+          "SEO & Google Ads"
+        ]
+      }
+    },
+    "quickContact": {
+      "title": "Schnelle Fragen?",
+      "subtitle": "Kontaktieren Sie uns direkt",
+      "description": "Haben Sie eine schnelle Frage oder möchten Sie Ihr Projekt besprechen? Verwenden Sie das untenstehende Formular oder kontaktieren Sie uns direkt.",
+      "form": {
+        "name": "Ihr Name",
+        "email": "E-Mail-Adresse",
+        "subject": "Betreff",
+        "message": "Ihre Nachricht",
+        "submit": "Nachricht senden"
+      },
+      "contactInfo": {
+        "title": "Kontaktinformationen",
+        "address": "Bulevardi Gjergj Fishta, Rruga Nikolla Jorga Ap1 Zyra 3, Tirana, Albanien",
+        "phone": "+355 67 58 52 355",
+        "email": "info@code-studio.eu",
+        "whatsapp": "+355 67 58 52 355",
+        "telegram": "+355 67 58 52 355",
+        "instagram": "https://www.instagram.com/codestudio.eu/",
+        "linkedin": "https://www.linkedin.com/in/rei-aliaj-28a951172/"
+      }
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Code Studio",
+      "description": "Professionelles Webentwicklungsunternehmen mit Sitz in Tirana, Albanien. Bedienung von Partnern weltweit mit hochwertigen Lösungen zu wettbewerbsfähigen Preisen."
+    },
+    "services": {
+      "title": "Unsere Leistungen",
+      "aiAgents": "KI-Agenten & Automatisierungen",
+      "webApps": "Web-Anwendungen",
+      "wordpress": "WordPress-Entwicklung",
+      "shopify": "Shopify-Lösungen",
+      "typo3": "TYPO3-Entwicklung",
+      "seoAdwords": "SEO & Google Ads"
+    },
+    "contact": {
+      "title": "Kontakt aufnehmen",
+      "email": "info@code-studio.eu",
+      "phone": "+355 67 58 52 355",
+      "address": "Bulevardi Gjergj Fishta, Rruga Nikolla Jorga Ap1 Zyra 3, Tirana, Albanien"
+    },
+    "copyright": "© 2025 Code Studio. Alle Rechte vorbehalten."
+  },
+  "locale": {
+    "en": "English",
+    "de": "Deutsch"
+  }
+}
