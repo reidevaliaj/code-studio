@@ -3,6 +3,7 @@
 import {useTranslations} from 'next-intl';
 import Button from './Button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type HeroSectionProps = {
   /** i18n namespace, e.g. "home.hero" or "partners.hero" */
@@ -64,18 +65,24 @@ export default function HeroSection({
         <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-12 items-center w-full">
           {/* Left - Mobile: centered content, Desktop: left aligned */}
           <div className="text-left text-white space-y-4 lg:space-y-8 lg:text-left">
-            <p className="text-sm font-medium uppercase tracking-widest text-white/80 font-sans">
-              {t('subtitle')}
-            </p>
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-[#04ADBD] rounded-full flex-shrink-0"></div>
+              <p className="text-sm font-medium uppercase tracking-widest text-white/80 font-sans">
+                {t('subtitle')}
+              </p>
+            </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight font-heading">
               {t('title')}
             </h1>
 
             <div className="pt-2 lg:pt-4">
-              <Button href={ctaHref} variant="secondary" size="lg">
+              <Link
+                href={ctaHref}
+                className="inline-block px-8 py-4 text-lg font-medium bg-transparent border-2 border-[#04ADBD] text-[#04ADBD] hover:bg-[#04ADBD] hover:text-white transition-all duration-300 rounded-lg uppercase tracking-wide"
+              >
                 {t('cta')}
-              </Button>
+              </Link>
             </div>
           </div>
 

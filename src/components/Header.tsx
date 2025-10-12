@@ -77,7 +77,7 @@ const Header = () => {
                  ].join(' ')}
               >
                 <Image
-                    src={isScrolled ? '/images/logodark.png' : '/images/logowhite.png'}
+                    src={isScrolled ? '/images/logodark.png' : '/images/logowhite2.png'}
                     alt="Code Studio"
                     width={325}
                     height={60}   // adjust to your logo’s intrinsic ratio

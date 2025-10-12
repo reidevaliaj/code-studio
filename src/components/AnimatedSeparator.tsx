@@ -15,7 +15,7 @@ const AnimatedSeparator = () => {
           priority
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-accent-hover/80"></div>
       </div>
 
       {/* Content */}

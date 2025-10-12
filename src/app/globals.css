@@ -61,6 +61,10 @@ footer h3{
 .text-accent-2 {
   color: var(--accent-dark);
 }
+.text-accent-3 {
+  color: var(--accent-2);
+}
+
 
 .bg-accent {
   background-color: var(--accent);

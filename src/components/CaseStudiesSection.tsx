@@ -64,7 +64,7 @@ const CaseStudiesSection = () => {
             >
               {/* Image Placeholder */}
 {/* Case Study Image with overlay gradient and badge */}
-<div className="relative aspect-video bg-gradient-to-br from-blue-900  items-center justify-center text-center to-purple-600 overflow-hidden">
+<div className="relative aspect-video   items-center justify-center text-center bg-accent-hover overflow-hidden">
   {/* Image itself */}
   <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
   <Image
@@ -121,16 +121,7 @@ const CaseStudiesSection = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <Button 
-            href="/contact" 
-            variant="primary" 
-            size="lg"
-          >
-            Start Your Project
-          </Button>
-        </div>
+
       </div>
     </Section>
   );

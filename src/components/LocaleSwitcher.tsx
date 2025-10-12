@@ -50,7 +50,7 @@ const LocaleSwitcher = () => {
 
   // Colors switch: white-on-hero initially, dark-on-white after scroll
   const linkColor = isScrolled ? 'text-slate-900 hover:text-accent-hover' : 'text-white hover:text-accent';
-  const activeColor = isScrolled ? 'text-accent' : 'text-accent';
+  const activeColor = isScrolled ? 'text-accent-3' : 'text-accent-3';
   const separatorColor = isScrolled ? 'text-slate-300' : 'text-white/30';
 
   return (

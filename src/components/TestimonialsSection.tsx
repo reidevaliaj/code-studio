@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             {t('title')}
           </h2>
-          <p className="text-xl text-blue-600 font-semibold">
+          <p className="text-xl section-subtitle font-semibold mb-6">
             {t('subtitle')}
           </p>
         </div>
@@ -103,7 +103,7 @@ const TestimonialsSection = () => {
                           </span>
                         </div>
                         <div className="text-left">
-                          <div className="font-bold text-gray-900 text-lg">
+                          <div className="font-bold section-subtitle text-gray-900 text-lg">
                             {testimonial.name}
                           </div>
                           <div className="text-blue-600 font-medium">

@@ -44,7 +44,7 @@ const PartnersSection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             {t('title')}
           </h2>
-          <p className="text-xl text-blue-600 font-semibold">
+          <p className="text-xl section-subtitle font-semibold">
             {t('subtitle')}
           </p>
         </div>
@@ -64,7 +64,7 @@ const PartnersSection = () => {
                       >
                         {/* Logo Placeholder */}
                         <div className="w-full h-16 flex items-center justify-center">
-                          <div className="w-32 h-12 bg-gradient-to-r from-blue-700 to-blue-400 rounded flex items-center justify-center group-hover:from-blue-100 group-hover:to-purple-100 transition-all duration-300">
+                          <div className="w-32 h-12 bg-accent-hover rounded flex items-center justify-center group-hover:from-blue-100 group-hover:to-purple-100 transition-all duration-300">
                             <span className="text-gray-600 font-semibold text-sm group-hover:text-blue-600 transition-colors p-4">
                               <Image src={partner.logo} alt={partner.name} width={200} height={200} />
                             </span>
