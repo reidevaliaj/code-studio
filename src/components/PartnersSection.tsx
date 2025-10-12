@@ -65,7 +65,7 @@ const PartnersSection = () => {
                         {/* Logo Placeholder */}
                         <div className="w-full h-16 flex items-center justify-center">
                           
-                            <span className="text-gray-600 font-semibold text-sm group-hover:text-blue-600 transition-colors p-4">
+                            <span className="text-gray-600 font-semibold text-sm group-hover:text-blue-600 transition-colors lg:p-4 sm:p-0">
                               <Image src={partner.logo} alt={partner.name} width={200} height={200} />
                             </span>
                          

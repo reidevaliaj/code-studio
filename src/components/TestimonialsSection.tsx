@@ -97,7 +97,7 @@ const TestimonialsSection = () => {
                       {/* Author */}
                       <div className="flex items-center justify-center space-x-4">
                         {/* Avatar Placeholder */}
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                        <div className="w-16 h-16 bg-accent-hover rounded-full flex items-center justify-center">
                           <span className="text-white font-bold text-xl">
                             {testimonial.name.split(' ').map(n => n[0]).join('')}
                           </span>
@@ -119,7 +119,7 @@ const TestimonialsSection = () => {
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex justify-center space-x-2 mt-8">
+          <div className="flex justify-center space-x-2 mt-10">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -134,22 +134,7 @@ const TestimonialsSection = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <button
-            onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50"
-          >
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-50"
-          >
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+
         </div>
       </div>
     </Section>
