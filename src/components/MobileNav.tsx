@@ -54,10 +54,10 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               <div key={link.href}>
                 <button
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`btn-unified btn-unified-sm w-full text-left px-3 py-2 rounded-md text-sm font-normal uppercase tracking-wide transition-colors flex items-center justify-between ${
+                  className={`w-full text-left px-3 py-2 rounded-md text-sm font-normal uppercase tracking-wide transition-colors flex items-center justify-between ${
                     isActive
-                      ? 'text-green-400 bg-green-400/10'
-                      : 'text-white hover:text-green-400 hover:bg-white/5'
+                      ? 'text-accent-2 bg-accent-2/10'
+                      : 'text-white hover:text-accent-2 hover:bg-white/5'
                   }`}
                 >
                   {link.label}
@@ -79,7 +79,7 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
                         key={service.href}
                         href={service.href}
                         onClick={onClose}
-                        className="block px-3 py-2 rounded-md text-sm text-white/80 hover:text-green-400 hover:bg-white/5 transition-colors"
+                        className="block px-3 py-2 rounded-md text-sm text-white/80 hover:text-accent-2 hover:bg-white/5 transition-colors"
                       >
                         {service.label}
                       </Link>
@@ -97,8 +97,8 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               onClick={onClose}
               className={`block px-3 py-2 rounded-md text-sm font-normal uppercase tracking-wide transition-colors ${
                 isActive
-                  ? 'text-green-400 bg-green-400/10'
-                  : 'text-white hover:text-green-400 hover:bg-white/5'
+                  ? 'text-accent-2 bg-accent-2/10'
+                  : 'text-white hover:text-accent-2 hover:bg-white/5'
               }`}
             >
               {link.label}

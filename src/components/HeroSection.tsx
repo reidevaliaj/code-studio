@@ -29,7 +29,7 @@ export default function HeroSection({
   const t = useTranslations(ns);
 
   return (
-    <section className="dark-section relative min-h-screen flex items-center overflow-hidden">
+    <section className="dark-section relative h-screen flex items-center overflow-hidden">
       {/* Background: prefer video if provided, else image */}
       <div className="absolute inset-0 z-0">
   {imageSrc ? (
@@ -60,10 +60,10 @@ export default function HeroSection({
 </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-12 items-center min-h-screen py-20">
-          {/* Left */}
-          <div className="text-left text-white space-y-8">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-12 items-center w-full">
+          {/* Left - Mobile: centered content, Desktop: left aligned */}
+          <div className="text-left text-white space-y-4 lg:space-y-8 lg:text-left">
             <p className="text-sm font-medium uppercase tracking-widest text-white/80 font-sans">
               {t('subtitle')}
             </p>
@@ -72,15 +72,15 @@ export default function HeroSection({
               {t('title')}
             </h1>
 
-            <div className="pt-4">
+            <div className="pt-2 lg:pt-4">
               <Button href={ctaHref} variant="secondary" size="lg">
                 {t('cta')}
               </Button>
             </div>
           </div>
 
-          {/* Right */}
-          <div className="flex justify-center lg:justify-end">
+          {/* Right - Hidden on mobile, visible on desktop */}
+          <div className="hidden lg:flex justify-center lg:justify-end">
             <RotatingRing
               centerImageSrc={centerImageSrc}
               ringText={ringText ?? ' CODE STUDIO • YOUR PARTNER • '}
