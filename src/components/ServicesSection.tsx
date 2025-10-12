@@ -108,15 +108,7 @@ const ServicesSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center">
-          <Button 
-            href={`${localePrefix}/services`} 
-            variant="primary" 
-            size="lg"
-          >
-            View All Services
-          </Button>
-        </div>
+
       </div>
     </Section>
   );

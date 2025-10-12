@@ -96,7 +96,7 @@ function ImageWithIcon({
         {/* Overlapping icon + pill (bottom-left) */}
         <div className="absolute -bottom-1 -left-1 flex items-center gap-3">
           {/* circular icon badge */}
-          <div className="w-16 h-16 rounded-full bg-black text-white flex items-center justify-center  ring-14 ring-gray-50">
+          <div className="w-16 h-16 rounded-full bg-accent-hover text-white flex items-center justify-center  ring-14 ring-gray-50">
             <span className="text-2xl font-bold font-heading">&lt;/&gt;</span>
           </div>
   
