@@ -29,7 +29,7 @@ const WhatsAppButton = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <button
         onClick={handleClick}
-        className="group relative bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        className="group relative btn-unified btn-unified-md rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
         aria-label="Contact us on WhatsApp"
       >
         {/* WhatsApp Icon */}

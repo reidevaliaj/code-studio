@@ -47,7 +47,7 @@ const CaseStudiesSection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             {t('title')}
           </h2>
-          <p className="text-xl text-blue-600 font-semibold mb-6">
+          <p className="text-xl section-subtitle font-semibold mb-6">
             {t('subtitle')}
           </p>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">

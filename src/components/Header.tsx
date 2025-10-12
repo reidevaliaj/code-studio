@@ -81,7 +81,7 @@ const Header = () => {
                     alt="Code Studio"
                     width={325}
                     height={60}   // adjust to your logo’s intrinsic ratio
-                    className="w-[110px] sm:w-[150px] md:w-[150px] lg:w-[325px] h-auto"
+                    className="w-[200px] sm:w-[200px] md:w-[200px] lg:w-[325px] h-auto"
                     priority      // optional: avoids layout shift for header logo
                     />
                                 

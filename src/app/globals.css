@@ -39,7 +39,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-play), sans-serif;
   font-weight: 700;
-  color: var(--accent);
+  color: #04ADBD;
+}
+
+/* Section subtitles */
+.section-subtitle {
+  color: #04334C;
 }
 
 footer h3{
@@ -98,4 +103,54 @@ nav button.text-accent {
 
 nav button:hover {
   color: var(--accent-2);
+}
+
+/* Unified Button Styles */
+.btn-unified {
+  background-color: #04ADBD;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.btn-unified:hover {
+  background-color: #fff;
+  color: #04334C;
+  border-color: #04ADBD;
+}
+
+.btn-unified:focus {
+  outline: none;
+  ring: 2px solid #04ADBD;
+  ring-offset: 2px;
+}
+
+.btn-unified:disabled {
+  opacity: 0.5;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+/* Button sizes */
+.btn-unified-sm {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-unified-md {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+.btn-unified-lg {
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
 }

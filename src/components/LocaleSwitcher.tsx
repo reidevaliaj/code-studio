@@ -71,7 +71,7 @@ const LocaleSwitcher = () => {
       <button
         onClick={() => switchLocale('de')}
         disabled={currentLocale === 'de'}
-        className={`px-2 py-1 text-xs font-normal uppercase tracking-wide transition-colors ${
+        className={` px-2 py-1 text-xs font-normal uppercase tracking-wide transition-colors ${
           currentLocale === 'de'
             ? activeColor + ' cursor-default'
             : linkColor

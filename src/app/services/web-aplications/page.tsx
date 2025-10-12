@@ -18,7 +18,7 @@ function WhatWeDoSection() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
             {t('title')}
           </h2>
-          <p className="text-xl text-accent font-semibold mb-6 font-sans">
+          <p className="text-xl section-subtitle font-semibold mb-6 font-sans">
             {t('subtitle')}
           </p>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-sans">
@@ -54,7 +54,7 @@ function HowItWorksSection() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
             {t('title')}
           </h2>
-          <p className="text-xl text-accent font-semibold mb-6 font-sans">
+          <p className="text-xl section-subtitle font-semibold mb-6 font-sans">
             {t('subtitle')}
           </p>
         </div>
@@ -94,7 +94,7 @@ function TechnologiesSection() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
             {t('title')}
           </h2>
-          <p className="text-xl text-accent font-semibold mb-6 font-sans">
+          <p className="text-xl section-subtitle font-semibold mb-6 font-sans">
             {t('subtitle')}
           </p>
         </div>
@@ -121,7 +121,7 @@ function ResultsSection() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
             {t('title')}
           </h2>
-          <p className="text-xl text-accent font-semibold mb-6 font-sans">
+          <p className="text-xl section-subtitle font-semibold mb-6 font-sans">
             {t('subtitle')}
           </p>
         </div>

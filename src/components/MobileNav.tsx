@@ -54,7 +54,7 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               <div key={link.href}>
                 <button
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`w-full text-left px-3 py-2 rounded-md text-sm font-normal uppercase tracking-wide transition-colors flex items-center justify-between ${
+                  className={`btn-unified btn-unified-sm w-full text-left px-3 py-2 rounded-md text-sm font-normal uppercase tracking-wide transition-colors flex items-center justify-between ${
                     isActive
                       ? 'text-green-400 bg-green-400/10'
                       : 'text-white hover:text-green-400 hover:bg-white/5'
