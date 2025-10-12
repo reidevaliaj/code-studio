@@ -106,7 +106,7 @@ const TestimonialsSection = () => {
                           <div className="font-bold section-subtitle text-gray-900 text-lg">
                             {testimonial.name}
                           </div>
-                          <div className="text-blue-600 font-medium">
+                          <div className="text-grey-900 font-medium">
                             {testimonial.position}
                           </div>
                         </div>

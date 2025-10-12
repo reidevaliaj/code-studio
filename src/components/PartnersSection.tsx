@@ -60,15 +60,15 @@ const PartnersSection = () => {
                     .map((partner, index) => (
                       <div
                         key={`${slideIndex}-${index}`}
-                        className="group flex items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                        className="group flex items-center justify-center p-6  rounded-lg  transition-all duration-300 hover:scale-105"
                       >
                         {/* Logo Placeholder */}
                         <div className="w-full h-16 flex items-center justify-center">
-                          <div className="w-32 h-12 bg-accent-hover rounded flex items-center justify-center group-hover:from-blue-100 group-hover:to-purple-100 transition-all duration-300">
+                          
                             <span className="text-gray-600 font-semibold text-sm group-hover:text-blue-600 transition-colors p-4">
                               <Image src={partner.logo} alt={partner.name} width={200} height={200} />
                             </span>
-                          </div>
+                         
                         </div>
                       </div>
                     ))}
@@ -85,7 +85,7 @@ const PartnersSection = () => {
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? 'bg-blue-600 w-8'
+                    ? 'bg-accent-hover w-8'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
               />
