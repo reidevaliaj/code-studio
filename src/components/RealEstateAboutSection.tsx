@@ -107,7 +107,7 @@ export default function RealEstateAboutSection() {
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-gray-900 mb-2">{t('pricing.title')}</div>
-                  <div className="text-4xl font-bold text-[#04ADBD] mb-2">{t('pricing.amount')}</div>
+                  <div className="text-4xl font-bold text-[#04ADBD] mb-2">$500</div>
                   <div className="text-sm text-gray-600">{t('pricing.description')}</div>
                 </div>
               </div>
