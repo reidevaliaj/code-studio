@@ -1349,6 +1349,195 @@
   "locale": {
     "en": "EN",
     "de": "DE"
+    },
+  "realEstateLanding": {
+    "hero": {
+      "title": "Transform Your Real Estate Business with Professional Web Solutions",
+      "subtitle": "Exclusive Real Estate Services",
+      "cta": "Get Your Free Quote"
+    },
+    "about": {
+      "title": "Why Choose Code Studio for Your Real Estate Business?",
+      "subtitle": "Professional Web Solutions",
+      "description": "We specialize in providing comprehensive web solutions specifically designed for real estate companies. From AI-powered automation to stunning website redesigns, we help real estate agencies streamline their operations and attract more clients with professional, cost-effective solutions from Albania.",
+      "benefits": {
+        "competitivePricing": {
+          "title": "Competitive Pricing",
+          "description": "Save up to 60% compared to Western European agencies while maintaining professional quality standards."
+        },
+        "professionalWork": {
+          "title": "Professional Quality",
+          "description": "5+ years of experience with 200+ completed projects and 98% client satisfaction rate."
+        },
+        "comprehensiveServices": {
+          "title": "Comprehensive Services",
+          "description": "From AI automation to website development, SEO, and maintenance - we cover all your digital needs."
+        }
+      },
+      "stats": {
+        "title": "Our Track Record",
+        "subtitle": "Proven results for real estate companies",
+        "projects": "Projects Completed",
+        "clients": "Happy Clients",
+        "years": "Years Experience",
+        "satisfaction": "Client Satisfaction"
+      },
+      "pricing": {
+        "title": "Starting From",
+        "amount": "€2,500",
+        "description": "Complete website redesign with modern features"
+      },
+      "cta": "View Our Services"
+    },
+    "services": {
+      "title": "Complete Digital Solutions for Real Estate",
+      "subtitle": "Our Services",
+      "description": "We offer comprehensive digital solutions specifically tailored for real estate companies. From AI automation to website development and SEO, we help you stay ahead of the competition.",
+      "services": {
+        "aiAgents": {
+          "title": "AI Agents & Automations",
+          "description": "Streamline your real estate operations with intelligent AI agents that handle lead management, customer inquiries, and automated workflows.",
+          "features": {
+            "leadManagement": "Automated lead qualification and follow-up",
+            "automation": "Property listing automation",
+            "customerSupport": "24/7 AI customer support",
+            "dataAnalysis": "Market analysis and insights"
+          }
+        },
+        "websiteRedesign": {
+          "title": "Website Redesign",
+          "description": "Transform your online presence with modern, mobile-responsive designs that showcase your properties and attract more clients.",
+          "features": {
+            "modernDesign": "Modern, professional design",
+            "mobileOptimization": "Mobile-first responsive design",
+            "userExperience": "Enhanced user experience",
+            "brandAlignment": "Brand-consistent design"
+          }
+        },
+        "websiteDevelopment": {
+          "title": "Website Development",
+          "description": "Custom web development solutions including property management systems, search functionality, and CRM integrations.",
+          "features": {
+            "customDevelopment": "Custom property management systems",
+            "cmsIntegration": "Easy-to-use content management",
+            "propertyListings": "Advanced property listing features",
+            "searchFunctionality": "Powerful search and filtering"
+          }
+        },
+        "websiteMaintenance": {
+          "title": "Website Maintenance",
+          "description": "Keep your website running smoothly with regular updates, security monitoring, and technical support.",
+          "features": {
+            "regularUpdates": "Regular content and security updates",
+            "securityMonitoring": "24/7 security monitoring",
+            "performanceOptimization": "Performance optimization",
+            "technicalSupport": "Dedicated technical support"
+          }
+        },
+        "seoAdwords": {
+          "title": "SEO & Google Ads",
+          "description": "Boost your online visibility with professional SEO optimization and strategic Google Ads campaigns.",
+          "features": {
+            "seoOptimization": "Local SEO optimization",
+            "googleAds": "Strategic Google Ads campaigns",
+            "localSeo": "Local real estate SEO",
+            "analytics": "Performance tracking and analytics"
+          }
+        }
+      },
+      "cta": "Get Started Today"
+    },
+    "designExamples": {
+      "title": "Design Examples",
+      "subtitle": "See What's Possible",
+      "description": "Explore our portfolio of real estate website designs. Click on any example to see the live demo and discover the possibilities for your business.",
+      "bottomText": "Ready to create something amazing for your real estate business?",
+      "cta": "Start Your Project"
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Code Studio?",
+      "subtitle": "Your Trusted Partner",
+      "description": "We understand the unique challenges of the real estate industry and provide solutions that help you succeed in a competitive market.",
+      "reasons": {
+        "competitivePricing": {
+          "title": "Competitive Pricing",
+          "description": "Benefit from Albania's favorable business environment with costs up to 60% lower than Western Europe while maintaining professional quality standards."
+        },
+        "provenExperience": {
+          "title": "Proven Experience",
+          "description": "Over 5 years of experience with 200+ completed projects and 98% client satisfaction rate. We know how to deliver results for real estate companies."
+        },
+        "modernTechnology": {
+          "title": "Modern Technology",
+          "description": "We use the latest technologies and frameworks including React, Next.js, WordPress, Shopify, and AI automation tools specifically for real estate."
+        },
+        "dedicatedSupport": {
+          "title": "Dedicated Support",
+          "description": "Direct communication with project managers and dedicated support to ensure your real estate website performs optimally."
+        },
+        "internationalExperience": {
+          "title": "International Experience",
+          "description": "Serving real estate companies across Germany, Switzerland, and the USA with deep understanding of international markets."
+        },
+        "resultsDriven": {
+          "title": "Results-Driven Approach",
+          "description": "We focus on delivering measurable results that help your real estate business grow and succeed in the digital marketplace."
+        }
+      },
+      "testimonial": {
+        "quote": "Code Studio transformed our real estate business with their professional web solutions. The AI automation alone has saved us 20 hours per week, and our new website has increased our lead generation by 150%.",
+        "author": {
+          "name": "Sarah Johnson",
+          "position": "CEO, Premium Real Estate Group",
+          "initials": "SJ"
+        }
+      }
+    },
+    "contact": {
+      "title": "Ready to Transform Your Real Estate Business?",
+      "subtitle": "Get In Touch",
+      "description": "Let's discuss how we can help your real estate company succeed with professional web solutions. Get in touch today for a free consultation and quote.",
+      "contactMethods": {
+        "email": {
+          "title": "Email Us",
+          "description": "Send us your project details and we'll respond within 24 hours."
+        },
+        "phone": {
+          "title": "Call Us",
+          "description": "Speak directly with our team for immediate assistance."
+        },
+        "location": {
+          "title": "Visit Us",
+          "description": "Our office is located in Tirana, Albania.",
+          "address": "Bulevardi Gjergj Fishta, Rruga Nikolla Jorga Ap1 Zyra 3, Tirana, Albania"
+        }
+      },
+      "cta": {
+        "primary": "Get Free Quote",
+        "whatsapp": "WhatsApp Us"
+      },
+      "form": {
+        "title": "Quick Contact Form",
+        "subtitle": "Tell us about your project",
+        "fields": {
+          "name": "Full Name",
+          "email": "Email Address",
+          "company": "Company Name",
+          "service": "Service Needed",
+          "servicePlaceholder": "Select a service",
+          "services": {
+            "aiAgents": "AI Agents & Automations",
+            "websiteRedesign": "Website Redesign",
+            "websiteDevelopment": "Website Development",
+            "websiteMaintenance": "Website Maintenance",
+            "seoAdwords": "SEO & Google Ads"
+          },
+          "message": "Project Details",
+          "messagePlaceholder": "Tell us about your real estate business and what you're looking to achieve..."
+        },
+        "submit": "Send Message"
+      }
     }
+  }
   }
   

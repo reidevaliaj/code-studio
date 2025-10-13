@@ -1348,5 +1348,194 @@
   "locale": {
     "en": "EN",
     "de": "DE"
+  },
+  "realEstateLanding": {
+    "hero": {
+      "title": "Transformieren Sie Ihr Immobilienunternehmen mit professionellen Web-Lösungen",
+      "subtitle": "Exklusive Immobiliendienstleistungen",
+      "cta": "Kostenloses Angebot erhalten"
+    },
+    "about": {
+      "title": "Warum Code Studio für Ihr Immobilienunternehmen wählen?",
+      "subtitle": "Professionelle Web-Lösungen",
+      "description": "Wir spezialisieren uns auf die Bereitstellung umfassender Web-Lösungen, die speziell für Immobilienunternehmen entwickelt wurden. Von KI-gestützter Automatisierung bis hin zu beeindruckenden Website-Redesigns helfen wir Immobilienagenturen dabei, ihre Abläufe zu optimieren und mehr Kunden mit professionellen, kosteneffektiven Lösungen aus Albanien zu gewinnen.",
+      "benefits": {
+        "competitivePricing": {
+          "title": "Wettbewerbsfähige Preise",
+          "description": "Sparen Sie bis zu 60% im Vergleich zu westeuropäischen Agenturen bei gleichbleibenden professionellen Qualitätsstandards."
+        },
+        "professionalWork": {
+          "title": "Professionelle Qualität",
+          "description": "5+ Jahre Erfahrung mit 200+ abgeschlossenen Projekten und 98% Kundenzufriedenheit."
+        },
+        "comprehensiveServices": {
+          "title": "Umfassende Dienstleistungen",
+          "description": "Von KI-Automatisierung bis Website-Entwicklung, SEO und Wartung - wir decken alle Ihre digitalen Bedürfnisse ab."
+        }
+      },
+      "stats": {
+        "title": "Unsere Erfolgsbilanz",
+        "subtitle": "Bewährte Ergebnisse für Immobilienunternehmen",
+        "projects": "Abgeschlossene Projekte",
+        "clients": "Zufriedene Kunden",
+        "years": "Jahre Erfahrung",
+        "satisfaction": "Kundenzufriedenheit"
+      },
+      "pricing": {
+        "title": "Ab",
+        "amount": "€2.500",
+        "description": "Komplettes Website-Redesign mit modernen Features"
+      },
+      "cta": "Unsere Dienstleistungen ansehen"
+    },
+    "services": {
+      "title": "Vollständige digitale Lösungen für Immobilien",
+      "subtitle": "Unsere Dienstleistungen",
+      "description": "Wir bieten umfassende digitale Lösungen, die speziell für Immobilienunternehmen entwickelt wurden. Von KI-Automatisierung bis Website-Entwicklung und SEO helfen wir Ihnen, der Konkurrenz voraus zu bleiben.",
+      "services": {
+        "aiAgents": {
+          "title": "KI-Agenten & Automatisierung",
+          "description": "Optimieren Sie Ihre Immobilienabläufe mit intelligenten KI-Agenten, die Lead-Management, Kundenanfragen und automatisierte Workflows handhaben.",
+          "features": {
+            "leadManagement": "Automatisierte Lead-Qualifizierung und Nachverfolgung",
+            "automation": "Automatisierung von Immobilieninseraten",
+            "customerSupport": "24/7 KI-Kundensupport",
+            "dataAnalysis": "Marktanalyse und Einblicke"
+          }
+        },
+        "websiteRedesign": {
+          "title": "Website-Redesign",
+          "description": "Verwandeln Sie Ihre Online-Präsenz mit modernen, mobilen Designs, die Ihre Immobilien präsentieren und mehr Kunden anziehen.",
+          "features": {
+            "modernDesign": "Modernes, professionelles Design",
+            "mobileOptimization": "Mobile-First responsive Design",
+            "userExperience": "Verbesserte Benutzererfahrung",
+            "brandAlignment": "Markenkonformes Design"
+          }
+        },
+        "websiteDevelopment": {
+          "title": "Website-Entwicklung",
+          "description": "Maßgeschneiderte Web-Entwicklungslösungen einschließlich Immobilienverwaltungssysteme, Suchfunktionalität und CRM-Integrationen.",
+          "features": {
+            "customDevelopment": "Maßgeschneiderte Immobilienverwaltungssysteme",
+            "cmsIntegration": "Benutzerfreundliches Content-Management",
+            "propertyListings": "Erweiterte Immobilieninserat-Features",
+            "searchFunctionality": "Leistungsstarke Suche und Filterung"
+          }
+        },
+        "websiteMaintenance": {
+          "title": "Website-Wartung",
+          "description": "Halten Sie Ihre Website reibungslos mit regelmäßigen Updates, Sicherheitsüberwachung und technischem Support.",
+          "features": {
+            "regularUpdates": "Regelmäßige Content- und Sicherheitsupdates",
+            "securityMonitoring": "24/7 Sicherheitsüberwachung",
+            "performanceOptimization": "Performance-Optimierung",
+            "technicalSupport": "Dedizierter technischer Support"
+          }
+        },
+        "seoAdwords": {
+          "title": "SEO & Google Ads",
+          "description": "Steigern Sie Ihre Online-Sichtbarkeit mit professioneller SEO-Optimierung und strategischen Google Ads-Kampagnen.",
+          "features": {
+            "seoOptimization": "Lokale SEO-Optimierung",
+            "googleAds": "Strategische Google Ads-Kampagnen",
+            "localSeo": "Lokale Immobilien-SEO",
+            "analytics": "Performance-Tracking und Analytics"
+          }
+        }
+      },
+      "cta": "Heute starten"
+    },
+    "designExamples": {
+      "title": "Design-Beispiele",
+      "subtitle": "Sehen Sie, was möglich ist",
+      "description": "Entdecken Sie unser Portfolio von Immobilien-Website-Designs. Klicken Sie auf ein Beispiel, um die Live-Demo zu sehen und die Möglichkeiten für Ihr Unternehmen zu entdecken.",
+      "bottomText": "Bereit, etwas Großartiges für Ihr Immobilienunternehmen zu schaffen?",
+      "cta": "Ihr Projekt starten"
+    },
+    "whyChooseUs": {
+      "title": "Warum Code Studio wählen?",
+      "subtitle": "Ihr vertrauensvoller Partner",
+      "description": "Wir verstehen die einzigartigen Herausforderungen der Immobilienbranche und bieten Lösungen, die Ihnen helfen, in einem wettbewerbsintensiven Markt erfolgreich zu sein.",
+      "reasons": {
+        "competitivePricing": {
+          "title": "Wettbewerbsfähige Preise",
+          "description": "Profitieren Sie von Albaniens günstigem Geschäftsumfeld mit Kosten bis zu 60% niedriger als in Westeuropa bei gleichbleibenden professionellen Qualitätsstandards."
+        },
+        "provenExperience": {
+          "title": "Bewährte Erfahrung",
+          "description": "Über 5 Jahre Erfahrung mit 200+ abgeschlossenen Projekten und 98% Kundenzufriedenheit. Wir wissen, wie man Ergebnisse für Immobilienunternehmen liefert."
+        },
+        "modernTechnology": {
+          "title": "Moderne Technologie",
+          "description": "Wir verwenden die neuesten Technologien und Frameworks einschließlich React, Next.js, WordPress, Shopify und KI-Automatisierungstools speziell für Immobilien."
+        },
+        "dedicatedSupport": {
+          "title": "Dedizierter Support",
+          "description": "Direkte Kommunikation mit Projektmanagern und dedizierter Support, um sicherzustellen, dass Ihre Immobilien-Website optimal funktioniert."
+        },
+        "internationalExperience": {
+          "title": "Internationale Erfahrung",
+          "description": "Bedienung von Immobilienunternehmen in Deutschland, der Schweiz und den USA mit tiefem Verständnis für internationale Märkte."
+        },
+        "resultsDriven": {
+          "title": "Ergebnisorientierter Ansatz",
+          "description": "Wir konzentrieren uns darauf, messbare Ergebnisse zu liefern, die Ihrem Immobilienunternehmen helfen, zu wachsen und im digitalen Marktplatz erfolgreich zu sein."
+        }
+      },
+      "testimonial": {
+        "quote": "Code Studio hat unser Immobilienunternehmen mit ihren professionellen Web-Lösungen transformiert. Die KI-Automatisierung allein hat uns 20 Stunden pro Woche gespart, und unsere neue Website hat unsere Lead-Generierung um 150% gesteigert.",
+        "author": {
+          "name": "Sarah Johnson",
+          "position": "CEO, Premium Real Estate Group",
+          "initials": "SJ"
+        }
+      }
+    },
+    "contact": {
+      "title": "Bereit, Ihr Immobilienunternehmen zu transformieren?",
+      "subtitle": "Kontakt aufnehmen",
+      "description": "Lassen Sie uns besprechen, wie wir Ihrem Immobilienunternehmen mit professionellen Web-Lösungen zum Erfolg verhelfen können. Nehmen Sie noch heute Kontakt auf für eine kostenlose Beratung und ein Angebot.",
+      "contactMethods": {
+        "email": {
+          "title": "E-Mail senden",
+          "description": "Senden Sie uns Ihre Projektdetails und wir antworten innerhalb von 24 Stunden."
+        },
+        "phone": {
+          "title": "Anrufen",
+          "description": "Sprechen Sie direkt mit unserem Team für sofortige Unterstützung."
+        },
+        "location": {
+          "title": "Besuchen Sie uns",
+          "description": "Unser Büro befindet sich in Tirana, Albanien.",
+          "address": "Bulevardi Gjergj Fishta, Rruga Nikolla Jorga Ap1 Zyra 3, Tirana, Albanien"
+        }
+      },
+      "cta": {
+        "primary": "Kostenloses Angebot erhalten",
+        "whatsapp": "WhatsApp uns"
+      },
+      "form": {
+        "title": "Schnelles Kontaktformular",
+        "subtitle": "Erzählen Sie uns von Ihrem Projekt",
+        "fields": {
+          "name": "Vollständiger Name",
+          "email": "E-Mail-Adresse",
+          "company": "Firmenname",
+          "service": "Benötigte Dienstleistung",
+          "servicePlaceholder": "Dienstleistung auswählen",
+          "services": {
+            "aiAgents": "KI-Agenten & Automatisierung",
+            "websiteRedesign": "Website-Redesign",
+            "websiteDevelopment": "Website-Entwicklung",
+            "websiteMaintenance": "Website-Wartung",
+            "seoAdwords": "SEO & Google Ads"
+          },
+          "message": "Projektdetails",
+          "messagePlaceholder": "Erzählen Sie uns von Ihrem Immobilienunternehmen und was Sie erreichen möchten..."
+        },
+        "submit": "Nachricht senden"
+      }
+    }
   }
 }

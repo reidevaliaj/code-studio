@@ -64,6 +64,10 @@ footer h3{
 .text-accent-3 {
   color: var(--accent-2);
 }
+.text-accent-4 {
+  color: var(--accent-hover);
+}
+
 
 
 .bg-accent {
