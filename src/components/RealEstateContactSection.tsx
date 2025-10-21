@@ -3,9 +3,63 @@
 import { useTranslations } from 'next-intl';
 import Section from './Section';
 import Button from './Button';
+import { useState } from 'react';
 
 export default function RealEstateContactSection() {
   const t = useTranslations('realEstateLanding.contact');
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/real-estate-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   return (
     <Section id="contact" className="py-20 bg-white">
@@ -96,7 +150,7 @@ export default function RealEstateContactSection() {
                 <p className="text-gray-600">{t('form.subtitle')}</p>
               </div>
 
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -106,6 +160,8 @@ export default function RealEstateContactSection() {
                       type="text"
                       id="name"
                       name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#04ADBD] focus:border-transparent transition-colors duration-200"
                     />
@@ -118,6 +174,8 @@ export default function RealEstateContactSection() {
                       type="email"
                       id="email"
                       name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#04ADBD] focus:border-transparent transition-colors duration-200"
                     />
@@ -132,6 +190,8 @@ export default function RealEstateContactSection() {
                     type="text"
                     id="company"
                     name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#04ADBD] focus:border-transparent transition-colors duration-200"
                   />
                 </div>
@@ -143,6 +203,8 @@ export default function RealEstateContactSection() {
                   <select
                     id="service"
                     name="service"
+                    value={formData.service}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#04ADBD] focus:border-transparent transition-colors duration-200"
                   >
                     <option value="">{t('form.fields.servicePlaceholder')}</option>
@@ -162,16 +224,32 @@ export default function RealEstateContactSection() {
                     id="message"
                     name="message"
                     rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#04ADBD] focus:border-transparent transition-colors duration-200"
                     placeholder={t('form.fields.messagePlaceholder')}
                   ></textarea>
                 </div>
 
+                {/* Status Messages */}
+                {submitStatus === 'success' && (
+                  <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                    Message sent successfully! We'll get back to you soon.
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                    Failed to send message. Please try again or contact us directly.
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-[#04ADBD] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#04ADBD]/90 transition-colors duration-200"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#04ADBD] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#04ADBD]/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {t('form.submit')}
+                  {isSubmitting ? 'Sending...' : t('form.submit')}
                 </button>
               </form>
             </div>
