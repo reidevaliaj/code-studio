@@ -1,3 +1,5 @@
+'use client';
+
 import HeroSection from '../../../components/HeroSection';
 import ProblemSection from './ProblemSection';
 import SolutionSection from './SolutionSection';
