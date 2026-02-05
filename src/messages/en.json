@@ -1637,16 +1637,17 @@
     },
     "about": {
       "title": "About Code Studio",
-      "description": "Code Studio is a European web development agency helping businesses improve their online presence for over 7 years.",
-      "focus": "We focus on building websites that are fast, stable, and easy to manage.",
-      "clients": "Our clients are based across Europe and the United States.",
+      "subtitle": "Your Trusted Development Partner",
+      "description": "Code Studio is an international web development agency with its main operating office in Albania. For over 7 years, we have helped businesses across Europe and the United States improve their online presence.",
+      "pricing": "Operating from Albania allows us to keep development costs lower while maintaining high European quality standards — giving our clients strong results with efficient pricing.",
+      "focus": "We specialize in building websites that are fast, reliable, and easy to manage long-term.",
       "founder": {
         "name": "Rei Aliaj",
         "title": "Founder"
       }
     },
     "cta": {
-      "title": "Check If Your Website Can Be Rebuilt",
+      "title": "Check what we can do for your website",
       "description": "Send us your website and we will review if this rebuild solution fits your business.",
       "form": {
         "websiteUrl": "Website URL",
