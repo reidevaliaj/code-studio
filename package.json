@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/nodemailer": "^7.0.2",
-    "next": "15.5.4",
+    "next": "15.5.9",
     "next-intl": "^4.3.9",
     "nodemailer": "^7.0.9",
     "react": "19.1.0",
@@ -24,7 +24,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.5.4",
+    "eslint-config-next": "15.5.9",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
