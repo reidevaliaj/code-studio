@@ -1540,11 +1540,11 @@
   },
   "websiteRebuild": {
     "metaTitle": "Website-Rebuild-Service - Schneller, SEO-stärker, einfacher zu verwalten",
-    "metaDescription": "Wir bauen Ihre aktuelle Website mit neuer Technologie neu auf, die sie schneller lädt, besser bei Google rankt und einfacher zu verwalten ist — während Ihr bestehendes Layout und Ihre Inhalte erhalten bleiben.",
+    "metaDescription": "Wir bauen Ihre Website mit moderner Webtechnologie neu auf, die Geschwindigkeit, SEO-Performance und Content-Management verbessert — während wir Ihr aktuelles Design beibehalten oder es neu gestalten, wenn Sie möchten.",
     "hero": {
-      "title": "Erstellen Sie eine schnellere, SEO-stärkere, einfacher zu verwaltende Website — ohne Ihr Design zu ändern",
+      "title": "Machen Sie Ihre Website schneller, einfacher zu verwalten und bereit für 2026",
       "subtitle": "Website-Rebuild-Service",
-      "description": "Wir bauen Ihre aktuelle Website mit neuer Technologie neu auf, die sie schneller lädt, besser bei Google rankt und einfacher zu verwalten ist — während Ihr bestehendes Layout und Ihre Inhalte erhalten bleiben.",
+      "description": "Wir bauen Ihre Website mit moderner Webtechnologie neu auf, die Geschwindigkeit, SEO-Performance und Content-Management verbessert — während wir Ihr aktuelles Design beibehalten oder es neu gestalten, wenn Sie möchten.",
       "trustHighlights": {
         "speed": "Schnellere Seitenladezeiten",
         "seo": "Bessere SEO-Performance",
@@ -1553,35 +1553,30 @@
       },
       "cta": "So funktioniert es"
     },
-    "problem": {
-      "title": "Viele Unternehmenswebsites sehen gut aus — verursachen aber tägliche Frustration",
-      "description": "Die meisten Unternehmenswebsites von heute basieren auf veralteten Systemen. Mit der Zeit werden sie langsamer, schwieriger zu aktualisieren und teurer zu warten.",
-      "intro": "Das könnte Ihnen bekannt vorkommen:",
-      "issues": [
-        "Website lädt langsam",
-        "Google-Rankings verbessern sich nicht",
-        "Updates erfordern Entwickler",
-        "Plugins brechen oder benötigen ständige Updates",
-        "Kleine Inhaltsänderungen dauern zu lange"
+    "modernTech": {
+      "title": "Gebaut mit moderner Webtechnologie",
+      "description": "Wir entwickeln Websites mit modernen Entwicklungstools, die auf Geschwindigkeit, Stabilität und Flexibilität ausgelegt sind.",
+      "intro": "Unser Technologie-Stack umfasst:",
+      "technologies": [
+        "Next.js und Vite für extrem schnelle Benutzererfahrung",
+        "FastAPI und Python für zuverlässige Backend-Systeme",
+        "Sanity und Headless-CMS-Lösungen für einfaches und flexibles Content-Management"
       ],
-      "conclusion": "Ihre Website sollte Ihrem Unternehmen beim Wachstum helfen — nicht es verlangsamen."
+      "conclusion": "Dies ermöglicht es Ihrer Website, schnell, sicher und einfach zu aktualisieren zu bleiben, ohne von Plugins oder veralteten Systemen abhängig zu sein."
     },
-    "solution": {
-      "title": "Wir bauen Ihre Website mit neuer Technologie neu auf",
-      "description": "Wir nehmen Ihr bestehendes Website-Design und bauen es mit modernen Webentwicklungstools neu auf.",
-      "points": [
-        "Ihr Design bleibt gleich.",
-        "Ihre Inhalte bleiben gleich.",
-        "Nur die Technologie ändert sich."
-      ],
-      "result": "Das Ergebnis ist eine Website, die:",
+    "whyMoveAway": {
+      "title": "Warum viele Unternehmenswebsites sich von traditionellen CMS-Systemen entfernen",
+      "description": "Content-Management-Systeme wie WordPress, TYPO3, Shopify und ähnliche Plattformen haben Unternehmen viele Jahre lang beim Aufbau von Websites geholfen.",
+      "intro": "Die Webtechnologie hat sich jedoch erheblich verändert.",
+      "modernBenefits": "Moderne Websites werden heute mit schnelleren und flexibleren Entwicklungsframeworks erstellt, die:",
       "benefits": [
-        "Viel schneller ist",
-        "Besser für Suchmaschinen optimiert ist",
-        "Langfristig einfacher zu warten ist",
-        "Einfach für Ihr Team zu aktualisieren ist"
+        "Seiten deutlich schneller laden",
+        "Google-Performance und SEO-Struktur verbessern",
+        "Wartungsaufwand durch Plugins und Updates reduzieren",
+        "Einfacheres und sichereres Content-Management ermöglichen",
+        "Besser skalieren, wenn Unternehmen wachsen"
       ],
-      "conclusion": "Sie behalten die Website, die Ihre Kunden bereits kennen — aber mit deutlich besserer Performance."
+      "conclusion": "Traditionelle CMS-Plattformen funktionieren noch, erfordern aber oft ständige Updates, Plugin-Wartung und Entwicklerunterstützung für einfache Änderungen. Viele Unternehmen bewegen sich nun hin zu modernen Entwicklungsstacks, die bessere Performance und langfristige Stabilität bieten."
     },
     "benefits": {
       "title": "Was Sie vom Rebuild erhalten",

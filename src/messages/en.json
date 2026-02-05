@@ -1541,11 +1541,11 @@
   },
   "websiteRebuild": {
     "metaTitle": "Website Rebuild Service - Faster, SEO-Stronger, Easier to Manage",
-    "metaDescription": "We rebuild your current website using new technology that makes it load faster, rank better on Google, and become easier to manage — while keeping your existing layout and content.",
+    "metaDescription": "We rebuild your website using modern web technology that improves speed, SEO performance, and content management — while keeping your current design or redesigning it if you want.",
     "hero": {
-      "title": "Build a Faster, SEO-Stronger, Easier-to-Manage Website — Without Changing Your Design",
+      "title": "Make Your Website Faster, Easier to Manage, and Ready for 2026",
       "subtitle": "Website Rebuild Service",
-      "description": "We rebuild your current website using new technology that makes it load faster, rank better on Google, and become easier to manage — while keeping your existing layout and content.",
+      "description": "We rebuild your website using modern web technology that improves speed, SEO performance, and content management — while keeping your current design or redesigning it if you want.",
       "trustHighlights": {
         "speed": "Faster page speed",
         "seo": "Better SEO performance",
@@ -1554,35 +1554,30 @@
       },
       "cta": "See How This Works"
     },
-    "problem": {
-      "title": "Many Business Websites Look Good — But Cause Daily Frustration",
-      "description": "Most company websites today depend on outdated systems. Over time they become slower, harder to update, and more expensive to maintain.",
-      "intro": "You might recognize this:",
-      "issues": [
-        "Website loads slowly",
-        "Google rankings don't improve",
-        "Updates require developers",
-        "Plugins break or need constant updates",
-        "Small content changes take too long"
+    "modernTech": {
+      "title": "Built With Modern Web Technology",
+      "description": "We build websites using modern development tools designed for speed, stability, and flexibility.",
+      "intro": "Our technology stack includes:",
+      "technologies": [
+        "Next.js and Vite for extremely fast user experience",
+        "FastAPI and Python for reliable backend systems",
+        "Sanity and Headless CMS solutions for simple and flexible content management"
       ],
-      "conclusion": "Your website should help your business grow — not slow it down."
+      "conclusion": "This allows your website to stay fast, secure, and easy to update without depending on plugins or outdated systems."
     },
-    "solution": {
-      "title": "We Rebuild Your Website Using New Technology",
-      "description": "We take your existing website design and rebuild it using modern web development tools.",
-      "points": [
-        "Your design stays the same.",
-        "Your content stays the same.",
-        "Only the technology changes."
-      ],
-      "result": "The result is a website that is:",
+    "whyMoveAway": {
+      "title": "Why Many Business Websites Are Moving Away From Traditional CMS Systems",
+      "description": "Content management systems like WordPress, TYPO3, Shopify, and similar platforms helped businesses build websites for many years.",
+      "intro": "However, web technology has changed significantly.",
+      "modernBenefits": "Modern websites today are built using faster and more flexible development frameworks that:",
       "benefits": [
-        "Much faster",
-        "Better optimized for search engines",
-        "Easier to maintain long-term",
-        "Simple for your team to update"
+        "Load pages significantly faster",
+        "Improve Google performance and SEO structure",
+        "Reduce maintenance caused by plugins and updates",
+        "Allow easier and safer content management",
+        "Scale better as businesses grow"
       ],
-      "conclusion": "You keep the website your clients already know — but with far better performance."
+      "conclusion": "Traditional CMS platforms still work, but they often require constant updates, plugin maintenance, and developer support for simple changes. Many companies are now moving toward modern development stacks that offer better performance and long-term stability."
     },
     "benefits": {
       "title": "What You Gain From The Rebuild",

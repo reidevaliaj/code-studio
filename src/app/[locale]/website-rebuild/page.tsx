@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import HeroSection from '../../../components/HeroSection';
-import ProblemSection from './ProblemSection';
-import SolutionSection from './SolutionSection';
+import ModernTechSection from './ModernTechSection';
+import WhyMoveAwaySection from './WhyMoveAwaySection';
 import BenefitsSection from './BenefitsSection';
 import ProcessSection from './ProcessSection';
 import PricingSection from './PricingSection';
@@ -10,11 +10,11 @@ import CTASection from './CTASection';
 
 export const metadata: Metadata = {
   title: 'Website Rebuild Service - Faster, SEO-Stronger, Easier to Manage',
-  description: 'We rebuild your current website using new technology that makes it load faster, rank better on Google, and become easier to manage — while keeping your existing layout and content.',
+  description: 'We rebuild your website using modern web technology that improves speed, SEO performance, and content management — while keeping your current design or redesigning it if you want.',
   keywords: 'website rebuild, website migration, faster website, SEO optimization, website performance',
   openGraph: {
     title: 'Website Rebuild Service - Faster, SEO-Stronger, Easier to Manage',
-    description: 'We rebuild your current website using new technology that makes it load faster, rank better on Google, and become easier to manage — while keeping your existing layout and content.',
+    description: 'We rebuild your website using modern web technology that improves speed, SEO performance, and content management — while keeping your current design or redesigning it if you want.',
     type: 'website',
   },
 };
@@ -27,8 +27,8 @@ export default function WebsiteRebuildPage() {
         imageSrc="/images/webaplication.jpg"
         ctaHref="#cta-section"
       />
-      <ProblemSection />
-      <SolutionSection />
+      <ModernTechSection />
+      <WhyMoveAwaySection />
       <BenefitsSection />
       <ProcessSection />
       <PricingSection />
