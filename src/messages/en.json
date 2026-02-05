@@ -1538,6 +1538,131 @@
         "submit": "Send Message"
       }
     }
+  },
+  "websiteRebuild": {
+    "metaTitle": "Website Rebuild Service - Faster, SEO-Stronger, Easier to Manage",
+    "metaDescription": "We rebuild your current website using new technology that makes it load faster, rank better on Google, and become easier to manage — while keeping your existing layout and content.",
+    "hero": {
+      "title": "Build a Faster, SEO-Stronger, Easier-to-Manage Website — Without Changing Your Design",
+      "subtitle": "Website Rebuild Service",
+      "description": "We rebuild your current website using new technology that makes it load faster, rank better on Google, and become easier to manage — while keeping your existing layout and content.",
+      "trustHighlights": {
+        "speed": "Faster page speed",
+        "seo": "Better SEO performance",
+        "maintenance": "No plugin maintenance",
+        "editing": "Easy content editing"
+      },
+      "cta": "See How This Works"
+    },
+    "problem": {
+      "title": "Many Business Websites Look Good — But Cause Daily Frustration",
+      "description": "Most company websites today depend on outdated systems. Over time they become slower, harder to update, and more expensive to maintain.",
+      "intro": "You might recognize this:",
+      "issues": [
+        "Website loads slowly",
+        "Google rankings don't improve",
+        "Updates require developers",
+        "Plugins break or need constant updates",
+        "Small content changes take too long"
+      ],
+      "conclusion": "Your website should help your business grow — not slow it down."
+    },
+    "solution": {
+      "title": "We Rebuild Your Website Using New Technology",
+      "description": "We take your existing website design and rebuild it using modern web development tools.",
+      "points": [
+        "Your design stays the same.",
+        "Your content stays the same.",
+        "Only the technology changes."
+      ],
+      "result": "The result is a website that is:",
+      "benefits": [
+        "Much faster",
+        "Better optimized for search engines",
+        "Easier to maintain long-term",
+        "Simple for your team to update"
+      ],
+      "conclusion": "You keep the website your clients already know — but with far better performance."
+    },
+    "benefits": {
+      "title": "What You Gain From The Rebuild",
+      "items": {
+        "speed": {
+          "title": "Speed",
+          "description": "Your pages load faster, improving user experience and conversions."
+        },
+        "seo": {
+          "title": "SEO Performance",
+          "description": "Modern structure helps Google understand your content better and improves ranking potential."
+        },
+        "maintenance": {
+          "title": "Maintenance",
+          "description": "No plugin dependency means fewer updates, fewer errors, and lower long-term costs."
+        },
+        "content": {
+          "title": "Content Management",
+          "description": "Your team can update text, images, and sections easily without technical knowledge."
+        }
+      }
+    },
+    "process": {
+      "title": "Simple 4 Step Process",
+      "steps": {
+        "review": {
+          "number": "Step 1",
+          "title": "Website Review",
+          "description": "We analyze your current website and confirm what can be improved."
+        },
+        "rebuild": {
+          "number": "Step 2",
+          "title": "Rebuild",
+          "description": "We recreate your website using new technology while keeping your design."
+        },
+        "testing": {
+          "number": "Step 3",
+          "title": "Testing",
+          "description": "You test the website and request any changes you want."
+        },
+        "launch": {
+          "number": "Step 4",
+          "title": "Launch",
+          "description": "Your new website goes live only after your final approval."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Start With Very Low Risk",
+      "description": "We offer website rebuild projects starting from €300 depending on complexity and size.",
+      "guarantees": [
+        "No upfront payment",
+        "You pay only after final approval",
+        "Unlimited revision requests during development"
+      ],
+      "conclusion": "This allows businesses to upgrade their website safely and without pressure."
+    },
+    "about": {
+      "title": "About Code Studio",
+      "description": "Code Studio is a European web development agency helping businesses improve their online presence for over 7 years.",
+      "focus": "We focus on building websites that are fast, stable, and easy to manage.",
+      "clients": "Our clients are based across Europe and the United States.",
+      "founder": {
+        "name": "Rei Aliaj",
+        "title": "Founder"
+      }
+    },
+    "cta": {
+      "title": "Check If Your Website Can Be Rebuilt",
+      "description": "Send us your website and we will review if this rebuild solution fits your business.",
+      "form": {
+        "websiteUrl": "Website URL",
+        "name": "Name",
+        "email": "Email",
+        "submit": "Request Website Review",
+        "submitting": "Sending...",
+        "success": "Website review request sent successfully! We will contact you soon.",
+        "error": "Error sending request. Please try again or contact us directly."
+      }
+    }
   }
-  }
+}
   

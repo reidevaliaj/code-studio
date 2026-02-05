@@ -1537,5 +1537,130 @@
         "submit": "Nachricht senden"
       }
     }
+  },
+  "websiteRebuild": {
+    "metaTitle": "Website-Rebuild-Service - Schneller, SEO-stärker, einfacher zu verwalten",
+    "metaDescription": "Wir bauen Ihre aktuelle Website mit neuer Technologie neu auf, die sie schneller lädt, besser bei Google rankt und einfacher zu verwalten ist — während Ihr bestehendes Layout und Ihre Inhalte erhalten bleiben.",
+    "hero": {
+      "title": "Erstellen Sie eine schnellere, SEO-stärkere, einfacher zu verwaltende Website — ohne Ihr Design zu ändern",
+      "subtitle": "Website-Rebuild-Service",
+      "description": "Wir bauen Ihre aktuelle Website mit neuer Technologie neu auf, die sie schneller lädt, besser bei Google rankt und einfacher zu verwalten ist — während Ihr bestehendes Layout und Ihre Inhalte erhalten bleiben.",
+      "trustHighlights": {
+        "speed": "Schnellere Seitenladezeiten",
+        "seo": "Bessere SEO-Performance",
+        "maintenance": "Keine Plugin-Wartung",
+        "editing": "Einfache Inhaltsbearbeitung"
+      },
+      "cta": "So funktioniert es"
+    },
+    "problem": {
+      "title": "Viele Unternehmenswebsites sehen gut aus — verursachen aber tägliche Frustration",
+      "description": "Die meisten Unternehmenswebsites von heute basieren auf veralteten Systemen. Mit der Zeit werden sie langsamer, schwieriger zu aktualisieren und teurer zu warten.",
+      "intro": "Das könnte Ihnen bekannt vorkommen:",
+      "issues": [
+        "Website lädt langsam",
+        "Google-Rankings verbessern sich nicht",
+        "Updates erfordern Entwickler",
+        "Plugins brechen oder benötigen ständige Updates",
+        "Kleine Inhaltsänderungen dauern zu lange"
+      ],
+      "conclusion": "Ihre Website sollte Ihrem Unternehmen beim Wachstum helfen — nicht es verlangsamen."
+    },
+    "solution": {
+      "title": "Wir bauen Ihre Website mit neuer Technologie neu auf",
+      "description": "Wir nehmen Ihr bestehendes Website-Design und bauen es mit modernen Webentwicklungstools neu auf.",
+      "points": [
+        "Ihr Design bleibt gleich.",
+        "Ihre Inhalte bleiben gleich.",
+        "Nur die Technologie ändert sich."
+      ],
+      "result": "Das Ergebnis ist eine Website, die:",
+      "benefits": [
+        "Viel schneller ist",
+        "Besser für Suchmaschinen optimiert ist",
+        "Langfristig einfacher zu warten ist",
+        "Einfach für Ihr Team zu aktualisieren ist"
+      ],
+      "conclusion": "Sie behalten die Website, die Ihre Kunden bereits kennen — aber mit deutlich besserer Performance."
+    },
+    "benefits": {
+      "title": "Was Sie vom Rebuild erhalten",
+      "items": {
+        "speed": {
+          "title": "Geschwindigkeit",
+          "description": "Ihre Seiten laden schneller, was die Benutzererfahrung und Conversions verbessert."
+        },
+        "seo": {
+          "title": "SEO-Performance",
+          "description": "Moderne Struktur hilft Google, Ihre Inhalte besser zu verstehen und verbessert das Ranking-Potenzial."
+        },
+        "maintenance": {
+          "title": "Wartung",
+          "description": "Keine Plugin-Abhängigkeit bedeutet weniger Updates, weniger Fehler und niedrigere langfristige Kosten."
+        },
+        "content": {
+          "title": "Content-Management",
+          "description": "Ihr Team kann Texte, Bilder und Abschnitte einfach ohne technisches Wissen aktualisieren."
+        }
+      }
+    },
+    "process": {
+      "title": "Einfacher 4-Schritte-Prozess",
+      "steps": {
+        "review": {
+          "number": "Schritt 1",
+          "title": "Website-Überprüfung",
+          "description": "Wir analysieren Ihre aktuelle Website und bestätigen, was verbessert werden kann."
+        },
+        "rebuild": {
+          "number": "Schritt 2",
+          "title": "Rebuild",
+          "description": "Wir erstellen Ihre Website mit neuer Technologie neu, während wir Ihr Design beibehalten."
+        },
+        "testing": {
+          "number": "Schritt 3",
+          "title": "Testing",
+          "description": "Sie testen die Website und fordern alle gewünschten Änderungen an."
+        },
+        "launch": {
+          "number": "Schritt 4",
+          "title": "Launch",
+          "description": "Ihre neue Website geht erst nach Ihrer endgültigen Genehmigung live."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Starten Sie mit sehr geringem Risiko",
+      "description": "Wir bieten Website-Rebuild-Projekte ab €300 je nach Komplexität und Größe an.",
+      "guarantees": [
+        "Keine Vorauszahlung",
+        "Sie zahlen erst nach endgültiger Genehmigung",
+        "Unbegrenzte Revisionsanfragen während der Entwicklung"
+      ],
+      "conclusion": "Dies ermöglicht es Unternehmen, ihre Website sicher und ohne Druck zu modernisieren."
+    },
+    "about": {
+      "title": "Über Code Studio",
+      "description": "Code Studio ist eine europäische Webentwicklungsagentur, die Unternehmen seit über 7 Jahren dabei hilft, ihre Online-Präsenz zu verbessern.",
+      "focus": "Wir konzentrieren uns darauf, Websites zu erstellen, die schnell, stabil und einfach zu verwalten sind.",
+      "clients": "Unsere Kunden sind in ganz Europa und den Vereinigten Staaten ansässig.",
+      "founder": {
+        "name": "Rei Aliaj",
+        "title": "Gründer"
+      }
+    },
+    "cta": {
+      "title": "Prüfen Sie, ob Ihre Website neu aufgebaut werden kann",
+      "description": "Senden Sie uns Ihre Website und wir werden prüfen, ob diese Rebuild-Lösung zu Ihrem Unternehmen passt.",
+      "form": {
+        "websiteUrl": "Website-URL",
+        "name": "Name",
+        "email": "E-Mail",
+        "submit": "Website-Überprüfung anfordern",
+        "submitting": "Wird gesendet...",
+        "success": "Website-Überprüfungsanfrage erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.",
+        "error": "Fehler beim Senden der Anfrage. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
+      }
+    }
   }
 }

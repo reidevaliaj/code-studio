@@ -126,4 +126,49 @@ export const sendMeetingEmail = async (formData: {
   }
 };
 
+// Send website review request email
+export const sendWebsiteReviewEmail = async (formData: {
+  name: string;
+  email: string;
+  websiteUrl: string;
+}) => {
+  try {
+    const result = await resend.emails.send({
+      from: 'Code Studio <info@updates.cod-st.com>',
+      to: ['info@cod-st.com'],
+      replyTo: formData.email,
+      subject: `Website Review Request: ${formData.websiteUrl}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #04334C;">New Website Review Request</h2>
+          
+          <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="color: #04334C; margin-top: 0;">Contact Information</h3>
+            <p><strong>Name:</strong> ${formData.name}</p>
+            <p><strong>Email:</strong> ${formData.email}</p>
+            <p><strong>Website URL:</strong> <a href="${formData.websiteUrl}" target="_blank">${formData.websiteUrl}</a></p>
+          </div>
+          
+          <div style="background-color: #ffffff; padding: 20px; border-left: 4px solid #04334C;">
+            <h3 style="color: #04334C; margin-top: 0;">Next Steps</h3>
+            <p>Please review the website and determine if a rebuild solution would be suitable for this business.</p>
+          </div>
+          
+          <div style="margin-top: 20px; padding: 15px; background-color: #e9ecef; border-radius: 5px;">
+            <p style="margin: 0; font-size: 12px; color: #6c757d;">
+              This website review request was sent from the Code Studio website rebuild landing page.
+              <br>Reply directly to this email to respond to the customer.
+            </p>
+          </div>
+        </div>
+      `
+    });
+
+    return { success: true, messageId: result.data?.id };
+  } catch (error) {
+    console.error('Error sending website review email:', error);
+    return { success: false, error: error.message };
+  }
+};
+
 export default resend;
