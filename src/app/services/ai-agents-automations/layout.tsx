@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Agents & Automation Services - Code Studio Albania',
-  description: 'Custom AI agents and automation solutions from Albania to streamline your business operations and boost productivity.',
-  keywords: 'AI agents, automation, chatbots, workflow automation, business intelligence, Albania',
+  title: 'White-Label AI Systems, LLM Apps & Automations - Code Studio',
+  description: 'White-label AI agents, LLM integrations, voice AI, RAG systems, semantic search, and API automations for software companies and agencies.',
+  keywords: 'AI agents, white-label AI, LLM integrations, RAG systems, voice AI, LangChain, LangGraph, FastAPI',
   openGraph: {
-    title: 'AI Agents & Automation Services - Code Studio Albania',
-    description: 'Custom AI agents and automation solutions from Albania to streamline your business operations and boost productivity.',
+    title: 'White-Label AI Systems, LLM Apps & Automations - Code Studio',
+    description: 'White-label AI agents, LLM integrations, voice AI, RAG systems, semantic search, and API automations for software companies and agencies.',
     type: 'website',
     locale: 'en_US',
   },

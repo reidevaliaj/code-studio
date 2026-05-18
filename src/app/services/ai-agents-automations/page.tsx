@@ -6,7 +6,24 @@ import Footer from '../../../components/Footer';
 import HeroSection from '../../../components/HeroSection';
 import Section from '../../../components/Section';
 import Button from '../../../components/Button';
-import Image from 'next/image';
+
+type FeatureItem = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
+type ProcessStep = {
+  number: string;
+  title: string;
+  description: string;
+};
+
+type ResultMetric = {
+  icon: string;
+  value: string;
+  description: string;
+};
 
 function WhatWeDoSection() {
   const t = useTranslations('serviceDetails.aiAgents.whatWeDo');
@@ -27,7 +44,7 @@ function WhatWeDoSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {t.raw('features').map((feature: any, index: number) => (
+          {t.raw('features').map((feature: FeatureItem, index: number) => (
             <div key={index} className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading">
@@ -60,7 +77,7 @@ function UseCasesSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {t.raw('cases').map((useCase: any, index: number) => (
+          {t.raw('cases').map((useCase: FeatureItem, index: number) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="text-3xl mb-4">{useCase.icon}</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3 font-heading">
@@ -103,7 +120,7 @@ function HowItWorksSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          {t.raw('steps').map((step: any, index: number) => (
+          {t.raw('steps').map((step: ProcessStep, index: number) => (
             <div key={index} className="text-center relative">
               {index < 4 && (
                 <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-accent transform translate-x-4 -translate-y-1/2 z-0"></div>
@@ -170,7 +187,7 @@ function ResultsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {t.raw('metrics').map((metric: any, index: number) => (
+          {t.raw('metrics').map((metric: ResultMetric, index: number) => (
             <div key={index} className="text-center">
               <div className="text-4xl mb-4">{metric.icon}</div>
               <div className="text-4xl lg:text-5xl font-bold text-accent mb-2 font-heading">

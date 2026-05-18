@@ -131,232 +131,195 @@
   },
   "serviceDetails": {
     "aiAgents": {
-      "title": "KI-Agenten & Automatisierungen",
-      "subtitle": "Intelligente Automatisierung für Ihr Unternehmen",
-      "description": "Optimieren Sie Ihre Abläufe mit maßgeschneiderten KI-Agenten und Automatisierungslösungen, die 24/7 arbeiten, um die Effizienz zu steigern.",
-      "metaTitle": "KI-Agenten & Automatisierungsdienstleistungen - Code Studio",
-      "metaDescription": "Maßgeschneiderte KI-Agenten und Automatisierungslösungen zur Optimierung Ihrer Geschäftsabläufe und Steigerung der Produktivität.",
+      "title": "AI Agents & Automatisierungen",
+      "subtitle": "White-Label-AI-Systeme für Softwareunternehmen und Agenturen",
+      "description": "Wir entwickeln AI Agents, LLM-Anwendungen, Voice-AI, RAG-Systeme und API-basierte Automatisierungen für Partner, die moderne AI-Leistungen unter eigener Marke anbieten möchten.",
+      "metaTitle": "AI Agents, LLM-Anwendungen & White-Label-Automatisierungen - Code Studio",
+      "metaDescription": "White-Label AI Agents, LLM-Integrationen, Voice-AI, RAG-Systeme, Vektorsuche und API-Automatisierungen für Softwareunternehmen und Agenturen.",
       "hero": {
-        "title": "Stärken Sie Ihr Unternehmen mit KI-Agenten & Automatisierungen",
-        "subtitle": "Von Chatbots bis hin zu komplexen Workflows — wir entwickeln KI-Systeme, die denken, handeln und Ergebnisse liefern.",
-        "cta": "Lassen Sie uns Ihre Arbeit automatisieren",
+        "title": "White-Label AI-Systeme, Agents & Automatisierungen",
+        "subtitle": "Wir unterstützen Softwareunternehmen und Agenturen bei modernen AI-Produkten, LLM-Integrationen und agentischen Workflows diskret unter ihrer Marke.",
+        "cta": "AI-Projekt besprechen",
         "secondaryCta": "Anwendungsfälle ansehen"
       },
       "whatWeDo": {
-        "title": "Was wir tun",
-        "subtitle": "Intelligente Automatisierung, die für Sie arbeitet",
-        "description": "Bei Code Studio entwickeln wir maßgeschneiderte KI-Agenten, die sich in Ihre Tools integrieren und Ihre täglichen Abläufe automatisieren. Ob es um die Verwaltung Ihres Kundensupports, die Bearbeitung wiederholender Datentasks oder die Verbindung komplexer Systeme geht — unsere KI-Agenten arbeiten 24/7, um Ihr Unternehmen zu vereinfachen.",
+        "title": "Was wir entwickeln",
+        "subtitle": "Technische AI-Systeme für echte Geschäftsprozesse",
+        "description": "Code Studio arbeitet als diskreter technischer White-Label-Partner für Teams, die zuverlässige AI-Umsetzungskapazität benötigen. Wir planen und entwickeln AI Agents, LLM-Anwendungen, interne Automatisierungstools und kundennahe AI-Funktionen mit sauberer Architektur, praktischen Integrationen und klarer Dokumentation.",
         "features": [
           {
             "icon": "🤖",
-            "title": "Intelligente Agenten",
-            "description": "Bewältigen Gespräche, Aufgaben und Workflows autonom."
+            "title": "Agentic AI Workflows",
+            "description": "AI Agents, die Aufgaben, Tools, Daten und Freigaben über Geschäftsprozesse hinweg koordinieren."
           },
           {
-            "icon": "⚙️",
-            "title": "Workflow-Automatisierungen",
-            "description": "Verbinden APIs, Datenbanken, CRMs und Tabellenkalkulationen."
+            "icon": "🧠",
+            "title": "LLM-Anwendungen",
+            "description": "Individuelle OpenAI-, Gemini- und modellunabhängige Anwendungen, angebunden an Produkte, Teams oder Kundendaten."
           },
           {
-            "icon": "🔄",
-            "title": "Maßgeschneiderte Integrationen",
-            "description": "KI, die zu Ihren exakten Tools passt (Shopify, WordPress, HubSpot, Notion, etc.)."
+            "icon": "🎙️",
+            "title": "Voice AI & Receptionists",
+            "description": "Telefon- und Sprachassistenten, die Fragen beantworten, Anfragen qualifizieren und Termine vorbereiten."
           },
           {
-            "icon": "📈",
-            "title": "Skalierbare Lösungen",
-            "description": "Von kleinen Automatisierungen bis hin zu vollständigen Enterprise-Systemen."
+            "icon": "🔎",
+            "title": "RAG & semantische Suche",
+            "description": "Embedding-basierte Suche, Vector Databases und Dokumentenintelligenz für interne oder kundennahe Systeme."
           }
         ]
       },
       "useCases": {
-        "title": "Echte Anwendungsfälle",
-        "subtitle": "Was auch immer Sie wiederholt tun — wir können es automatisieren",
-        "cta": "Ihre maßgeschneiderte Automatisierung erhalten",
+        "title": "Systeme, die wir umsetzen können",
+        "subtitle": "Konkrete AI-Module für Kundenprojekte, interne Tools und Produktfeatures",
+        "cta": "White-Label AI-System planen",
         "cases": [
           {
+            "icon": "☎️",
+            "title": "AI Receptionist",
+            "description": "Nimmt Anrufe entgegen, beantwortet häufige Fragen, bereitet Termine vor und filtert Anfragen für das Team."
+          },
+          {
             "icon": "💬",
-            "title": "KI-Chat-Support",
-            "description": "Trainieren Sie Chatbots mit Ihren Daten, um Kundenfragen auf Ihrer Website, WhatsApp oder Instagram zu beantworten."
+            "title": "AI Sales Assistant",
+            "description": "Begleitet Website-Besucher, beantwortet Produktfragen, qualifiziert Leads und übergibt sauberen Kontext an den Vertrieb."
           },
           {
             "icon": "🛒",
-            "title": "E-Commerce-Automatisierung",
-            "description": "Verwalten Sie Lagerbestände, aktualisieren Sie Bestellungen und beantworten Sie Kundenanfragen automatisch."
-          },
-          {
-            "icon": "🧾",
-            "title": "Dokumentenverwaltung",
-            "description": "Lassen Sie KI Ihre PDFs, Rechnungen und Berichte lesen, extrahieren und organisieren."
-          },
-          {
-            "icon": "📅",
-            "title": "Terminplanungs-Assistent",
-            "description": "Automatisieren Sie Terminplanung und Follow-ups."
+            "title": "E-Commerce Product Assistant",
+            "description": "Versteht Kataloge, Varianten, Filter und Kundenabsichten, um passende Produkte zu empfehlen."
           },
           {
             "icon": "🏢",
-            "title": "Interne Workflows",
-            "description": "Automatische Synchronisation von Daten zwischen CRM, Google Sheets, HubSpot oder Datenbanken."
-          },
-          {
-            "icon": "✉️",
-            "title": "E-Mail-Automatisierung",
-            "description": "KI, die Kunden-E-Mails basierend auf dem Kontext liest und beantwortet."
-          },
-          {
-            "icon": "📊",
-            "title": "Datenanalyse",
-            "description": "Analysieren Sie Berichte automatisch und generieren Sie Erkenntnisse aus Ihren Daten."
+            "title": "Interner Wissensassistent",
+            "description": "Macht Dokumente, Richtlinien, Prozesse und Produktdaten über ein kontrolliertes LLM-Interface nutzbar."
           },
           {
             "icon": "🔍",
-            "title": "Content-Moderation",
-            "description": "KI-gestützte Content-Filterung und Moderation für Plattformen und Communities."
+            "title": "Semantische Suche",
+            "description": "Embedding-basierte Suche für Produkte, Dokumente, Inserate, Support-Inhalte oder interne Datenbanken."
           },
           {
-            "icon": "💰",
-            "title": "Rechnungsverarbeitung",
-            "description": "Extrahieren Sie automatisch Daten aus Rechnungen und aktualisieren Sie Buchhaltungssysteme."
+            "icon": "📚",
+            "title": "RAG für Dokumente",
+            "description": "Verbindet LLMs mit PDFs, Wissensdatenbanken, Handbüchern, Verträgen und strukturierten Geschäftsdaten."
           },
           {
-            "icon": "📱",
-            "title": "Social Media Management",
-            "description": "Planen Sie Posts, beantworten Sie Kommentare und analysieren Sie das Engagement automatisch."
+            "icon": "⚙️",
+            "title": "Workflow-Automatisierung",
+            "description": "Automatisiert wiederkehrende Prozesse über CRMs, ERPs, Tabellen, Postfächer, Dashboards und interne Tools hinweg."
           },
           {
             "icon": "🎯",
             "title": "Lead-Qualifizierung",
-            "description": "Bewerten und qualifizieren Sie Leads automatisch basierend auf vordefinierten Kriterien."
+            "description": "Erfasst eingehende Anfragen, reichert Daten an, bewertet Chancen und leitet Leads an den passenden nächsten Schritt weiter."
+          },
+          {
+            "icon": "🔗",
+            "title": "API- & Webhook-Automation",
+            "description": "Verbindet AI-Workflows mit bestehenden Plattformen über robuste APIs, Webhooks und Background Jobs."
+          },
+          {
+            "icon": "📊",
+            "title": "Datenverarbeitungs-Pipelines",
+            "description": "Bereinigt, transformiert, klassifiziert und vorbereitet Geschäftsdaten für Reporting, Suche oder AI-Workflows."
+          },
+          {
+            "icon": "🧩",
+            "title": "Scraping & Datenanreicherung",
+            "description": "Sammelt und strukturiert öffentliche Daten, reichert Datensätze an und speist interne Systeme oder AI-Pipelines."
           },
           {
             "icon": "📋",
-            "title": "Formularverarbeitung",
-            "description": "Extrahieren und organisieren Sie Daten aus Formularen, Bewerbungen und Einreichungen."
-          },
-          {
-            "icon": "🔄",
-            "title": "Datenmigration",
-            "description": "Übertragen Sie Daten automatisch zwischen Systemen mit Validierung und Fehlerbehandlung."
-          },
-          {
-            "icon": "📈",
-            "title": "Performance-Monitoring",
-            "description": "Verfolgen Sie KPIs und generieren Sie automatisierte Berichte über die Geschäftsleistung."
-          },
-          {
-            "icon": "🔔",
-            "title": "Alarm-Systeme",
-            "description": "Intelligente Benachrichtigungen und Alarme basierend auf Geschäftsregeln und Schwellenwerten."
-          },
-          {
-            "icon": "📝",
-            "title": "Berichtserstellung",
-            "description": "Erstellen und verteilen Sie automatisch Berichte aus Ihren Datenquellen."
-          },
-          {
-            "icon": "🎨",
-            "title": "Content-Erstellung",
-            "description": "Generieren Sie Produktbeschreibungen, Social Media Content und Marketing-Texte."
-          },
-          {
-            "icon": "🔐",
-            "title": "Sicherheitsüberwachung",
-            "description": "Überwachen Sie Systeme auf Sicherheitsbedrohungen und reagieren Sie automatisch auf Vorfälle."
-          },
-          {
-            "icon": "📦",
-            "title": "Bestandsverwaltung",
-            "description": "Verfolgen Sie Lagerbestände, prognostizieren Sie die Nachfrage und automatisieren Sie Nachbestellungsprozesse."
-          },
-          {
-            "icon": "👥",
-            "title": "Kunden-Onboarding",
-            "description": "Automatisieren Sie den gesamten Kunden-Onboarding-Prozess von der Anmeldung bis zur ersten Nutzung."
+            "title": "Backoffice Assistants",
+            "description": "Unterstützt Operationsteams bei Dokumenten, E-Mail-Entwürfen, Ticket-Triage und wiederkehrenden Admin-Aufgaben."
           }
         ]
       },
       "howItWorks": {
-        "title": "Wie es funktioniert",
-        "subtitle": "Unser bewährter Prozess für KI-Automatisierungserfolg",
+        "title": "Wie wir arbeiten",
+        "subtitle": "Strukturierte Umsetzung für Partner und kundennahe AI-Projekte",
         "steps": [
           {
             "number": "01",
-            "title": "Entdeckung",
-            "description": "Verstehen Sie Ihr Unternehmen und Ihre Workflows"
+            "title": "Technische Analyse",
+            "description": "Use Case, Datenquellen, Einschränkungen und Erfolgskriterien gemeinsam klären."
           },
           {
             "number": "02",
-            "title": "Design",
-            "description": "Planen Sie Automatisierungen und Integrationen"
+            "title": "Architektur",
+            "description": "Ein API-first-System mit passenden Modellen, Datenbanken, Integrationen und Deployment-Optionen planen."
           },
           {
             "number": "03",
             "title": "Entwicklung",
-            "description": "Entwickeln Sie KI-Agenten mit Python, n8n und OpenAI MCP Protocol"
+            "description": "Umsetzung mit Python, FastAPI, LangChain, LangGraph, Vector Databases und stabilen Integrationen."
           },
           {
             "number": "04",
-            "title": "Bereitstellung",
-            "description": "Integration in Ihre Systeme"
+            "title": "Staging & QA",
+            "description": "Prompts, Retrieval-Qualität, Edge Cases, Sicherheit und User Flows vor dem Launch testen."
           },
           {
             "number": "05",
-            "title": "Support",
-            "description": "Kontinuierliche Verbesserung und Überwachung"
+            "title": "Launch & Weiterentwicklung",
+            "description": "Deployment, Dokumentation, Monitoring und laufende Verbesserung der Workflows nach dem Rollout."
           }
         ]
       },
       "technologies": {
-        "title": "Technologien, die wir verwenden",
-        "subtitle": "Modernste Tools für intelligente Automatisierung",
+        "title": "Technologie-Stack",
+        "subtitle": "Moderne Tools für produktionsreife AI-Systeme",
         "techs": [
           "OpenAI",
-          "n8n",
+          "Gemini",
           "LangChain",
+          "LangGraph",
+          "Python",
           "FastAPI",
-          "Shopify APIs",
-          "WordPress APIs",
-          "HubSpot APIs",
+          "PostgreSQL",
           "Qdrant",
           "Pinecone",
-          "PostgreSQL",
-          "MCP Protocol",
-          "Web Scraping",
-          "Datenorganisation"
+          "Vector Databases",
+          "Embeddings",
+          "RAG",
+          "APIs & Webhooks",
+          "n8n",
+          "Vercel",
+          "Web Scraping"
         ]
       },
       "results": {
-        "title": "Ergebnisse, die Sie erwarten können",
-        "subtitle": "Messbare Auswirkungen auf Ihre Geschäftsabläufe",
+        "title": "Was Partner gewinnen",
+        "subtitle": "AI-Umsetzungskapazität ohne eigenes Spezialistenteam",
         "metrics": [
           {
-            "icon": "⏱",
-            "value": "70%",
-            "description": "Sparen Sie bis zu 70% der manuellen Zeit"
+            "icon": "🤝",
+            "value": "White-Label",
+            "description": "Diskrete Umsetzung unter Ihrer Marke"
           },
           {
-            "icon": "💰",
-            "value": "40%",
-            "description": "Reduzieren Sie Betriebskosten"
+            "icon": "🔌",
+            "value": "API-first",
+            "description": "Saubere Integrationen in bestehende Tools"
           },
           {
-            "icon": "🤖",
-            "value": "24/7",
-            "description": "Intelligente Verfügbarkeit"
+            "icon": "🧪",
+            "value": "Staging",
+            "description": "Getestet vor dem Kunden-Rollout"
           },
           {
-            "icon": "🚀",
-            "value": "5x",
-            "description": "Schnellere Reaktion und Skalierbarkeit"
+            "icon": "📘",
+            "value": "Doku",
+            "description": "Klare Dokumentation und Übergabe"
           }
         ]
       },
       "cta": {
-        "title": "Lassen Sie uns Ihren KI-Assistenten entwickeln",
-        "subtitle": "Bereit, KI für Sie arbeiten zu lassen?",
-        "description": "Lassen Sie uns über Ihren Workflow sprechen und einen intelligenten Automatisierungsplan erstellen.",
-        "cta": "Kostenlose Beratung buchen"
+        "title": "Lassen Sie uns Ihr AI-Angebot entwickeln",
+        "subtitle": "Sie benötigen AI-Kapazität hinter Ihrer Agentur oder Ihrem Softwareteam?",
+        "description": "Erzählen Sie uns, welche AI-Leistung Sie Ihren Kunden anbieten oder intern automatisieren möchten. Wir können einzelne technische Module übernehmen oder das komplette AI-System als Umsetzungspartner entwickeln.",
+        "cta": "Technisches Gespräch buchen"
       }
     },
     "webApps": {

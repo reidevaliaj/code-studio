@@ -133,231 +133,194 @@
   "serviceDetails": {
     "aiAgents": {
       "title": "AI Agents & Automations",
-      "subtitle": "Intelligent automation for your business",
-      "description": "Streamline your operations with custom AI agents and automation solutions that work 24/7 to improve efficiency. Perfect for partners looking to optimize their workflows.",
-      "metaTitle": "AI Agents & Automation Services - Code Studio Albania",
-      "metaDescription": "Custom AI agents and automation solutions from Albania to streamline your business operations and boost productivity.",
+      "subtitle": "White-label AI systems for software companies and agencies",
+      "description": "We build AI agents, LLM applications, voice AI, RAG systems, and API-driven automations for partners who want to offer advanced AI capabilities under their own brand.",
+      "metaTitle": "AI Agents, LLM Apps & White-Label Automations - Code Studio",
+      "metaDescription": "White-label AI agents, LLM integrations, voice AI, RAG systems, vector search, and API automation for software companies and agencies.",
       "hero": {
-        "title": "Empower Your Business with AI Agents & Automations",
-        "subtitle": "From chatbots to complex workflows — we build AI systems that think, act, and deliver results.",
-        "cta": "Let's Automate Your Work",
-        "secondaryCta": "See Use Cases"
+        "title": "White-Label AI Systems, Agents & Automations",
+        "subtitle": "We help software companies and agencies deliver modern AI products, LLM integrations, and agentic workflows discreetly under their own brand.",
+        "cta": "Discuss an AI Project",
+        "secondaryCta": "Explore Use Cases"
       },
       "whatWeDo": {
-        "title": "What We Do",
-        "subtitle": "Intelligent automation that works for you",
-        "description": "At Code Studio, we build custom AI Agents that integrate into your tools and automate your daily operations. Whether it's managing your customer support, handling repetitive data tasks, or connecting complex systems — our AI agents work 24/7 to simplify your business.",
+        "title": "What We Build",
+        "subtitle": "Technical AI systems that fit real business operations",
+        "description": "Code Studio works as a discreet technical partner for teams that need reliable AI delivery capacity. We design and build AI agents, LLM applications, internal automation tools, and client-facing AI features with clean architecture, practical integrations, and clear documentation.",
         "features": [
           {
             "icon": "🤖",
-            "title": "Intelligent Agents",
-            "description": "Handle conversations, tasks, and workflows autonomously."
+            "title": "Agentic AI Workflows",
+            "description": "AI agents that coordinate tasks, tools, data, and approvals across business processes."
           },
           {
-            "icon": "⚙️",
-            "title": "Workflow Automations",
-            "description": "Connect APIs, databases, CRMs, and spreadsheets."
+            "icon": "🧠",
+            "title": "LLM Applications",
+            "description": "Custom OpenAI, Gemini, and model-agnostic applications connected to products, teams, or client data."
           },
           {
-            "icon": "🔄",
-            "title": "Custom Integrations",
-            "description": "AI that fits your exact tools (Shopify, WordPress, HubSpot, Notion, etc.)."
+            "icon": "🎙️",
+            "title": "Voice AI & Receptionists",
+            "description": "Phone and voice assistants that answer questions, qualify requests, and prepare appointments."
           },
           {
-            "icon": "📈",
-            "title": "Scalable Solutions",
-            "description": "From small automations to full enterprise systems."
+            "icon": "🔎",
+            "title": "RAG & Semantic Search",
+            "description": "Embedding-based search, vector databases, and document intelligence for internal or customer-facing systems."
           }
         ]
       },
       "useCases": {
-        "title": "Real-World Use Cases",
-        "subtitle": "Whatever you do repeatedly — we can automate it",
-        "cta": "Get Your Custom Automation",
+        "title": "Systems We Can Deliver",
+        "subtitle": "Concrete AI modules for client projects, internal tools, and product features",
+        "cta": "Plan a White-Label AI System",
         "cases": [
           {
+            "icon": "☎️",
+            "title": "AI Receptionist",
+            "description": "Answers calls, handles common questions, prepares appointments, and filters requests before they reach a team."
+          },
+          {
             "icon": "💬",
-            "title": "AI Chat Support",
-            "description": "Train chatbots on your data to answer customer questions on your website, WhatsApp, or Instagram."
+            "title": "AI Sales Assistant",
+            "description": "Guides website visitors, answers product questions, qualifies leads, and hands over clean context to sales."
           },
           {
             "icon": "🛒",
-            "title": "E-commerce Automation",
-            "description": "Manage stock, update orders, and answer customer requests automatically."
-          },
-          {
-            "icon": "🧾",
-            "title": "Document Management",
-            "description": "Let AI read, extract, and organize your PDFs, invoices, and reports."
-          },
-          {
-            "icon": "📅",
-            "title": "Scheduling Assistant",
-            "description": "Automate meeting scheduling and follow-ups."
+            "title": "E-commerce Product Assistant",
+            "description": "Understands catalogs, variants, filters, and customer intent to recommend suitable products."
           },
           {
             "icon": "🏢",
-            "title": "Internal Workflows",
-            "description": "Auto-sync data between CRM, Google Sheets, HubSpot, or databases."
-          },
-          {
-            "icon": "✉️",
-            "title": "Email Automation",
-            "description": "AI that reads and responds to client emails based on context."
-          },
-          {
-            "icon": "📊",
-            "title": "Data Analysis",
-            "description": "Automatically analyze reports and generate insights from your data."
+            "title": "Internal Knowledge Assistant",
+            "description": "Makes company documents, policies, processes, and product data searchable through a controlled LLM interface."
           },
           {
             "icon": "🔍",
-            "title": "Content Moderation",
-            "description": "AI-powered content filtering and moderation for platforms and communities."
+            "title": "Semantic Search",
+            "description": "Builds embedding-based search for products, documents, listings, support content, or internal databases."
           },
           {
-            "icon": "💰",
-            "title": "Invoice Processing",
-            "description": "Automatically extract data from invoices and update accounting systems."
+            "icon": "📚",
+            "title": "RAG for Documents",
+            "description": "Connects LLMs to PDFs, knowledge bases, manuals, contracts, and structured business data."
           },
           {
-            "icon": "📱",
-            "title": "Social Media Management",
-            "description": "Schedule posts, respond to comments, and analyze engagement automatically."
+            "icon": "⚙️",
+            "title": "Workflow Automation",
+            "description": "Automates repetitive processes across CRMs, ERPs, spreadsheets, inboxes, dashboards, and internal tools."
           },
           {
             "icon": "🎯",
             "title": "Lead Qualification",
-            "description": "Automatically score and qualify leads based on predefined criteria."
+            "description": "Captures incoming requests, enriches data, scores opportunities, and routes leads to the right next step."
+          },
+          {
+            "icon": "🔗",
+            "title": "API & Webhook Automation",
+            "description": "Connects AI workflows with existing platforms through robust APIs, webhooks, and background jobs."
+          },
+          {
+            "icon": "📊",
+            "title": "Data Processing Pipelines",
+            "description": "Cleans, transforms, classifies, and prepares business data for reporting, search, or AI workflows."
+          },
+          {
+            "icon": "🧩",
+            "title": "Scraping & Enrichment",
+            "description": "Collects and structures public data, enriches records, and feeds internal systems or AI pipelines."
           },
           {
             "icon": "📋",
-            "title": "Form Processing",
-            "description": "Extract and organize data from forms, applications, and submissions."
-          },
-          {
-            "icon": "🔄",
-            "title": "Data Migration",
-            "description": "Automatically transfer data between systems with validation and error handling."
-          },
-          {
-            "icon": "📈",
-            "title": "Performance Monitoring",
-            "description": "Track KPIs and generate automated reports on business performance."
-          },
-          {
-            "icon": "🔔",
-            "title": "Alert Systems",
-            "description": "Smart notifications and alerts based on business rules and thresholds."
-          },
-          {
-            "icon": "📝",
-            "title": "Report Generation",
-            "description": "Automatically create and distribute reports from your data sources."
-          },
-          {
-            "icon": "🎨",
-            "title": "Content Creation",
-            "description": "Generate product descriptions, social media content, and marketing copy."
-          },
-          {
-            "icon": "🔐",
-            "title": "Security Monitoring",
-            "description": "Monitor systems for security threats and automatically respond to incidents."
-          },
-          {
-            "icon": "📦",
-            "title": "Inventory Management",
-            "description": "Track stock levels, predict demand, and automate reordering processes."
-          },
-          {
-            "icon": "👥",
-            "title": "Customer Onboarding",
-            "description": "Automate the entire customer onboarding process from signup to first use."
+            "title": "Backoffice Assistants",
+            "description": "Supports operations teams with document handling, email drafting, ticket triage, and routine admin tasks."
           }
         ]
       },
       "howItWorks": {
-        "title": "How It Works",
-        "subtitle": "Our proven process for AI automation success",
+        "title": "How We Work",
+        "subtitle": "Structured delivery for partners and client-facing AI projects",
         "steps": [
           {
             "number": "01",
-            "title": "Discovery",
-            "description": "Understand your business and workflows"
+            "title": "Technical Discovery",
+            "description": "Clarify the use case, data sources, constraints, and success criteria."
           },
           {
             "number": "02",
-            "title": "Design",
-            "description": "Plan automations and integrations"
+            "title": "Architecture",
+            "description": "Design an API-first system with the right model, database, integration, and deployment choices."
           },
           {
             "number": "03",
             "title": "Development",
-            "description": "Build AI Agents using Python, n8n, and OpenAI MCP Protocol"
+            "description": "Build with Python, FastAPI, LangChain, LangGraph, vector databases, and reliable integrations."
           },
           {
             "number": "04",
-            "title": "Deployment",
-            "description": "Integrate into your systems"
+            "title": "Staging & QA",
+            "description": "Test prompts, retrieval quality, edge cases, security, and user flows before launch."
           },
           {
             "number": "05",
-            "title": "Support",
-            "description": "Continuous improvement and monitoring"
+            "title": "Launch & Iteration",
+            "description": "Deploy, document the system, monitor performance, and improve the workflows after rollout."
           }
         ]
       },
       "technologies": {
-        "title": "Technologies We Use",
-        "subtitle": "Cutting-edge tools for intelligent automation",
+        "title": "Technology Stack",
+        "subtitle": "Modern tools for production-ready AI systems",
         "techs": [
           "OpenAI",
-          "n8n",
+          "Gemini",
           "LangChain",
+          "LangGraph",
+          "Python",
           "FastAPI",
-          "Shopify APIs",
-          "WordPress APIs",
-          "HubSpot APIs",
+          "PostgreSQL",
           "Qdrant",
           "Pinecone",
-          "PostgreSQL",
-          "MCP Protocol",
-          "Web Scraping",
-          "Data Organization"
+          "Vector Databases",
+          "Embeddings",
+          "RAG",
+          "APIs & Webhooks",
+          "n8n",
+          "Vercel",
+          "Web Scraping"
         ]
       },
       "results": {
-        "title": "Results You Can Expect",
-        "subtitle": "Measurable impact on your business operations",
+        "title": "What Partners Gain",
+        "subtitle": "AI delivery capacity without building an in-house specialist team",
         "metrics": [
           {
-            "icon": "⏱",
-            "value": "70%",
-            "description": "Save up to 70% of manual time"
+            "icon": "🤝",
+            "value": "White-label",
+            "description": "Delivered discreetly under your brand"
           },
           {
-            "icon": "💰",
-            "value": "40%",
-            "description": "Reduce operational costs"
+            "icon": "🔌",
+            "value": "API-first",
+            "description": "Clean integrations with existing tools"
           },
           {
-            "icon": "🤖",
-            "value": "24/7",
-            "description": "Intelligent availability"
+            "icon": "🧪",
+            "value": "Staging",
+            "description": "Tested before client rollout"
           },
           {
-            "icon": "🚀",
-            "value": "5x",
-            "description": "Faster response and scalability"
+            "icon": "📘",
+            "value": "Docs",
+            "description": "Clear documentation and handover"
           }
         ]
       },
       "cta": {
-        "title": "Let's Build Your AI Assistant",
-        "subtitle": "Ready to make AI work for you?",
-        "description": "Let's discuss your workflow and build a smart automation plan.",
-        "cta": "Book a Free Consultation"
+        "title": "Let's Build Your AI Offering",
+        "subtitle": "Need AI capacity behind your agency or software team?",
+        "description": "Tell us what you want to offer your clients or automate internally. We can take over a single technical module or build the full AI system as your implementation partner.",
+        "cta": "Book a Technical Call"
       }
     },
     "webApps": {
@@ -1661,4 +1624,3 @@
     }
   }
 }
-  
