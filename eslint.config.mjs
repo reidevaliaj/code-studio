@@ -18,6 +18,9 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      "output/**",
+      ".playwright-cli/**",
+      "voice-demo/.venv/**",
     ],
   },
 ];

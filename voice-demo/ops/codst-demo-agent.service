@@ -1,0 +1,25 @@
+[Unit]
+Description=cod-st isolated public demo voice worker
+After=network-online.target codst-demo-api.service
+Wants=network-online.target codst-demo-api.service
+
+[Service]
+User=rei
+Group=rei
+WorkingDirectory=/home/rei/apps/codst-demo/releases/20261025-v1
+EnvironmentFile=/home/rei/apps/codst-demo/shared.env
+ExecStart=/home/rei/apps/codst-demo/releases/20261025-v1/.venv/bin/python demo_agent.py start
+Restart=on-failure
+RestartSec=5
+MemoryHigh=750M
+MemoryMax=1000M
+CPUWeight=20
+TimeoutStopSec=30
+KillMode=mixed
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target

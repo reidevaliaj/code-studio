@@ -1,0 +1,23 @@
+[Unit]
+Description=cod-st isolated browser demo gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=rei
+Group=rei
+WorkingDirectory=/home/rei/apps/codst-demo/releases/20261025-v1
+EnvironmentFile=/home/rei/apps/codst-demo/shared.env
+ExecStart=/home/rei/apps/codst-demo/releases/20261025-v1/.venv/bin/uvicorn service:app --host 127.0.0.1 --port 8011 --no-access-log
+Restart=on-failure
+RestartSec=3
+MemoryMax=256M
+CPUWeight=20
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/rei/apps/codst-demo/data
+
+[Install]
+WantedBy=multi-user.target

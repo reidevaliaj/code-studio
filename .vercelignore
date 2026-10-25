@@ -1,0 +1,7 @@
+voice-demo/
+.env*
+output/
+.playwright-cli/
+public/videos/
+public/images/*
+!public/images/practice-reception.png

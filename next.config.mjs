@@ -1,22 +1,41 @@
-import createNextIntlPlugin from 'next-intl/plugin';
-
-// Wrap your Next.js config with the plugin
-const withNextIntl = createNextIntlPlugin('./next-intl.config.ts');
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: { unoptimized: true },
-
-  // ✅ Ignore build-time TypeScript & ESLint errors on Vercel
-  eslint: {
-    ignoreDuringBuilds: true,
+const config = {
+  poweredByHeader: false,
+  async redirects() {
+    return [
+      { source: "/de", destination: "/", permanent: true },
+      { source: "/en", destination: "/", permanent: true },
+      { source: "/de/:path*", destination: "/:path*", permanent: true },
+      { source: "/en/:path*", destination: "/:path*", permanent: true },
+      { source: "/contact", destination: "/kontakt", permanent: true },
+      ...[
+        "services",
+        "partners",
+        "case-studies",
+        "website-rebuild",
+        "real-estate-landing",
+      ].map((path) => ({
+        source: `/${path}/:path*`,
+        destination: "/",
+        permanent: true,
+      })),
+    ];
   },
-  typescript: {
-    ignoreBuildErrors: true,
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Frame-Options", value: "DENY" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(self), geolocation=()",
+          },
+        ],
+      },
+    ];
   },
-
-  // Optional: if you want static HTML export later
-  // output: 'export',
 };
-
-export default withNextIntl(nextConfig);
+export default config;
