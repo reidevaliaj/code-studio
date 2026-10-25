@@ -63,13 +63,22 @@ export default function Page() {
         Widerruf bleibt davon unberührt.
       </p>
       <p>
-        Wir speichern selbst keine Audioaufnahmen und keine Gesprächstranskripte
-        dieser Demo und führen keine Analyse oder automatische
-        Kundenbenachrichtigung nach dem Gespräch aus. Die flüchtige Verarbeitung
-        durch Sprach- und Verbindungsanbieter ist trotzdem erforderlich.
-        Anbieter können für Sicherheit, Missbrauchsprävention und gesetzliche
-        Pflichten Daten nach ihren jeweiligen Bedingungen aufbewahren. Die Demo
-        ist deshalb kein Angebot für vertrauliche Gesundheitsinformationen.
+        Mit Ihrer Einwilligung erstellen wir ein textliches Gesprächsprotokoll
+        und erfassen Praxisprofil, Zeitpunkt, Dauer und Beendigungsstatus. Das
+        Protokoll wird im geschützten Anrufverlauf abgelegt und per E-Mail an
+        info@cod-st.com gesendet. Dies dient der Funktionskontrolle und
+        Verbesserung unserer Rezeption. Es wird keine Nachricht an eine
+        Beispielpraxis oder an einen Patienten gesendet. Die lokale
+        Demo-Datenbank löscht Gesprächsprotokolle nach spätestens 30 Tagen.
+        Kopien im geschützten Anrufverlauf und im E-Mail-Postfach werden
+        regelmäßig auf ihre Erforderlichkeit geprüft und bei Wegfall des Zwecks
+        gelöscht; Sie können eine Löschung unter info@cod-st.com anfragen. In
+        der aktuell freigeschalteten Browser-Demo speichern wir selbst keine
+        Audioaufnahmen. Die Verarbeitung durch Sprach- und Verbindungsanbieter
+        ist weiterhin erforderlich. Anbieter können für Sicherheit,
+        Missbrauchsprävention und gesetzliche Pflichten Daten nach ihren
+        jeweiligen Bedingungen aufbewahren. Die Demo ist deshalb kein Angebot
+        für vertrauliche Gesundheitsinformationen.
       </p>
       <p>
         OpenAI nennt für die Realtime-API standardmäßig eine Aufbewahrung von
@@ -101,10 +110,11 @@ export default function Page() {
         Zeitstempel. Die IP-Adresse wird hierfür in eine nicht direkt lesbare,
         mit einem geheimen Schlüssel abgeleitete Kennung umgewandelt. Diese
         bleibt ein pseudonymes Datum. Beendete Demo-Sitzungsdaten werden
-        innerhalb von 24 Stunden gelöscht; Kennungen für die Anrufbegrenzung
-        nach zehn Minuten und für die Formularbegrenzung nach einer Stunde.
-        Technische Betriebs- und Sicherheitsprotokolle der Hostinganbieter
-        unterliegen deren Aufbewahrungsfristen und den geltenden
+        innerhalb von 24 Stunden gelöscht. Davon getrennte Gesprächsprotokolle
+        unterliegen den unter Ziffer 4 genannten Fristen. Kennungen für die
+        Anrufbegrenzung nach zehn Minuten und für die Formularbegrenzung nach
+        einer Stunde. Technische Betriebs- und Sicherheitsprotokolle der
+        Hostinganbieter unterliegen deren Aufbewahrungsfristen und den geltenden
         Kontoeinstellungen.
       </p>
       <h2>6. Empfänger und internationale Verarbeitung</h2>

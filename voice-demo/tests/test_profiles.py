@@ -26,6 +26,25 @@ class ProfileTests(unittest.TestCase):
         with self.assertRaises(KeyError):
             instructions("quintact")
 
+    def test_short_named_greetings_and_complete_front_desk_knowledge(self):
+        for key, profile in PROFILES.items():
+            self.assertLessEqual(len(profile["greeting"].split()), 20)
+            self.assertIn(profile["assistant"], profile["greeting"])
+            self.assertNotIn("demo", profile["greeting"].lower())
+            self.assertGreaterEqual(len(profile["knowledge"]), 8)
+            for topic in [
+                "Anfahrt",
+                "Termine",
+                "Unterlagen",
+                "Absagen",
+                "Kosten",
+                "Team",
+                "Barrierefreiheit",
+            ]:
+                self.assertIn(topic, profile["knowledge"])
+            self.assertIn("eine Frage", instructions(key))
+            self.assertIn("keine echten Termine", instructions(key))
+
 
 if __name__ == "__main__":
     unittest.main()

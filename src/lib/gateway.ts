@@ -61,6 +61,9 @@ export async function gateway(request: NextRequest, kind: "demo" | "contact") {
           action: body.action,
           profile: body.profile,
           consent: body.consent,
+          consentVersion: body.consentVersion,
+          id: body.id,
+          reason: body.reason,
           client: hash("visitor:" + visitor),
           ip: hash("ip:" + ip),
         }

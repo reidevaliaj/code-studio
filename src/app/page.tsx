@@ -22,7 +22,15 @@ const faqs = [
   ],
   [
     "Wie werden meine Daten verarbeitet?",
-    "Die Demo überträgt Ihre Stimme zur Verarbeitung an unsere Sprach- und Verbindungsanbieter. Wir speichern selbst weder Audioaufnahmen noch Gesprächstranskripte der Demo. Details zu Anbietern und Verarbeitung finden Sie in der Datenschutzerklärung.",
+    "Die freiwillige Demo verarbeitet Ihre Stimme und erstellt ein Gesprächsprotokoll. Code-Studio erhält Anrufdaten und Transkript per E-Mail zur Qualitätsprüfung. Verwenden Sie nur erfundene Angaben. Einzelheiten stehen in der Datenschutzerklärung.",
+  ],
+  [
+    "Was passiert, wenn die KI etwas nicht weiß?",
+    "Sie soll nachfragen oder ihre Grenze offen benennen. In Ihrer Praxis legen wir fest, welche Anliegen sie aufnehmen darf und wann Ihr Team übernehmen soll. Die Demo kann keine Person weiterverbinden und gibt keine medizinischen Ratschläge.",
+  ],
+  [
+    "Brauche ich dafür einen neuen Praxiskalender?",
+    "Für Praxisinformationen und die Aufnahme von Anliegen ist kein Kalenderwechsel erforderlich. Eine verbindliche Terminbuchung setzt eine passende, freigegebene Kalenderanbindung voraus. Wir prüfen Ihre vorhandene Software, bevor wir eine Integration zusagen.",
   ],
   [
     "Was kostet die Lösung für meine Praxis?",
@@ -84,6 +92,73 @@ export default function Home() {
         </span>
       </div>
       <DemoExperience />
+      <section
+        className="call-results section-pad"
+        aria-labelledby="call-results-title"
+      >
+        <div>
+          <p className="eyebrow">VOM GESPRÄCH ZUM ÜBERBLICK</p>
+          <h2 id="call-results-title">
+            Aufgenommen.
+            <br />
+            <span className="muted">Nachvollziehbar.</span>
+          </h2>
+          <p className="results-copy">
+            Nach dem Anruf bleiben die wichtigen Informationen bei Ihnen:
+            Gesprächsverlauf, Zeitpunkt und Anliegen gesammelt im
+            Anrufprotokoll. So kann Ihr Team den nächsten Schritt übernehmen.
+          </p>
+          <ul className="results-points">
+            <li>
+              <Icon name="check" /> Gesprächsprotokoll per E-Mail
+            </li>
+            <li>
+              <Icon name="check" /> Praxiswissen und Abläufe individuell
+              festlegen
+            </li>
+            <li>
+              <Icon name="check" /> Klare Grenzen statt unbestätigter Buchungen
+            </li>
+          </ul>
+        </div>
+        <article
+          className="sample-call"
+          aria-label="Beispiel eines Anrufprotokolls"
+        >
+          <div className="sample-call-top">
+            <span>BEISPIEL · ANRUFPROTOKOLL</span>
+            <Icon name="phone" />
+          </div>
+          <p className="sample-call-category">Terminwunsch</p>
+          <h3>
+            Ein Anliegen.
+            <br />
+            Alles an einem Platz.
+          </h3>
+          <dl>
+            <div>
+              <dt>Praxis</dt>
+              <dd>Physiotherapie</dd>
+            </div>
+            <div>
+              <dt>Anliegen</dt>
+              <dd>Manuelle Therapie</dd>
+            </div>
+            <div>
+              <dt>Wunschzeit</dt>
+              <dd>Donnerstag, nachmittags</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Wunsch aufgenommen</dd>
+            </div>
+          </dl>
+          <p className="sample-call-note">
+            <Icon name="check" /> Nachlesen statt zurückfragen.
+          </p>
+          <small>Fiktives Beispiel. Keine bestätigte Terminbuchung.</small>
+        </article>
+      </section>
       <section className="benefits section-pad" id="vorteile">
         <div className="section-heading">
           <p className="eyebrow">WENIGER UNTERBRECHUNGEN. MEHR RUHE.</p>
@@ -163,6 +238,15 @@ export default function Home() {
               <p>{copy}</p>
             </article>
           ))}
+        </div>
+        <div className="integration-note">
+          <Icon name="phone" />
+          <p>
+            <strong>Ihre Nummer. Ihr Praxisalltag.</strong> Wir prüfen Ihre
+            Telefonanlage, richten die passende Weiterleitung ein und stimmen
+            Öffnungszeiten, Praxiswissen und Übergaben mit Ihnen ab. Kalender-
+            und Praxissoftware-Anbindungen klären wir individuell.
+          </p>
         </div>
       </section>
       <section className="faq-section section-pad" id="fragen">

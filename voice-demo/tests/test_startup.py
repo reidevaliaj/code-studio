@@ -24,6 +24,8 @@ async def test_service_auth_and_invalid_requests(tmp_path, monkeypatch):
     ) as client:
         assert (await client.post("/v1/demo", json={"action": "join"})).status_code == 401
         assert (await client.post("/internal/claim", json={})).status_code == 401
+        assert (await client.post("/internal/report", json={})).status_code == 401
+        assert (await client.get("/v1/reports")).status_code == 404
         assert (
             await client.post(
                 "/v1/demo",
@@ -43,3 +45,29 @@ async def test_service_auth_and_invalid_requests(tmp_path, monkeypatch):
                 headers={"Authorization": "Bearer gateway-test"},
             )
         ).status_code == 413
+        monkeypatch.setattr(service, "ready", True)
+        headers = {"Authorization": "Bearer gateway-test"}
+        body = {
+            "action": "join",
+            "client": "a" * 64,
+            "ip": "test-ip",
+            "profile": "physio",
+            "consent": True,
+        }
+        assert (await client.post("/v1/demo", json=body, headers=headers)).status_code == 409
+        body["consentVersion"] = service.CONSENT_VERSION
+        response = await client.post("/v1/demo", json=body, headers=headers)
+        assert response.status_code == 200
+        session_id = response.json()["id"]
+        response = await client.post(
+            "/v1/demo",
+            json={
+                "action": "cancel",
+                "client": "a" * 64,
+                "id": session_id,
+                "reason": "close_button",
+            },
+            headers=headers,
+        )
+        assert response.status_code == 200
+        assert service.store.status("a" * 64)["end_reason"] == "close_button"

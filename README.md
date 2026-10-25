@@ -12,7 +12,7 @@ Use Node.js 22+ and npm. Run `npm ci`, provide `DEMO_API_URL` and `DEMO_GATEWAY_
 
 The isolated Python service, dedicated LiveKit worker, tests, and host deployment scripts are in [voice-demo/](voice-demo/README.md). They run on the existing voice host, not inside Vercel Functions. Vercel stores only the gateway URL and server-only gateway credential.
 
-Public demo IDs are physio, dental, and general. Two server-side slots are shared across the three profiles. Additional visitors wait in a real FIFO queue. The gateway controls tenant identity, short-lived tokens, duration, and cleanup. Agent-side recording, transcripts, and business-action tools are disabled.
+Public demo IDs are physio, dental, and general. Two server-side slots are shared across the three profiles. Additional visitors wait in a real FIFO queue. The gateway controls tenant identity, short-lived tokens, duration, and cleanup. Business-action tools remain disabled. Consenting calls now produce private transcripts, backend call-history entries and email reports to the operator. Audio recording is implemented and tested, but its production switch remains off pending the operator's recording notice and legal review.
 
 ## Business details
 

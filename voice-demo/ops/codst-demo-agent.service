@@ -6,20 +6,21 @@ Wants=network-online.target codst-demo-api.service
 [Service]
 User=rei
 Group=rei
-WorkingDirectory=/home/rei/apps/codst-demo/releases/20261025-v1
+WorkingDirectory=/home/rei/apps/codst-demo/releases/20261025-v2
 EnvironmentFile=/home/rei/apps/codst-demo/shared.env
-ExecStart=/home/rei/apps/codst-demo/releases/20261025-v1/.venv/bin/python demo_agent.py start
+ExecStart=/home/rei/apps/codst-demo/releases/20261025-v2/.venv/bin/python demo_agent.py start
 Restart=on-failure
 RestartSec=5
 MemoryHigh=750M
 MemoryMax=1000M
 CPUWeight=20
-TimeoutStopSec=30
+TimeoutStopSec=50
 KillMode=mixed
 UMask=0077
 NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
+ReadWritePaths=/home/rei/apps/codst-demo/data
 
 [Install]
 WantedBy=multi-user.target

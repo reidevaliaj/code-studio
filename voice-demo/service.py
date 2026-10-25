@@ -10,23 +10,28 @@ import re
 import time
 from contextlib import asynccontextmanager
 from datetime import timedelta
+from pathlib import Path
 
 import httpx
 import psutil
+from aiohttp import ClientTimeout
 from fastapi import FastAPI, Header, HTTPException, Request
 from fastapi.responses import JSONResponse
 from livekit import api
 
 from admission import Admission, Denied
 from profiles import PROFILES, instructions
+from reports import REASONS, Reports, deliver_email, mirror_history
 
 log = logging.getLogger("codst.demo")
 GATEWAY_KEY = os.environ["DEMO_GATEWAY_KEY"]
 WORKER_KEY = os.environ["DEMO_WORKER_KEY"]
 ready = False
+CONSENT_VERSION = "2026-10-25-transcript-v1"
 store = Admission(
     os.getenv("DEMO_DATABASE", "/home/rei/apps/codst-demo/data/queue.db"), available=lambda: ready
 )
+reports = Reports(store, os.getenv("DEMO_DATA_DIR", str(Path(store.path).parent)))
 
 
 def auth(value, key):
@@ -43,7 +48,9 @@ async def housekeeping():
     while True:
         try:
             async with httpx.AsyncClient(timeout=3) as client:
-                health = await client.get("http://127.0.0.1:8091/")
+                health = await client.get(
+                    "http://127.0.0.1:" + os.getenv("DEMO_WORKER_PORT", "8091") + "/"
+                )
             ready = (
                 health.status_code == 200
                 and psutil.virtual_memory().available > 512 * 1024 * 1024
@@ -54,7 +61,7 @@ async def housekeeping():
             ready = False
         for row in store.cleanup_rooms():
             try:
-                async with api.LiveKitAPI() as lk:
+                async with api.LiveKitAPI(timeout=ClientTimeout(total=8)) as lk:
                     await lk.room.delete_room(api.DeleteRoomRequest(room=row["room"]))
                 store.finish_cleanup(row["id"])
             except api.TwirpError as exc:
@@ -62,16 +69,38 @@ async def housekeeping():
                     store.finish_cleanup(row["id"])
             except Exception:  # noqa: BLE001 - retain the occupied slot and retry uncertain room deletion
                 log.warning("Room cleanup retry required")
+        reports.reconcile()
+        await asyncio.sleep(3)
+
+
+async def delivery_loop():
+    while True:
+        for channel, deliver in (("email", deliver_email), ("mirror", mirror_history)):
+            if channel == "mirror" and os.getenv("DEMO_HISTORY_MIRROR_ENABLED", "1") == "0":
+                continue
+            due = reports.due(channel)
+            if due:
+                row = due[0]
+                try:
+                    await deliver(reports, row, os.environ)
+                except Exception as exc:  # noqa: BLE001 - durable outbox retries without holding a voice slot
+                    reports.failed(row["id"], channel, type(exc).__name__)
+                    log.warning("Call %s delivery will retry: %s", channel, type(exc).__name__)
         await asyncio.sleep(3)
 
 
 @asynccontextmanager
 async def lifespan(_app):
+    reports.import_legacy()
     task = asyncio.create_task(housekeeping())
+    deliveries = asyncio.create_task(delivery_loop())
     yield
     task.cancel()
+    deliveries.cancel()
     with contextlib.suppress(asyncio.CancelledError):
         await task
+    with contextlib.suppress(asyncio.CancelledError):
+        await deliveries
 
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
@@ -102,7 +131,17 @@ async def demo(request: Request, authorization: str = Header(default="")):
             )
         if body.get("consent") is not True:
             raise HTTPException(400, "Bitte bestätigen Sie zuerst die Hinweise zur Demo.")
-        row = store.join(client, str(body.get("ip", "")), str(body.get("profile", "")))
+        if body.get("consentVersion") != CONSENT_VERSION:
+            raise HTTPException(
+                409,
+                "Bitte laden Sie die Seite neu und bestätigen Sie die aktuellen Datenschutzhinweise.",
+            )
+        row = store.join(
+            client,
+            str(body.get("ip", "")),
+            str(body.get("profile", "")),
+            consent_version=CONSENT_VERSION,
+        )
         if row["state"] in ("connecting", "active", "closing"):
             raise HTTPException(
                 409,
@@ -111,15 +150,27 @@ async def demo(request: Request, authorization: str = Header(default="")):
     elif action == "status":
         row = store.status(client)
     elif action == "cancel":
-        store.cancel(client)
+        reason = body.get("reason", "hangup")
+        store.cancel(
+            client,
+            body.get("id"),
+            reason if isinstance(reason, str) and reason in REASONS else "hangup",
+        )
         return {"state": "ended"}
     elif action == "connect":
         row = store.connect(client)
+        if row["source"] == "browser" and row["consent_version"] != CONSENT_VERSION:
+            store.cancel(client, row["id"], "connection_error")
+            store.room_ready(row["id"])
+            raise HTTPException(
+                409,
+                "Bitte laden Sie die Seite neu und bestätigen Sie die aktuellen Datenschutzhinweise.",
+            )
         if row["source"] != "browser":
             raise HTTPException(403)
         if row["new"]:
             try:
-                async with api.LiveKitAPI() as lk:
+                async with api.LiveKitAPI(timeout=ClientTimeout(total=8)) as lk:
                     await lk.room.create_room(
                         api.CreateRoomRequest(
                             name=row["room"],
@@ -128,19 +179,25 @@ async def demo(request: Request, authorization: str = Header(default="")):
                             max_participants=2,
                         )
                     )
+                    if not store.room_connectable(row["id"]):
+                        raise ValueError("Call cancelled during room creation")
                     await lk.agent_dispatch.create_dispatch(
                         api.CreateAgentDispatchRequest(
-                            agent_name="codst-demo-agent",
+                            agent_name=os.getenv("DEMO_AGENT_NAME", "codst-demo-agent"),
                             room=row["room"],
                             metadata=json.dumps({"session_id": row["id"]}),
                         )
                     )
             except Exception:  # noqa: BLE001 - uncertain dispatch must close the reserved room
-                store.cancel(client)
+                store.cancel(client, row["id"], "connection_error")
                 raise HTTPException(
                     503,
                     "Die Verbindung konnte nicht aufgebaut werden. Bitte versuchen Sie es erneut.",
                 )
+            finally:
+                store.room_ready(row["id"])
+        if not store.room_connectable(row["id"]):
+            raise HTTPException(409, "Dieses Gespräch wurde bereits beendet.")
         token = (
             api.AccessToken()
             .with_identity("visitor-" + client[:20])
@@ -165,9 +222,9 @@ async def demo(request: Request, authorization: str = Header(default="")):
     return public(row)
 
 
-async def bounded_body(request):
+async def bounded_body(request, limit=8192):
     raw = await request.body()
-    if len(raw) > 8192:
+    if len(raw) > limit:
         raise HTTPException(413, "Die Anfrage ist zu groß.")
     try:
         body = json.loads(raw)
@@ -181,19 +238,41 @@ async def bounded_body(request):
 @app.post("/internal/{action}")
 async def internal(action: str, request: Request, authorization: str = Header(default="")):
     auth(authorization, WORKER_KEY)
-    body = await bounded_body(request)
+    body = await bounded_body(request, limit=262144 if action in ("report", "checkpoint") else 8192)
     session_id = str(body.get("id", ""))
     if action == "claim":
         row = store.claim(session_id, str(body.get("room", "")))
+        reports.start(row)
         return {
             **public(row),
             "instructions": instructions(row["profile"]),
             "greeting": PROFILES[row["profile"]]["greeting"],
+            "profile": row["profile"],
+            "transcripts_enabled": os.getenv("DEMO_TRANSCRIPTS_ENABLED", "1") == "1",
+            "record_audio": os.getenv("DEMO_AUDIO_RECORDING_ENABLED", "0") == "1",
         }
     if action == "ping":
         return public(store.worker_ping(session_id))
     if action == "end":
-        store.end_by_id(session_id)
+        reason = body.get("reason", "worker_shutdown")
+        store.end_by_id(
+            session_id,
+            reason if isinstance(reason, str) and reason in REASONS else "worker_shutdown",
+        )
+        return {"ok": True}
+    if action in ("report", "checkpoint"):
+        try:
+            if action == "report":
+                reports.finish(
+                    session_id,
+                    body.get("messages", []),
+                    body.get("reason", "worker_shutdown"),
+                    body.get("audio_status", "disabled"),
+                )
+            else:
+                reports.checkpoint(session_id, body.get("messages", []))
+        except (ValueError, TypeError):
+            raise HTTPException(400, "Ungültiges Anrufprotokoll.")
         return {"ok": True}
     if action == "sip-admit":
         if not ready:

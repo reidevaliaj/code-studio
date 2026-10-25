@@ -10,22 +10,28 @@ const profiles = [
     id: "physio",
     icon: "physio",
     label: "Physiotherapiepraxis",
-    name: "Physiotherapie am Park",
-    hint: "Terminwunsch & Praxisfragen",
+    name: "Physiotherapie Code-Studio",
+    assistant: "Mira",
+    callLabel: "Demo Physiotherapie anrufen",
+    hint: "Behandlungen, Verordnungen & Terminwünsche",
   },
   {
     id: "dental",
     icon: "tooth",
     label: "Zahnarztpraxis",
-    name: "Zahnarztpraxis Lindenhof",
-    hint: "Vorsorge & Terminorganisation",
+    name: "Zahnarztpraxis Code-Studio",
+    assistant: "Clara",
+    callLabel: "Demo Zahnarztpraxis anrufen",
+    hint: "Vorsorge, Zahnreinigung & Praxisfragen",
   },
   {
     id: "general",
     icon: "cross",
     label: "Hausarztpraxis",
-    name: "Hausarztpraxis Sonnenallee",
-    hint: "Anliegen & Praxisablauf",
+    name: "Hausarztpraxis Code-Studio",
+    assistant: "Lea",
+    callLabel: "Demo Hausarztpraxis anrufen",
+    hint: "Sprechzeiten, Rezepte & Terminorganisation",
   },
 ];
 type Profile = (typeof profiles)[number];
@@ -79,9 +85,10 @@ export function DemoExperience() {
   const audioContainer = useRef<HTMLDivElement>(null);
   const opener = useRef<HTMLElement | null>(null);
   const joined = useRef(false);
+  const admissionId = useRef<string | null>(null);
   const generation = useRef(0);
 
-  const disconnect = useCallback(() => {
+  const disconnect = useCallback((reason = "hangup") => {
     generation.current++;
     microphone.current?.stop();
     microphone.current = null;
@@ -92,19 +99,24 @@ export function DemoExperience() {
     if (audioContainer.current) audioContainer.current.replaceChildren();
     if (joined.current) {
       joined.current = false;
-      void requestDemo("cancel").catch(() => {});
+      const id = admissionId.current;
+      admissionId.current = null;
+      void requestDemo("cancel", { id, reason }).catch(() => {});
     }
   }, []);
   const close = useCallback(() => {
-    disconnect();
+    disconnect("close_button");
     setSelected(null);
     setData(null);
     opener.current?.focus();
   }, [disconnect]);
-  const end = useCallback(() => {
-    disconnect();
-    setStage("ended");
-  }, [disconnect]);
+  const end = useCallback(
+    (reason = "hangup") => {
+      disconnect(reason);
+      setStage("ended");
+    },
+    [disconnect],
+  );
 
   useEffect(() => () => disconnect(), [disconnect]);
   useEffect(() => {
@@ -142,7 +154,7 @@ export function DemoExperience() {
       }
     }
     window.addEventListener("keydown", key);
-    const leave = () => disconnect();
+    const leave = () => disconnect("pagehide");
     window.addEventListener("pagehide", leave);
     return () => {
       document.body.style.overflow = overflow;
@@ -194,7 +206,7 @@ export function DemoExperience() {
         ? Math.ceil((data.deadline * 1000 - Date.now()) / 1000)
         : 180 - Math.floor((Date.now() - started) / 1000);
       setRemaining(Math.max(0, seconds));
-      if (seconds <= 0) end();
+      if (seconds <= 0) end("duration_limit");
     };
     tick();
     const timer = setInterval(tick, 1000);
@@ -217,12 +229,20 @@ export function DemoExperience() {
     const current = ++generation.current;
     setStage("loading");
     try {
-      const next = await requestDemo("join", { profile: selected.id, consent });
-      joined.current = true;
+      const next = await requestDemo("join", {
+        profile: selected.id,
+        consent,
+        consentVersion: "2026-10-25-transcript-v1",
+      });
       if (generation.current !== current) {
-        disconnect();
+        void requestDemo("cancel", {
+          id: next.id,
+          reason: "close_button",
+        }).catch(() => {});
         return;
       }
+      joined.current = true;
+      admissionId.current = next.id;
       setData(next);
       setStage(next.state === "reserved" ? "ready" : "waiting");
     } catch (e) {
@@ -282,7 +302,7 @@ export function DemoExperience() {
         },
       );
       liveRoom.on(RoomEvent.Disconnected, () => {
-        if (generation.current === current) end();
+        if (generation.current === current) end("visitor_disconnected");
       });
       await liveRoom.connect(connection.url!, connection.token!);
       if (current !== generation.current) {
@@ -295,7 +315,7 @@ export function DemoExperience() {
       setStage("live");
     } catch (e) {
       if (current !== generation.current) return;
-      disconnect();
+      disconnect("connection_error");
       const denied =
         e instanceof Error &&
         ["NotAllowedError", "PermissionDeniedError"].includes(e.name);
@@ -340,37 +360,62 @@ export function DemoExperience() {
       <section id="demo" className="demo-section section-pad">
         <div className="section-heading horizontal">
           <div>
-            <p className="eyebrow">NICHT NUR LESEN. SELBST ERLEBEN.</p>
+            <p className="eyebrow">
+              <span className="status-dot" /> LIVE-DEMO · DIREKT IM BROWSER
+            </p>
             <h2>
-              Wie klingt Entlastung?
+              Rufen Sie Ihre
               <br />
-              <span className="muted">Probieren Sie es aus.</span>
+              <span className="muted">KI-Rezeption an.</span>
             </h2>
           </div>
           <p>
-            Wählen Sie eine Praxis.
-            <br />
-            Ihre KI-Rezeption ist ein Gespräch entfernt.
+            Lernen Sie Mira, Clara und Lea kennen. Drei Beispielpraxen, drei
+            spezialisierte Rezeptionistinnen – und Sie sind der Anrufer.
           </p>
+        </div>
+        <div className="demo-explainer">
+          <p>
+            Fragen Sie nach Öffnungszeiten, Behandlungen, Anfahrt oder spielen
+            Sie einen Terminwunsch durch. Alle Praxisdaten sind erfunden, echte
+            Termine werden nicht gebucht.
+            <span> Die Wartezimmerlektüre dürfen Sie sich dafür sparen.</span>
+          </p>
+          <ol aria-label="So starten Sie den Browser-Test">
+            <li>
+              <Icon name="phone" />
+              <span>Praxis wählen</span>
+            </li>
+            <li>
+              <Icon name="mic" />
+              <span>Mikrofon erlauben</span>
+            </li>
+            <li>
+              <Icon name="check" />
+              <span>Einfach lossprechen</span>
+            </li>
+          </ol>
         </div>
         <div className="demo-choices">
           {profiles.map((profile, i) => (
-            <button
-              className="demo-choice"
-              key={profile.id}
-              onClick={(e) => open(profile, e)}
-              aria-label={`${profile.label} Demo öffnen`}
-            >
+            <article className="demo-choice" key={profile.id}>
               <span className="choice-top">
                 <Icon name={profile.icon} width="32" height="32" />
                 <span>0{i + 1}</span>
               </span>
               <h3>{profile.label}</h3>
-              <p>{profile.hint}</p>
-              <span className="choice-action">
-                Demo ausprobieren <Icon name="arrow" />
+              <span className="choice-person">
+                Mit {profile.assistant} sprechen
               </span>
-            </button>
+              <p>{profile.hint}</p>
+              <button
+                className="choice-action"
+                onClick={(e) => open(profile, e)}
+              >
+                <Icon name="phone" />
+                {profile.callLabel}
+              </button>
+            </article>
           ))}
         </div>
         <div className="demo-footnote">
@@ -534,7 +579,9 @@ export function DemoExperience() {
                   <Link href="/datenschutz" target="_blank" rel="noopener">
                     Datenschutzhinweise
                   </Link>{" "}
-                  habe ich gelesen. Ich verwende nur erfundene Angaben.
+                  habe ich gelesen. Das Gesprächsprotokoll darf gespeichert und
+                  an Code-Studio per E-Mail gesendet werden. Ich verwende nur
+                  erfundene Angaben.
                 </span>
               </label>
             )}
@@ -568,7 +615,7 @@ export function DemoExperience() {
                   <button
                     className="call-control hangup"
                     aria-label="Gespräch beenden"
-                    onClick={end}
+                    onClick={() => end()}
                   >
                     <Icon name="phone" />
                   </button>
@@ -588,7 +635,7 @@ export function DemoExperience() {
               </>
             )}
             {["waiting", "loading", "connecting"].includes(stage) && (
-              <button className="phone-cancel" onClick={end}>
+              <button className="phone-cancel" onClick={() => end()}>
                 Abbrechen
               </button>
             )}

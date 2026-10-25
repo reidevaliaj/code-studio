@@ -25,13 +25,29 @@ class Admission:
                     id TEXT PRIMARY KEY, client TEXT NOT NULL, ip TEXT NOT NULL,
                     profile TEXT NOT NULL, state TEXT NOT NULL, created REAL NOT NULL,
                     seen REAL NOT NULL, deadline REAL NOT NULL, room TEXT NOT NULL DEFAULT '',
-                    connected REAL, worker_seen REAL, source TEXT NOT NULL DEFAULT 'browser'
+                    connected REAL, worker_seen REAL, source TEXT NOT NULL DEFAULT 'browser',
+                    ended_at REAL, end_reason TEXT NOT NULL DEFAULT '', room_pending INTEGER NOT NULL DEFAULT 0,
+                    consent_version TEXT NOT NULL DEFAULT ''
                 );
                 CREATE INDEX IF NOT EXISTS sessions_client ON sessions(client, created);
                 CREATE INDEX IF NOT EXISTS sessions_state ON sessions(state, created);
                 CREATE TABLE IF NOT EXISTS limits (ip TEXT NOT NULL, at REAL NOT NULL);
                 CREATE TABLE IF NOT EXISTS contact_limits (ip TEXT NOT NULL, at REAL NOT NULL);
             """)
+            columns = {row[1] for row in db.execute("PRAGMA table_info(sessions)")}
+            if "ended_at" not in columns:
+                db.execute("ALTER TABLE sessions ADD COLUMN ended_at REAL")
+            if "end_reason" not in columns:
+                db.execute("ALTER TABLE sessions ADD COLUMN end_reason TEXT NOT NULL DEFAULT ''")
+            if "room_pending" not in columns:
+                db.execute(
+                    "ALTER TABLE sessions ADD COLUMN room_pending INTEGER NOT NULL DEFAULT 0"
+                )
+
+            if "consent_version" not in columns:
+                db.execute(
+                    "ALTER TABLE sessions ADD COLUMN consent_version TEXT NOT NULL DEFAULT ''"
+                )
 
     @contextlib.contextmanager
     def db(self):
@@ -49,11 +65,12 @@ class Admission:
 
     def _sweep(self, db, now):
         db.execute(
-            "UPDATE sessions SET state=CASE WHEN room='' THEN 'ended' ELSE 'closing' END WHERE state IN ('reserved','connecting','active') AND (deadline<=? OR seen<? OR (state='active' AND worker_seen<?))",
-            (now, now - 45, now - 35),
+            "UPDATE sessions SET ended_at=?,end_reason=CASE WHEN state='active' AND deadline<=? THEN 'duration_limit' WHEN state='active' AND worker_seen<? THEN 'worker_timeout' ELSE 'browser_timeout' END,state=CASE WHEN room='' THEN 'ended' ELSE 'closing' END WHERE state IN ('reserved','connecting','active') AND (deadline<=? OR seen<? OR (state='active' AND worker_seen<?))",
+            (now, now, now - 35, now, now - 45, now - 35),
         )
         db.execute(
-            "UPDATE sessions SET state='ended' WHERE state='waiting' AND seen<?", (now - 45,)
+            "UPDATE sessions SET state='ended',ended_at=?,end_reason='browser_timeout' WHERE state='waiting' AND seen<?",
+            (now, now - 45),
         )
         db.execute("DELETE FROM sessions WHERE created<? AND state='ended'", (now - 86400,))
         db.execute("DELETE FROM limits WHERE at<?", (now - 600,))
@@ -95,7 +112,7 @@ class Admission:
         )
         return result
 
-    def join(self, client, ip, profile, source="browser"):
+    def join(self, client, ip, profile, source="browser", consent_version=""):
         if profile not in PROFILES or source not in ("browser", "sip"):
             raise Denied("Diese Demo ist nicht verfügbar.")
         now = self.clock()
@@ -118,7 +135,7 @@ class Admission:
                 raise Denied("Die Warteschlange ist voll. Bitte versuchen Sie es später erneut.")
             db.execute("INSERT INTO limits VALUES (?,?)", (ip, now))
             db.execute(
-                "INSERT INTO sessions(id,client,ip,profile,state,created,seen,deadline,source) VALUES (?,?,?,?,?,?,?,?,?)",
+                "INSERT INTO sessions(id,client,ip,profile,state,created,seen,deadline,source,consent_version) VALUES (?,?,?,?,?,?,?,?,?,?)",
                 (
                     secrets.token_urlsafe(24),
                     client,
@@ -129,6 +146,7 @@ class Admission:
                     now,
                     now + 45,
                     source,
+                    consent_version,
                 ),
             )
             self._promote(db, now)
@@ -154,8 +172,8 @@ class Admission:
                 raise Denied("Die Leitung ist noch nicht bereit. Bitte warten Sie kurz.")
             room = "codst-demo-" + row["id"] if row["source"] == "browser" else ""
             db.execute(
-                "UPDATE sessions SET state='connecting', room=?, seen=?, deadline=? WHERE id=?",
-                (room, now, now + 45, row["id"]),
+                "UPDATE sessions SET state='connecting', room=?, seen=?, deadline=?,room_pending=? WHERE id=?",
+                (room, now, now + 45, int(row["source"] == "browser"), row["id"]),
             )
             return dict(self._current(db, client), new=True)
 
@@ -172,10 +190,25 @@ class Admission:
             ):
                 raise Denied("Ungültige oder abgelaufene Demo-Sitzung.")
             db.execute(
-                "UPDATE sessions SET state='active', room=?, connected=?, worker_seen=?, seen=?, deadline=? WHERE id=?",
+                "UPDATE sessions SET state='active', room=?, connected=?, worker_seen=?, seen=?, deadline=?,room_pending=0 WHERE id=?",
                 (room, now, now, now, now + 180, session_id),
             )
             return dict(db.execute("SELECT * FROM sessions WHERE id=?", (session_id,)).fetchone())
+
+    def room_ready(self, session_id):
+        with self.db() as db:
+            db.execute("UPDATE sessions SET room_pending=0 WHERE id=?", (session_id,))
+
+    def room_connectable(self, session_id):
+        with self.db() as db:
+            row = db.execute(
+                "SELECT state,deadline FROM sessions WHERE id=?", (session_id,)
+            ).fetchone()
+            return (
+                row is not None
+                and row["state"] in ("connecting", "active")
+                and row["deadline"] > self.clock()
+            )
 
     def worker_ping(self, session_id):
         now = self.clock()
@@ -190,27 +223,39 @@ class Admission:
             )
             return dict(row)
 
-    def cancel(self, client):
+    def cancel(self, client, session_id=None, reason="hangup"):
         with self.db() as db:
-            row = self._current(db, client)
+            row = (
+                db.execute(
+                    "SELECT * FROM sessions WHERE client=? AND id=?", (client, session_id)
+                ).fetchone()
+                if session_id
+                else self._current(db, client)
+            )
+            if row is None:
+                return
             db.execute(
-                "UPDATE sessions SET state=CASE WHEN room='' THEN 'ended' ELSE 'closing' END WHERE id=? AND state NOT IN ('ended','closing')",
-                (row["id"],),
+                "UPDATE sessions SET state=CASE WHEN room='' THEN 'ended' ELSE 'closing' END,ended_at=?,end_reason=? WHERE id=? AND state NOT IN ('ended','closing')",
+                (self.clock(), reason, row["id"]),
             )
             self._promote(db, self.clock())
 
-    def end_by_id(self, session_id):
+    def end_by_id(self, session_id, reason="worker_shutdown"):
         with self.db() as db:
             db.execute(
-                "UPDATE sessions SET state=CASE WHEN room='' THEN 'ended' ELSE 'closing' END WHERE id=? AND state NOT IN ('ended','closing')",
-                (session_id,),
+                "UPDATE sessions SET state=CASE WHEN room='' THEN 'ended' ELSE 'closing' END,ended_at=?,end_reason=? WHERE id=? AND state NOT IN ('ended','closing')",
+                (self.clock(), reason, session_id),
             )
 
     def cleanup_rooms(self):
         with self.db() as db:
             self._sweep(db, self.clock())
             return [
-                dict(x) for x in db.execute("SELECT id,room FROM sessions WHERE state='closing'")
+                dict(x)
+                for x in db.execute(
+                    "SELECT id,room FROM sessions WHERE state='closing' AND (room_pending=0 OR ended_at<?)",
+                    (self.clock() - 30,),
+                )
             ]
 
     def finish_cleanup(self, session_id):

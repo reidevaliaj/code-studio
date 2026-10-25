@@ -16,6 +16,7 @@ async def test_runtime_disables_cloud_recording_and_uses_claimed_profile(monkeyp
             return lambda fn: fn
 
     class Context:
+        proc = SimpleNamespace(userdata={})
         job = SimpleNamespace(metadata='{"session_id":"test"}')
         room = Room()
 
@@ -34,6 +35,7 @@ async def test_runtime_disables_cloud_recording_and_uses_claimed_profile(monkeyp
     class Session:
         def __init__(self, **kwargs):
             self.callbacks = {}
+            self.history = SimpleNamespace(messages=list)
 
         def on(self, event):
             def register(fn):
@@ -51,6 +53,10 @@ async def test_runtime_disables_cloud_recording_and_uses_claimed_profile(monkeyp
         def generate_reply(self, **kwargs):
             calls.append(("reply", kwargs))
 
+        def say(self, text, **kwargs):
+            assert text == "Fiktive Praxis, keine echte Buchung."
+            calls.append(("greeting", text))
+
         async def aclose(self):
             pass
 
@@ -59,11 +65,15 @@ async def test_runtime_disables_cloud_recording_and_uses_claimed_profile(monkeyp
         return {
             "instructions": "Trusted server profile",
             "greeting": "Fiktive Praxis, keine echte Buchung.",
+            "profile": "physio",
+            "transcripts_enabled": True,
+            "deadline": 9999999999,
         }
 
     def model(**kwargs):
         assert kwargs["model"] == "gpt-realtime-2.1-mini"
-        assert kwargs["input_audio_transcription"] is None
+        assert kwargs["input_audio_transcription"].model == "gpt-transcribe"
+        assert kwargs["input_audio_transcription"].language == "de"
         assert kwargs["tracing"] is None
         assert kwargs["turn_detection"].create_response is True
         assert kwargs["turn_detection"].interrupt_response is True
@@ -72,9 +82,12 @@ async def test_runtime_disables_cloud_recording_and_uses_claimed_profile(monkeyp
     monkeypatch.setattr(demo_agent, "call", gateway)
     monkeypatch.setattr(demo_agent, "AgentSession", Session)
     monkeypatch.setattr(demo_agent.openai.realtime, "RealtimeModel", model)
-    await demo_agent.demo(Context())
+    ctx = Context()
+    await demo_agent.demo(ctx)
+    await demo_agent.on_session_end(ctx)
     assert any(k == "start" for k, _ in calls)
     assert any(k == "end" for k, _ in calls)
+    assert any(k == "report" for k, _ in calls)
 
 
 @pytest.mark.asyncio
