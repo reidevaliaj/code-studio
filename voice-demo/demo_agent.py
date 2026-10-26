@@ -10,9 +10,8 @@ from pathlib import Path
 
 import httpx
 from livekit.agents import Agent, AgentServer, AgentSession, AutoSubscribe, JobContext, cli
-from livekit.plugins import openai
+from livekit.plugins import openai, silero
 from openai.types.realtime import AudioTranscription, RealtimeReasoning
-from openai.types.realtime.realtime_audio_input_turn_detection import SemanticVad
 
 from call_lifecycle import CallLifecycle
 from greetings import greeting_audio
@@ -30,6 +29,18 @@ server = AgentServer(
     shutdown_process_timeout=40,
     session_end_timeout=30,
 )
+
+
+def prewarm(proc):
+    proc.userdata["vad"] = silero.VAD.load(
+        activation_threshold=0.65,
+        min_speech_duration=0.12,
+        min_silence_duration=0.6,
+        prefix_padding_duration=0.3,
+    )
+
+
+server.setup_fnc = prewarm
 
 
 async def call(action, data):
@@ -84,17 +95,24 @@ async def demo(ctx: JobContext):
             tracing=None,
             max_session_duration=180,
             reasoning=RealtimeReasoning(effort="low"),
-            turn_detection=SemanticVad(
-                type="semantic_vad", eagerness="high", create_response=True, interrupt_response=True
-            ),
+            # Provider-side turn detection bypasses the SDK's interruption
+            # duration gate. Let local speech detection own both boundaries.
+            turn_detection=None,
         )
         session = AgentSession(
             llm=llm,
+            vad=ctx.proc.userdata["vad"],
+            # The browser already enables echo cancellation. The SDK's default
+            # 3-second warmup otherwise drops the start of an early correction.
+            aec_warmup_duration=0.75,
             session_close_transcript_timeout=3.0,
             turn_handling={
-                "turn_detection": "realtime_llm",
+                "turn_detection": "vad",
+                "endpointing": {"min_delay": 0.6, "max_delay": 3.0},
                 "interruption": {
                     "enabled": True,
+                    "mode": "vad",
+                    "min_duration": 0.65,
                     "resume_false_interruption": True,
                     "false_interruption_timeout": 2.0,
                 },

@@ -40,7 +40,18 @@ def auth(value, key):
 
 
 def public(row):
-    return {k: row.get(k) for k in ("id", "profile", "state", "position", "deadline", "connected")}
+    result = {
+        k: row.get(k)
+        for k in ("id", "profile", "state", "position", "deadline", "connected", "end_reason")
+    }
+    # A duration computed by the server avoids dependence on the visitor's
+    # wall clock. The browser only shortens its own monotonic hard deadline.
+    result["remaining"] = (
+        max(0, min(180, row["deadline"] - time.time()))
+        if row.get("connected") is not None
+        else None
+    )
+    return result
 
 
 async def housekeeping():

@@ -34,6 +34,13 @@ async def test_runtime_disables_cloud_recording_and_uses_claimed_profile(monkeyp
 
     class Session:
         def __init__(self, **kwargs):
+            assert kwargs["vad"] is not None
+            assert 0 < kwargs["aec_warmup_duration"] <= 1
+            handling = kwargs["turn_handling"]
+            assert handling["turn_detection"] == "vad"
+            assert handling["interruption"]["mode"] == "vad"
+            assert handling["interruption"]["min_duration"] >= 0.6
+            assert handling["interruption"]["resume_false_interruption"] is True
             self.callbacks = {}
             self.history = SimpleNamespace(messages=list)
 
@@ -75,14 +82,16 @@ async def test_runtime_disables_cloud_recording_and_uses_claimed_profile(monkeyp
         assert kwargs["input_audio_transcription"].model == "gpt-transcribe"
         assert kwargs["input_audio_transcription"].language == "de"
         assert kwargs["tracing"] is None
-        assert kwargs["turn_detection"].create_response is True
-        assert kwargs["turn_detection"].interrupt_response is True
+        # Provider-side VAD bypasses LiveKit's minimum speech duration, so it
+        # must be disabled for the local breathing/short-noise gate to work.
+        assert kwargs["turn_detection"] is None
         return object()
 
     monkeypatch.setattr(demo_agent, "call", gateway)
     monkeypatch.setattr(demo_agent, "AgentSession", Session)
     monkeypatch.setattr(demo_agent.openai.realtime, "RealtimeModel", model)
     ctx = Context()
+    ctx.proc.userdata["vad"] = object()
     await demo_agent.demo(ctx)
     await demo_agent.on_session_end(ctx)
     assert any(k == "start" for k, _ in calls)

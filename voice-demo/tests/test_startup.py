@@ -71,3 +71,17 @@ async def test_service_auth_and_invalid_requests(tmp_path, monkeypatch):
         )
         assert response.status_code == 200
         assert service.store.status("a" * 64)["end_reason"] == "close_button"
+
+
+def test_public_countdown_uses_server_time_and_cannot_exceed_three_minutes(monkeypatch):
+    import service
+
+    monkeypatch.setattr(service.time, "time", lambda: 5000.0)
+    row = {"id": "a", "state": "active", "connected": 4900, "deadline": 5080}
+    assert service.public(row)["remaining"] == 80
+    row["deadline"] = 6000
+    assert service.public(row)["remaining"] == 180
+    row["deadline"] = 4999
+    assert service.public(row)["remaining"] == 0
+    row["connected"] = None
+    assert service.public(row)["remaining"] is None

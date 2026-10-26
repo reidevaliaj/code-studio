@@ -133,6 +133,20 @@ class AdmissionTests(unittest.TestCase):
         self.assertEqual(self.store.status("a")["id"], new["id"])
         self.assertEqual(self.store.status("a")["state"], "reserved")
 
+    def test_restart_can_queue_while_the_old_room_is_being_deleted(self):
+        self.join("a")
+        old = self.store.connect("a")
+        self.store.cancel("a", old["id"], "close_button")
+        self.join("b")
+        new = self.join("a", "dental")
+        self.assertNotEqual(new["id"], old["id"])
+        self.assertEqual(new["state"], "waiting")
+        self.assertEqual(self.store.count_active(), 2)
+        self.store.finish_cleanup(old["id"])
+        self.assertEqual(self.store.status("a")["state"], "reserved")
+        self.store.cancel("a", old["id"], "close_button")
+        self.assertEqual(self.store.status("a")["state"], "reserved")
+
     def test_invalid_profile_and_queue_flood_rejected(self):
         with self.assertRaises(Denied):
             self.join("a", "codestudio")

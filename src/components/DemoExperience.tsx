@@ -41,6 +41,8 @@ type SessionData = {
   position: number;
   deadline: number;
   connected: number | null;
+  remaining: number | null;
+  end_reason?: string;
   token?: string;
   url?: string;
 };
@@ -79,6 +81,7 @@ export function DemoExperience() {
   const [voiceState, setVoiceState] = useState("connecting");
   const [audioBlocked, setAudioBlocked] = useState(false);
   const [remaining, setRemaining] = useState(180);
+  const [endReason, setEndReason] = useState("");
   const room = useRef<Room | null>(null);
   const microphone = useRef<LocalAudioTrack | null>(null);
   const dialog = useRef<HTMLDivElement>(null);
@@ -87,9 +90,13 @@ export function DemoExperience() {
   const joined = useRef(false);
   const admissionId = useRef<string | null>(null);
   const generation = useRef(0);
+  const callDeadline = useRef<number | null>(null);
+  const pendingJoin = useRef<Promise<void> | null>(null);
+  const pendingCancellation = useRef<Promise<unknown> | null>(null);
 
   const disconnect = useCallback((reason = "hangup") => {
     generation.current++;
+    callDeadline.current = null;
     microphone.current?.stop();
     microphone.current = null;
     if (room.current) {
@@ -101,7 +108,9 @@ export function DemoExperience() {
       joined.current = false;
       const id = admissionId.current;
       admissionId.current = null;
-      void requestDemo("cancel", { id, reason }).catch(() => {});
+      pendingCancellation.current = requestDemo("cancel", { id, reason }).catch(
+        () => {},
+      );
     }
   }, []);
   const close = useCallback(() => {
@@ -113,6 +122,7 @@ export function DemoExperience() {
   const end = useCallback(
     (reason = "hangup") => {
       disconnect(reason);
+      setEndReason(reason);
       setStage("ended");
     },
     [disconnect],
@@ -174,13 +184,12 @@ export function DemoExperience() {
     const timer = setInterval(async () => {
       try {
         const update = await requestDemo("status");
-        if (cancelled) return;
+        if (cancelled || update.id !== admissionId.current) return;
         failures = 0;
         setData(update);
         if (update.state === "reserved") setStage("ready");
         if (update.state === "closing" || update.state === "ended") {
-          disconnect();
-          setStage("ended");
+          end(update.end_reason || "visitor_disconnected");
         }
       } catch {
         if (!cancelled && ++failures >= 3) {
@@ -196,22 +205,34 @@ export function DemoExperience() {
       cancelled = true;
       clearInterval(timer);
     };
-  }, [selected, stage, disconnect]);
+  }, [selected, stage, disconnect, end]);
 
   useEffect(() => {
     if (stage !== "live") return;
-    const started = Date.now();
+    const now = performance.now();
+    callDeadline.current ??= now + 180_000;
+    if (typeof data?.remaining === "number") {
+      callDeadline.current = Math.min(
+        callDeadline.current,
+        now + Math.max(0, data.remaining) * 1000,
+      );
+    }
     const tick = () => {
-      const seconds = data?.connected
-        ? Math.ceil((data.deadline * 1000 - Date.now()) / 1000)
-        : 180 - Math.floor((Date.now() - started) / 1000);
+      if (callDeadline.current === null) return;
+      const seconds = Math.ceil(
+        (callDeadline.current - performance.now()) / 1000,
+      );
       setRemaining(Math.max(0, seconds));
       if (seconds <= 0) end("duration_limit");
     };
     tick();
-    const timer = setInterval(tick, 1000);
-    return () => clearInterval(timer);
-  }, [stage, data?.deadline, data?.connected, end]);
+    const timer = setInterval(tick, 250);
+    document.addEventListener("visibilitychange", tick);
+    return () => {
+      clearInterval(timer);
+      document.removeEventListener("visibilitychange", tick);
+    };
+  }, [stage, data?.remaining, end]);
 
   function open(profile: Profile, event: React.MouseEvent<HTMLButtonElement>) {
     opener.current = event.currentTarget;
@@ -222,37 +243,49 @@ export function DemoExperience() {
     setData(null);
     setMuted(false);
     setRemaining(180);
+    setEndReason("");
     setAudioBlocked(false);
   }
   async function join() {
     if (!selected || !consent) return;
     const current = ++generation.current;
     setStage("loading");
-    try {
-      const next = await requestDemo("join", {
-        profile: selected.id,
-        consent,
-        consentVersion: "2026-10-25-transcript-v1",
-      });
-      if (generation.current !== current) {
-        void requestDemo("cancel", {
-          id: next.id,
-          reason: "close_button",
-        }).catch(() => {});
-        return;
+    const previous = pendingJoin.current;
+    // Finish cancelling an unanswered join before starting another one. Both
+    // requests would otherwise share the server's idempotent admission ID.
+    const pending = (async () => {
+      await previous;
+      await pendingCancellation.current;
+      if (generation.current !== current) return;
+      try {
+        const next = await requestDemo("join", {
+          profile: selected.id,
+          consent,
+          consentVersion: "2026-10-25-transcript-v1",
+        });
+        if (generation.current !== current) {
+          await requestDemo("cancel", {
+            id: next.id,
+            reason: "close_button",
+          }).catch(() => {});
+          return;
+        }
+        joined.current = true;
+        admissionId.current = next.id;
+        setData(next);
+        setStage(next.state === "reserved" ? "ready" : "waiting");
+      } catch (e) {
+        if (generation.current === current) {
+          setError(
+            e instanceof Error ? e.message : "Bitte versuchen Sie es erneut.",
+          );
+          setStage("error");
+        }
       }
-      joined.current = true;
-      admissionId.current = next.id;
-      setData(next);
-      setStage(next.state === "reserved" ? "ready" : "waiting");
-    } catch (e) {
-      if (generation.current === current) {
-        setError(
-          e instanceof Error ? e.message : "Bitte versuchen Sie es erneut.",
-        );
-        setStage("error");
-      }
-    }
+    })();
+    pendingJoin.current = pending;
+    await pending;
+    if (pendingJoin.current === pending) pendingJoin.current = null;
   }
   async function connect() {
     const current = ++generation.current;
@@ -262,9 +295,8 @@ export function DemoExperience() {
         throw new Error(
           "Ihr Browser unterstützt hier keinen Mikrofonzugriff. Bitte öffnen Sie die Website über HTTPS in einem aktuellen Browser.",
         );
-      const { Room, RoomEvent, Track, createLocalAudioTrack } = await import(
-        "livekit-client"
-      );
+      const { Room, RoomEvent, Track, createLocalAudioTrack } =
+        await import("livekit-client");
       const liveRoom = new Room({ adaptiveStream: true, dynacast: true });
       room.current = liveRoom;
       void liveRoom.startAudio().catch(() => setAudioBlocked(true));
@@ -273,14 +305,15 @@ export function DemoExperience() {
         noiseSuppression: true,
         autoGainControl: true,
       });
-      microphone.current = mic;
       if (current !== generation.current) {
         mic.stop();
         return;
       }
+      microphone.current = mic;
       const connection = await requestDemo("connect");
       if (current !== generation.current) {
-        disconnect();
+        mic.stop();
+        await liveRoom.disconnect();
         return;
       }
       setData(connection);
@@ -302,7 +335,13 @@ export function DemoExperience() {
         },
       );
       liveRoom.on(RoomEvent.Disconnected, () => {
-        if (generation.current === current) end("visitor_disconnected");
+        if (generation.current === current)
+          end(
+            callDeadline.current !== null &&
+              callDeadline.current - performance.now() <= 1000
+              ? "duration_limit"
+              : "visitor_disconnected",
+          );
       });
       await liveRoom.connect(connection.url!, connection.token!);
       if (current !== generation.current) {
@@ -311,6 +350,12 @@ export function DemoExperience() {
         return;
       }
       await liveRoom.localParticipant.publishTrack(mic);
+      if (current !== generation.current) {
+        mic.stop();
+        await liveRoom.disconnect();
+        return;
+      }
+      callDeadline.current = performance.now() + 180_000;
       setVoiceState("listening");
       setStage("live");
     } catch (e) {
@@ -555,6 +600,12 @@ export function DemoExperience() {
                     Danke fürs Ausprobieren.
                   </p>
                   <small>
+                    {endReason === "duration_limit" && (
+                      <>
+                        Die maximale Gesprächsdauer von 3 Minuten ist erreicht.
+                        <br />
+                      </>
+                    )}
                     In dieser Demo wurde kein echter Termin gebucht.
                   </small>
                 </>

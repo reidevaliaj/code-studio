@@ -119,7 +119,7 @@ class Admission:
         with self.db() as db:
             self._sweep(db, now)
             row = db.execute(
-                "SELECT * FROM sessions WHERE client=? AND state!='ended' ORDER BY created DESC LIMIT 1",
+                "SELECT * FROM sessions WHERE client=? AND state NOT IN ('ended','closing') ORDER BY created DESC LIMIT 1",
                 (client,),
             ).fetchone()
             if row:
