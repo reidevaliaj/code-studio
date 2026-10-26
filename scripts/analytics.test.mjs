@@ -59,7 +59,7 @@ function setup(host = "www.cod-st.com") {
 }
 const plain = (value) => JSON.parse(JSON.stringify(value));
 
-test("consent is versioned, bounded, and fails closed", () => {
+test("stored preferences are versioned and expire after 180 days", () => {
   const { api } = setup();
   const now = 100000000000;
   assert.equal(api.readConsent(null, now), null);
@@ -153,11 +153,20 @@ test("only predefined fields survive and durations are bounded", () => {
     {},
   );
 });
-test("no Google script, data layer or events before consent or after rejection", () => {
+test("new visitors are measured automatically without an acceptance action", () => {
+  const { api, window, scripts } = setup();
+  api.applyAnalyticsPreference(null);
+  api.trackPage();
+  api.track("demo_open", { demo_type: "physio" });
+  assert.equal(scripts.length, 1);
+  assert.equal(window["ga-disable-G-TEST"], false);
+  const events = window.dataLayer.filter((event) => event.event === "codst_event");
+  assert.deepEqual(plain(events.map((event) => event.event_name)), ["page_view", "demo_open"]);
+});
+test("an explicit existing opt-out still prevents Google scripts and events", () => {
   const { api, window, scripts } = setup();
   api.track("generate_lead", { form_id: "consultation" });
-  api.applyAnalyticsConsent(null);
-  api.applyAnalyticsConsent("rejected");
+  api.applyAnalyticsPreference("rejected");
   api.trackPage();
   assert.equal(scripts.length, 0);
   assert.equal(window.dataLayer, undefined);
@@ -170,18 +179,18 @@ test("preview and local hosts cannot transmit to the production property", () =>
     "www.cod-st.com.attacker.example",
   ]) {
     const { api, scripts, window } = setup(host);
-    api.applyAnalyticsConsent("accepted");
+    api.applyAnalyticsPreference("accepted");
     api.trackPage();
     assert.equal(scripts.length, 0);
     assert.equal(window.dataLayer, undefined);
   }
 });
 
-test("campaign labels survive a settings visit before opt-in without recipient data", () => {
+test("campaign labels survive client navigation without recipient data", () => {
   const { api, window } = setup();
-  api.applyAnalyticsConsent(null);
+  api.applyAnalyticsPreference(null);
   window.location.href = "https://www.cod-st.com/cookies";
-  api.applyAnalyticsConsent("accepted");
+  api.applyAnalyticsPreference("accepted");
   api.trackPage();
   assert.equal(
     window.dataLayer.at(-1).page_location,
@@ -189,12 +198,12 @@ test("campaign labels survive a settings visit before opt-in without recipient d
   );
   assert.ok(!JSON.stringify(window.dataLayer).includes("private"));
 });
-test("consent loads one container, denies all advertising, and deduplicates page views", () => {
+test("automatic startup loads one container, denies all advertising, and deduplicates page views", () => {
   const { api, scripts, window } = setup();
-  api.applyAnalyticsConsent("accepted");
+  api.applyAnalyticsPreference("accepted");
   api.trackPage();
   api.trackPage();
-  api.applyAnalyticsConsent("accepted");
+  api.applyAnalyticsPreference("accepted");
   api.trackPage();
   assert.equal(scripts.length, 1);
   assert.equal(
@@ -213,10 +222,10 @@ test("consent loads one container, denies all advertising, and deduplicates page
 });
 test("withdrawal blocks future events, deletes only analytics cookies and does not reload", () => {
   const { api, scripts, window, cookies } = setup();
-  api.applyAnalyticsConsent("accepted");
+  api.applyAnalyticsPreference("accepted");
   api.trackPage();
   api.track("demo_open", { demo_type: "physio" });
-  api.applyAnalyticsConsent("rejected");
+  api.applyAnalyticsPreference("rejected");
   const count = window.dataLayer.length;
   api.track("generate_lead", { form_id: "consultation" });
   api.trackPage();
@@ -224,7 +233,7 @@ test("withdrawal blocks future events, deletes only analytics cookies and does n
   assert.equal(window["ga-disable-G-TEST"], true);
   assert.equal(cookies.get("codst_demo"), "keep");
   assert.equal(cookies.has("_ga"), false);
-  api.applyAnalyticsConsent("accepted");
+  api.applyAnalyticsPreference("accepted");
   api.trackPage();
   assert.equal(scripts.length, 1);
   assert.equal(window["ga-disable-G-TEST"], false);
@@ -232,7 +241,7 @@ test("withdrawal blocks future events, deletes only analytics cookies and does n
 });
 test("optional event values are reset between events and unknown events are dropped", () => {
   const { api, window } = setup();
-  api.applyAnalyticsConsent("accepted");
+  api.applyAnalyticsPreference("accepted");
   api.track("demo_call_ended", {
     demo_type: "physio",
     call_duration_seconds: 45,

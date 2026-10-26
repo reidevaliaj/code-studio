@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <LegalPage title="Cookies & Einstellungen">
-      <h2>Ihre Auswahl zählt</h2>
+      <h2>Website-Statistik</h2>
       <p>
-        Notwendige Funktionen sind immer verfügbar. Google Analytics und Google
-        Tag Manager laden wir erst, wenn Sie „Statistik erlauben“ auswählen.
-        Ohne Zustimmung senden wir keine Statistikdaten an Google. Die Demo und
-        das Kontaktformular funktionieren auch ohne Statistik. Schriftarten und
-        Bilder werden mit der Website ausgeliefert.
+        Google Analytics und Google Tag Manager werden beim Besuch automatisch
+        geladen, sofern Sie die Statistik nicht deaktiviert haben. Es erscheint
+        kein Statistik-Popup. Die Demo und das Kontaktformular funktionieren
+        auch bei deaktivierter Statistik. Schriftarten und Bilder werden mit
+        der Website ausgeliefert.
       </p>
       <h2>Demo-Sitzung</h2>
       <p>
@@ -31,15 +31,16 @@ export default function Page() {
       <p>
         Ihre Auswahl speichern wir unter{" "}
         <strong>codst_analytics_consent_v1</strong> im lokalen Browserspeicher
-        für höchstens 180 Tage. Sie können sie hier jederzeit ändern. Ein
-        Widerruf stoppt die weitere Statistikmessung und entfernt unsere
+        für höchstens 180 Tage, wenn Sie die Einstellung ändern. Frühere
+        Ablehnungen bleiben gültig. Sie können die Statistik hier jederzeit
+        deaktivieren. Dies stoppt die weitere Messung und entfernt unsere
         Google-Analytics-Cookies, ohne ein laufendes Gespräch zu beenden.
         Bereits übermittelte Daten werden dadurch nicht automatisch gelöscht.
       </p>
       <CookieSettingsButton />
-      <h2>Optionale Statistik</h2>
+      <h2>Welche Daten werden gemessen?</h2>
       <p>
-        Mit Ihrer Zustimmung messen wir Seitenaufrufe, ausgewählte
+        Wir messen Seitenaufrufe, ausgewählte
         Schaltflächen, die Nutzung der drei Browser-Demos, Gesprächsdauer und
         erfolgreiche Beratungsanfragen. Google Analytics setzt dafür Cookies mit
         Namen

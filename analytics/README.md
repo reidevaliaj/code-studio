@@ -9,7 +9,7 @@ Use GA4 Reports → Acquisition → Traffic acquisition to compare email campaig
 
 | Event | Meaning |
 | --- | --- |
-| `page_view` | Consented visit/page; not proof of a human |
+| `page_view` | Automatically measured visit/page unless opted out; not proof of a human |
 | `site_engaged` | At least 15 visible seconds and a trusted pointer/keyboard interaction |
 | `cta_click` | Demo navigation, consultation navigation or public email link |
 | `demo_open` | One of the three call buttons opened the phone panel |
@@ -35,13 +35,13 @@ Use campaign-level labels in the **destination** of each Shlink short URL:
 https://www.cod-st.com/?utm_source=mailwizz&utm_medium=email&utm_campaign=physio_de_2026_10&utm_content=demo_button
 ```
 
-Change `utm_campaign` for each campaign/industry and `utm_content` for each placement. Keep names to letters, digits, underscores and hyphens (80 characters maximum). Never put an email address, subscriber UID, name or phone number in UTM fields. Unknown query parameters and URL fragments are removed before measurement. Campaign labels survive a privacy/settings visit in memory until the visitor opts in.
+Change `utm_campaign` for each campaign/industry and `utm_content` for each placement. Keep names to letters, digits, underscores and hyphens (80 characters maximum). Never put an email address, subscriber UID, name or phone number in UTM fields. Unknown query parameters and URL fragments are removed before measurement. Campaign labels survive client-side navigation in memory.
 
-Shlink/MailWizz click totals are upstream link activity, not website leads. Compare Shlink's non-bot visits with GA4 engaged users/calls/leads by campaign; do not expect identical totals. Consent refusals, ad blockers, tool redirects and scanners cause differences. This change does not modify MailWizz or Shlink campaigns or their server settings.
+Shlink/MailWizz click totals are upstream link activity, not website leads. Compare Shlink's non-bot visits with GA4 engaged users/calls/leads by campaign; do not expect identical totals. Explicit opt-outs, ad blockers, tool redirects and scanners cause differences. This change does not modify MailWizz or Shlink campaigns or their server settings.
 
-## Consent and data minimization
+## Automatic measurement and data minimization
 
-Basic opt-in: no Google script or analytics event before acceptance; equal controls for rejection and acceptance. Preferences are versioned in localStorage for 180 days and can be reopened under `/cookies`. Withdrawal disables GA4, stops app events, removes `_ga*` cookies and keeps calls connected. Other tabs receive storage changes. Voice-demo consent is separate.
+Owner requested automatic measurement on 26 October 2026. New production visitors initialize Google Analytics without accepting a banner; no statistics popup is rendered. `/cookies` provides an explicit opt-out/enable control. Existing rejections remain honored for their original 180-day lifetime. Opting out disables GA4, stops app events, removes `_ga*` cookies and keeps calls connected. Other tabs receive storage changes. Voice-demo consent is separate. This describes technical behavior and is not a claim of legal compliance. Do not reintroduce a required statistics acceptance step without discussing it with the owner.
 
 Only production hosts `cod-st.com` and `www.cod-st.com` can initialize measurement. Preview/local hosts are disabled. GA4 automatic/enhanced interactions and user-provided data collection are off. Google Signals, ads personalization and granular location/device collection are off. GA cookies expire after 90 days without renewal. User and event data retention are two months, with reset on new user activity disabled. Standard aggregate reports can persist longer.
 
@@ -51,8 +51,8 @@ Never send form values, transcripts, audio, call IDs, tokens or error messages i
 
 Public build settings: `NEXT_PUBLIC_GTM_ID`, `NEXT_PUBLIC_GA_MEASUREMENT_ID` (Vercel Config, not secrets). The website loads GTM once; GTM owns the Analytics destination and forwards `codst_event`. Do not add a second direct `gtag.js` installation.
 
-`npm run test:analytics` tests privacy, consent expiry, URL cleanup, host gating, page-view deduplication, withdrawal and field limits. `npm run lint` and `npm run build` validate the website. Browser tests additionally cover all three buttons, confirmed vs honeypot submissions, consent rejection/withdrawal and responsive consent controls. A transport test uses the real published GTM container while intercepting GA4 collection, checking destination ID, cleaned URLs, events and 90-day cookie expiry.
+`npm run test:analytics` tests automatic startup, explicit opt-out, preference expiry, URL cleanup, host gating, page-view deduplication, withdrawal and field limits. `npm run lint` and `npm run build` validate the website. Browser tests additionally cover all three buttons, confirmed vs honeypot submissions, automatic page/click delivery without acceptance, opt-out and responsive pages. A transport test uses the real published GTM container while intercepting GA4 collection, checking destination ID, cleaned URLs, events and 90-day cookie expiry.
 
-For deliberate development verification only, set `sessionStorage.codst_analytics_debug = "1"` on the website **before consenting**. The active `CodeStudio_QA_Debug_Traffic` developer filter excludes debug events from normal reports. Verify debug traffic in GA4 DebugView. Clear the session setting when finished. This flag never bypasses visitor consent.
+For deliberate development verification only, set `sessionStorage.codst_analytics_debug = "1"` on the website **before reloading**. The active `CodeStudio_QA_Debug_Traffic` developer filter excludes debug events from normal reports. Verify debug traffic in GA4 DebugView. Clear the session setting when finished. This flag never bypasses an explicit opt-out.
 
 Primary references: [Consent mode](https://developers.google.com/tag-platform/security/concepts/consent-mode), [GA4 known-bot filtering](https://support.google.com/analytics/answer/9888366), [Shlink bot visits](https://shlink.io/documentation/some-features/), [manual page views](https://developers.google.com/analytics/devguides/collection/ga4/views).

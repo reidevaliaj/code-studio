@@ -121,8 +121,8 @@ export default function Page() {
       <p>
         Eingesetzte Dienstleister sind Vercel (Website), DigitalOcean
         (Demo-Server), LiveKit (Sprachverbindung), OpenAI
-        (KI-Sprachverarbeitung), Resend (E-Mail-Versand) und bei Ihrer
-        Zustimmung Google Ireland Limited (Website-Statistik). Je nach Dienst
+        (KI-Sprachverarbeitung), Resend (E-Mail-Versand) und
+        Google Ireland Limited (Website-Statistik). Je nach Dienst
         und Kontoeinstellungen kann die Verarbeitung außerhalb des Europäischen
         Wirtschaftsraums, insbesondere in den USA, stattfinden. Wir behaupten
         keine ausschließlich europäische Verarbeitung. Für Auftragsverarbeitung
@@ -178,14 +178,15 @@ export default function Page() {
         Für eine von Ihnen gestartete Demo wird ein technisch notwendiges Cookie
         mit einer zufälligen Kennung für höchstens 24 Stunden verwendet. Es
         verhindert doppelte Warteschlangeneinträge und ordnet Ihre Verbindung
-        zu. Es enthält keine Gesprächsinhalte. Ihre Statistik-Auswahl speichern
-        wir für höchstens 180 Tage im lokalen Browserspeicher. Mehr unter{" "}
+        zu. Es enthält keine Gesprächsinhalte. Wenn Sie die Statistik-Einstellung
+        ändern, speichern wir diese für höchstens 180 Tage im lokalen
+        Browserspeicher. Frühere Ablehnungen bleiben gültig. Mehr unter{" "}
         <Link href="/cookies">Cookies & Einstellungen</Link>.
       </p>
-      <h2>8. Freiwillige Website-Statistik mit Google Analytics</h2>
+      <h2>8. Website-Statistik mit Google Analytics</h2>
       <p>
-        Nur mit Ihrer Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO laden wir
-        Google Tag Manager und Google Analytics 4 von Google Ireland Limited,
+        Beim Besuch laden wir automatisch Google Tag Manager und Google
+        Analytics 4 von Google Ireland Limited,
         Gordon House, Barrow Street, Dublin 4, Irland. Wir werten Seitenaufrufe,
         Kampagnenherkunft, ausgewählte Schaltflächen, Demo-Verbindungen und
         Gesprächsdauer sowie erfolgreich übermittelte Beratungsanfragen aus.
@@ -195,8 +196,9 @@ export default function Page() {
         erforderlich. Eine Verarbeitung in den USA kann stattfinden.
       </p>
       <p>
-        Vor Ihrer Zustimmung und nach einer Ablehnung laden wir keine
-        Google-Tags. Wir nutzen keine Werbepersonalisierung, kein Remarketing
+        Wenn Sie die Statistik unter „Cookies & Einstellungen“ deaktivieren,
+        stoppen wir die weitere Messung. Eine bereits gespeicherte Ablehnung
+        wird ebenfalls berücksichtigt. Wir nutzen keine Werbepersonalisierung, kein Remarketing
         und keine Google-Signale. Namen, E-Mail-Adressen, Telefonnummern,
         Formulartexte, Audio und Gesprächsprotokolle übermitteln wir nicht an
         Analytics. URL-Parameter beschränken wir auf Kampagnenkennzeichnungen;
@@ -207,9 +209,9 @@ export default function Page() {
         sein.
       </p>
       <p>
-        Sie können Ihre Einwilligung jederzeit unter{" "}
+        Sie können die Website-Statistik jederzeit unter{" "}
         <Link href="/cookies">Cookies & Einstellungen</Link> mit Wirkung für die
-        Zukunft widerrufen. Ihre Anfragen und Demo-Gespräche bleiben auch ohne
+        Zukunft deaktivieren. Ihre Anfragen und Demo-Gespräche bleiben auch ohne
         Statistik möglich. Weitere Informationen gibt Google in seinen{" "}
         <a
           href="https://policies.google.com/technologies/partner-sites"

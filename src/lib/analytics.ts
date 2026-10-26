@@ -135,8 +135,8 @@ export function safeReferrer(raw: string): string {
 
 function measurementLocation() {
   const current = new URL(safeLocation(window.location.href));
-  // Keep campaign labels in memory if a visitor opens the privacy/settings
-  // page before opting in. No cookie or recipient identifier is stored here.
+  // Preserve campaign attribution across client-side navigation without
+  // retaining email-recipient identifiers.
   if (entryLocation) {
     for (const [key, value] of new URL(entryLocation).searchParams) {
       if (!current.searchParams.has(key)) current.searchParams.set(key, value);
@@ -197,8 +197,8 @@ function removeAnalyticsCookies() {
 
 function debugFields(): Layer {
   try {
-    // Explicit developer QA only; still requires the visitor's statistics
-    // consent. GA4's developer-traffic filter keeps these out of reports.
+    // Explicit developer QA only. GA4's developer-traffic filter keeps these
+    // events out of ordinary reports.
     return sessionStorage.getItem("codst_analytics_debug") === "1"
       ? { debug_mode: true }
       : {};
@@ -211,14 +211,16 @@ export function analyticsConfigured() {
   return /^GTM-[A-Z0-9]+$/.test(GTM_ID) && /^G-[A-Z0-9]+$/.test(GA_ID);
 }
 
-export function applyAnalyticsConsent(choice: ConsentChoice | null) {
+export function applyAnalyticsPreference(choice: ConsentChoice | null) {
   if (typeof window === "undefined") return;
   entryLocation ??= safeLocation(window.location.href);
   const productionHost = ["cod-st.com", "www.cod-st.com"].includes(
     window.location.hostname,
   );
   // Local/preview hosts cannot pollute production reports.
-  const next = choice === "accepted" && analyticsConfigured() && productionHost;
+  // Start automatically for new visitors. Continue honoring an explicit
+  // opt-out, including choices saved by the previous statistics banner.
+  const next = choice !== "rejected" && analyticsConfigured() && productionHost;
   if (loaded && enabled === next) return;
   enabled = next;
   (window as unknown as Record<string, unknown>)[`ga-disable-${GA_ID}`] =
@@ -296,8 +298,4 @@ export function trackPage() {
   if (current === lastPage) return;
   lastPage = current;
   track("page_view");
-}
-
-export function openCookieSettings() {
-  window.dispatchEvent(new Event("codst:cookie-settings"));
 }
