@@ -14,7 +14,8 @@ export function SiteHeader() {
         <Logo />
       </Link>
       <nav aria-label="Hauptnavigation">
-        <Link href="/#vorteile">Vorteile</Link>
+        <Link href="/#vorteile">Funktionen</Link>
+        <Link href="/#integration">Anbindung</Link>
         <Link href="/#ablauf">So funktioniert’s</Link>
         <Link href="/#fragen">Fragen</Link>
       </nav>
@@ -43,7 +44,7 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Code-Studio · Belgien</span>
-        <span>KI für einen menschlicheren Praxisalltag.</span>
+        <span>KI-Rezeption für Unternehmen mit Kundenkontakt.</span>
       </div>
     </footer>
   );

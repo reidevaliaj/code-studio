@@ -65,14 +65,14 @@ export function ContactForm() {
           />
         </label>
         <label>
-          Ihre Praxis
+          Ihr Unternehmen / Ihre Einrichtung
           <input
             name="practice"
             autoComplete="organization"
             required
             minLength={2}
             maxLength={150}
-            placeholder="Name der Praxis"
+            placeholder="Name Ihres Unternehmens"
           />
         </label>
         <label>
@@ -83,7 +83,7 @@ export function ContactForm() {
             autoComplete="email"
             required
             maxLength={254}
-            placeholder="sie@ihre-praxis.de"
+            placeholder="sie@ihr-unternehmen.de"
           />
         </label>
         <label>
@@ -105,7 +105,7 @@ export function ContactForm() {
           minLength={10}
           maxLength={3000}
           rows={3}
-          placeholder="Erzählen Sie uns kurz von Ihrer Praxis und Ihrem Anliegen. Bitte keine Patientendaten angeben."
+          placeholder="Erzählen Sie uns kurz von Ihrem Unternehmen und Ihren Wünschen. Bitte keine sensiblen Kundendaten angeben."
         />
       </label>
       <div className="honeypot" aria-hidden="true">

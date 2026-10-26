@@ -3,10 +3,92 @@ import { Icon } from "@/components/Icons";
 import { DemoExperience } from "@/components/DemoExperience";
 import { ContactForm } from "@/components/ContactForm";
 
+const capabilities = [
+  [
+    "phone",
+    "Anrufe annehmen",
+    "Anrufer freundlich begrüßen, Anliegen verstehen und den nächsten Schritt einleiten.",
+  ],
+  [
+    "clock",
+    "24 Stunden erreichbar",
+    "Auch abends, am Wochenende und an Feiertagen für Ihre Kunden da sein.",
+  ],
+  [
+    "calendar",
+    "Termine buchen",
+    "Verfügbare Zeiten prüfen und Termine direkt im angebundenen Kalender vereinbaren.",
+  ],
+  [
+    "website",
+    "Auf Ihrer Website helfen",
+    "Besucher direkt im Browser beraten – mit derselben Assistenz wie am Telefon.",
+  ],
+  [
+    "check",
+    "Termine bestätigen",
+    "Vereinbarte Termine bestätigen und passende Erinnerungen versenden.",
+  ],
+  [
+    "info",
+    "Auskünfte geben",
+    "Öffnungszeiten, Leistungen, Preise und Abläufe aus Ihrem Unternehmenswissen erklären.",
+  ],
+  [
+    "globe",
+    "Mehrsprachig sprechen",
+    "Kunden in verschiedenen Sprachen empfangen und verständlich weiterhelfen.",
+  ],
+  [
+    "briefcase",
+    "Vertriebsanfragen bearbeiten",
+    "Leistungen erklären, Interessenten qualifizieren und Beratungstermine vereinbaren.",
+  ],
+  [
+    "calendar",
+    "Kalender organisieren",
+    "Verfügbarkeiten abgleichen, Termine koordinieren und Änderungen berücksichtigen.",
+  ],
+  [
+    "mail",
+    "E-Mails versenden",
+    "Bestätigungen, Informationen und Gesprächsübersichten per E-Mail verschicken.",
+  ],
+  [
+    "message",
+    "WhatsApp-Nachrichten senden",
+    "Bestätigungen und Erinnerungen über Ihre WhatsApp-Business-Anbindung senden.",
+  ],
+  [
+    "settings",
+    "Individuell konfigurieren",
+    "Stimme, Sprache, Wissen und Abläufe genau auf Ihr Unternehmen abstimmen.",
+  ],
+];
+
+const forwardingOptions = [
+  [
+    "Wenn besetzt ist",
+    "Ihr Team telefoniert bereits? Die KI nimmt den nächsten Anruf entgegen.",
+  ],
+  [
+    "Wenn niemand abnimmt",
+    "Nach der vereinbarten Klingelzeit übernimmt Ihre KI-Rezeption.",
+  ],
+  [
+    "Nach Feierabend",
+    "Außerhalb Ihrer Öffnungszeiten, am Wochenende oder in Ihren Pausen.",
+  ],
+  [
+    "Bei jedem Anruf",
+    "Leiten Sie alle Anrufe direkt an Ihre KI-Rezeption weiter.",
+  ],
+];
+
 const faqs = [
   [
-    "Was übernimmt der KI-Telefonassistent?",
-    "Er kann Anrufe entgegennehmen, wiederkehrende Fragen beantworten und Terminwünsche strukturiert aufnehmen. Welche Abläufe und Schnittstellen für Ihre Praxis passen, klären wir gemeinsam vor der Einrichtung.",
+    "Ist die KI-Rezeption nur für Arzt- und Therapiepraxen?",
+    "Nein. Die drei Praxen sind Beispiele zum Ausprobieren. Wir richten die KI-Rezeption ebenso für Handwerk, Handel, Immobilien, Hotellerie und andere Dienstleister ein – mit dem Wissen, den Sprachen und den Abläufen Ihres Unternehmens.",
   ],
   [
     "Kann ich die Stimme wirklich ausprobieren?",
@@ -18,7 +100,7 @@ const faqs = [
   ],
   [
     "Kann ich meine bestehende Telefonnummer behalten?",
-    "Wir prüfen Ihre Telefonanlage und die passende Weiterleitung im persönlichen Gespräch. Die Browser-Demo funktioniert unabhängig von Ihrem Telefonanbieter.",
+    "Ja. Über eine passende Rufumleitung kann die KI unter Ihrer bestehenden Nummer übernehmen: wenn besetzt ist, niemand abnimmt, nach Feierabend oder bei allen Anrufen. Die Einrichtung stimmen wir mit Ihrem Telefonanbieter oder Ihrer Telefonanlage ab. Auf Wunsch richten wir auch eine neue Rufnummer ein.",
   ],
   [
     "Wie werden meine Daten verarbeitet?",
@@ -26,14 +108,14 @@ const faqs = [
   ],
   [
     "Was passiert, wenn die KI etwas nicht weiß?",
-    "Sie soll nachfragen oder ihre Grenze offen benennen. In Ihrer Praxis legen wir fest, welche Anliegen sie aufnehmen darf und wann Ihr Team übernehmen soll. Die Demo kann keine Person weiterverbinden und gibt keine medizinischen Ratschläge.",
+    "Sie soll nachfragen oder ihre Grenze offen benennen. Wir legen gemeinsam fest, welche Anliegen sie bearbeiten darf und wann Ihr Team übernehmen soll. Die Browser-Demo kann keine Person weiterverbinden und gibt keine medizinischen Ratschläge.",
   ],
   [
-    "Brauche ich dafür einen neuen Praxiskalender?",
-    "Für Praxisinformationen und die Aufnahme von Anliegen ist kein Kalenderwechsel erforderlich. Eine verbindliche Terminbuchung setzt eine passende, freigegebene Kalenderanbindung voraus. Wir prüfen Ihre vorhandene Software, bevor wir eine Integration zusagen.",
+    "Kann die KI Termine buchen und Nachrichten senden?",
+    "Ja, mit den passenden Anbindungen und Ihren freigegebenen Abläufen. Wir prüfen Ihre Kalenderlösung, E-Mail und WhatsApp Business und richten die gewünschten Buchungen, Bestätigungen und Erinnerungen ein. Die Browser-Demos führen keine echten Buchungen durch und versenden keine Nachrichten an Anrufer.",
   ],
   [
-    "Was kostet die Lösung für meine Praxis?",
+    "Was kostet die Lösung für mein Unternehmen?",
     "Sie erhalten ein individuelles Angebot, passend zu Anrufaufkommen, gewünschten Abläufen und Einrichtung. Fragen Sie uns unverbindlich an.",
   ],
 ];
@@ -53,17 +135,17 @@ export default function Home() {
         <div className="hero-wash" />
         <div className="hero-content">
           <p className="eyebrow">
-            <span className="status-dot" /> KI-TELEFONASSISTENZ FÜR PRAXEN
+            <span className="status-dot" /> KI-REZEPTION FÜR IHR UNTERNEHMEN
           </p>
           <h1>
-            Ihre Rezeption.
+            Keinen Anruf
             <br />
-            <span>Immer ansprechbar.</span>
+            <span>mehr verpassen.</span>
           </h1>
           <p className="hero-description">
-            Anrufe annehmen. Anliegen verstehen.
+            Anrufe annehmen. Kunden weiterhelfen.
             <br />
-            Mehr Zeit für die Menschen in Ihrer Praxis.
+            Rund um die Uhr – auch wenn Ihr Team nicht erreichbar ist.
           </p>
           <div className="hero-actions">
             <a className="button" href="#demo">
@@ -79,134 +161,127 @@ export default function Home() {
           </p>
         </div>
         <div className="hero-caption">
-          <span className="mini-line" /> Technik, die Ihnen den Rücken freihält.
+          <span className="mini-line" /> Jeder Anruf kann Ihr nächster Kunde
+          sein.
         </div>
       </section>
       <div className="intro-line">
         <p>
-          Für Praxen, in denen{" "}
-          <strong>Menschen an erster Stelle stehen.</strong>
+          Für Praxen, Dienstleister und Unternehmen –{" "}
+          <strong>überall, wo Kunden anrufen.</strong>
         </p>
         <span>
-          Physiotherapie <i /> Zahnmedizin <i /> Allgemeinmedizin
+          Gesundheit <i /> Dienstleistung <i /> Handel
         </span>
       </div>
       <DemoExperience />
       <section
-        className="call-results section-pad"
-        aria-labelledby="call-results-title"
+        className="capabilities section-pad"
+        id="vorteile"
+        aria-labelledby="capabilities-title"
       >
-        <div>
-          <p className="eyebrow">VOM GESPRÄCH ZUM ÜBERBLICK</p>
-          <h2 id="call-results-title">
-            Aufgenommen.
-            <br />
-            <span className="muted">Nachvollziehbar.</span>
-          </h2>
-          <p className="results-copy">
-            Nach dem Anruf bleiben die wichtigen Informationen bei Ihnen:
-            Gesprächsverlauf, Zeitpunkt und Anliegen gesammelt im
-            Anrufprotokoll. So kann Ihr Team den nächsten Schritt übernehmen.
-          </p>
-          <ul className="results-points">
-            <li>
-              <Icon name="check" /> Gesprächsprotokoll per E-Mail
-            </li>
-            <li>
-              <Icon name="check" /> Praxiswissen und Abläufe individuell
-              festlegen
-            </li>
-            <li>
-              <Icon name="check" /> Klare Grenzen statt unbestätigter Buchungen
-            </li>
-          </ul>
-        </div>
-        <article
-          className="sample-call"
-          aria-label="Beispiel eines Anrufprotokolls"
-        >
-          <div className="sample-call-top">
-            <span>BEISPIEL · ANRUFPROTOKOLL</span>
-            <Icon name="phone" />
+        <div className="section-heading horizontal">
+          <div>
+            <p className="eyebrow">WAS IHRE KI-REZEPTION ÜBERNEHMEN KANN</p>
+            <h2 id="capabilities-title">
+              Mehr als
+              <br />
+              <span className="muted">Anrufe annehmen.</span>
+            </h2>
           </div>
-          <p className="sample-call-category">Terminwunsch</p>
-          <h3>
-            Ein Anliegen.
-            <br />
-            Alles an einem Platz.
-          </h3>
-          <dl>
-            <div>
-              <dt>Praxis</dt>
-              <dd>Physiotherapie</dd>
-            </div>
-            <div>
-              <dt>Anliegen</dt>
-              <dd>Manuelle Therapie</dd>
-            </div>
-            <div>
-              <dt>Wunschzeit</dt>
-              <dd>Donnerstag, nachmittags</dd>
-            </div>
-            <div>
-              <dt>Status</dt>
-              <dd>Wunsch aufgenommen</dd>
-            </div>
-          </dl>
-          <p className="sample-call-note">
-            <Icon name="check" /> Nachlesen statt zurückfragen.
+          <p>
+            Vom ersten Kontakt bis zum organisierten Termin. Wir richten Ihre
+            Assistenz auf die Aufgaben Ihres Unternehmens ein.
           </p>
-          <small>Fiktives Beispiel. Keine bestätigte Terminbuchung.</small>
-        </article>
-      </section>
-      <section className="benefits section-pad" id="vorteile">
-        <div className="section-heading">
-          <p className="eyebrow">WENIGER UNTERBRECHUNGEN. MEHR RUHE.</p>
-          <h2>
-            Ein offenes Ohr.
-            <br />
-            Auch wenn Sie gerade
-            <br />
-            <span className="muted">alle Hände voll haben.</span>
-          </h2>
         </div>
-        <div className="benefit-list">
-          {[
-            [
-              "phone",
-              "Anliegen bekommen einen Platz.",
-              "Die KI nimmt Anrufe entgegen und führt freundlich durch das Gespräch – mit den Informationen Ihrer Praxis.",
-            ],
-            [
-              "clock",
-              "Ihr Team bleibt im Moment.",
-              "Wiederkehrende Fragen zu Öffnungszeiten, Leistungen oder dem Praxisablauf müssen nicht jedes Mal Ihren Empfang unterbrechen.",
-            ],
-            [
-              "shield",
-              "Sie bestimmen den Rahmen.",
-              "Wir stimmen Sprache, Begrüßung und erlaubte Abläufe gemeinsam ab. Medizinische Beratung gehört nicht zur Aufgabe der KI.",
-            ],
-          ].map(([icon, title, copy], i) => (
-            <article key={title}>
-              <div className="benefit-icon">
-                <Icon name={icon} />
-              </div>
+        <ul className="capability-list">
+          {capabilities.map(([icon, title, copy]) => (
+            <li key={title}>
+              <Icon name={icon} />
               <div>
-                <span className="index">0{i + 1}</span>
                 <h3>{title}</h3>
                 <p>{copy}</p>
               </div>
-            </article>
+            </li>
           ))}
+        </ul>
+        <p className="capability-note">
+          Der Funktionsumfang richtet sich nach Ihrer Einrichtung und den
+          angebundenen Systemen. Die Browser-Demos zeigen Beispielgespräche ohne
+          echte Buchungen oder Nachrichten.
+        </p>
+      </section>
+      <section
+        className="integrations section-pad"
+        id="integration"
+        aria-labelledby="integration-title"
+      >
+        <div className="integration-heading">
+          <div>
+            <p className="eyebrow">EINFACH AN IHREN ALLTAG ANGEBUNDEN</p>
+            <h2 id="integration-title">
+              Ihre Nummer.
+              <br />
+              <span>Ihre Regeln.</span>
+            </h2>
+          </div>
+          <div className="integration-intro">
+            <p>
+              Bleiben Sie unter Ihrer gewohnten Telefonnummer erreichbar. Sie
+              entscheiden, wann Ihre KI-Rezeption übernimmt.
+            </p>
+            <div
+              className="routing-path"
+              role="img"
+              aria-label="Von Ihrer Rufnummer per Rufumleitung zur KI-Rezeption"
+            >
+              <span>
+                <Icon name="phone" /> Ihre Rufnummer
+              </span>
+              <Icon name="arrow" />
+              <span>
+                <Icon name="mic" /> KI-Rezeption
+              </span>
+            </div>
+            <small>Per Rufumleitung. Ihr bestehender Anschluss bleibt.</small>
+          </div>
         </div>
+        <dl className="routing-modes">
+          {forwardingOptions.map(([title, copy], i) => (
+            <div key={title}>
+              <dt>
+                <span aria-hidden="true">0{i + 1}</span>
+                {title}
+              </dt>
+              <dd>{copy}</dd>
+            </div>
+          ))}
+        </dl>
+        <div className="new-number">
+          <Icon name="phone" />
+          <div>
+            <h3>Lieber eine neue Rufnummer?</h3>
+            <p>
+              Auf Wunsch richten wir eine eigene Nummer für Ihr Unternehmen ein
+              – zusätzlich zu Ihrem Anschluss oder für einen neuen Start.
+            </p>
+          </div>
+          <a className="text-link" href="#kontakt">
+            Anbindung besprechen <Icon name="arrow" />
+          </a>
+        </div>
+        <p className="integration-detail">
+          Die Weiterleitung stimmen wir mit Ihrem Telefonanbieter oder Ihrer
+          Telefonanlage ab. Kalender, E-Mail und WhatsApp binden wir passend zu
+          Ihren Abläufen an.
+        </p>
       </section>
       <section className="process section-pad" id="ablauf">
         <div className="section-heading horizontal">
           <div>
             <p className="eyebrow">PERSÖNLICH EINGERICHTET</p>
             <h2>
-              Ihre Praxis.
+              Ihr Unternehmen.
               <br />
               Ihr Empfang.
             </h2>
@@ -225,11 +300,11 @@ export default function Home() {
             ],
             [
               "Einrichten",
-              "Wir konfigurieren Praxiswissen, Gesprächsführung und die passende Anbindung.",
+              "Wir konfigurieren Unternehmenswissen, Gesprächsführung und die passenden Anbindungen.",
             ],
             [
               "Gemeinsam starten",
-              "Sie testen die Abläufe. Danach begleiten wir die Einführung in Ihren Praxisalltag.",
+              "Sie testen die Abläufe. Danach begleiten wir die Einführung in Ihren Unternehmensalltag.",
             ],
           ].map(([title, copy], i) => (
             <article key={title}>
@@ -238,15 +313,6 @@ export default function Home() {
               <p>{copy}</p>
             </article>
           ))}
-        </div>
-        <div className="integration-note">
-          <Icon name="phone" />
-          <p>
-            <strong>Ihre Nummer. Ihr Praxisalltag.</strong> Wir prüfen Ihre
-            Telefonanlage, richten die passende Weiterleitung ein und stimmen
-            Öffnungszeiten, Praxiswissen und Übergaben mit Ihnen ab. Kalender-
-            und Praxissoftware-Anbindungen klären wir individuell.
-          </p>
         </div>
       </section>
       <section className="faq-section section-pad" id="fragen">
@@ -277,15 +343,15 @@ export default function Home() {
         <div className="contact-intro">
           <p className="eyebrow">DER NÄCHSTE SCHRITT</p>
           <h2>
-            Mehr Ruhe
+            Erreichbar bleiben.
             <br />
-            am Empfang.
+            Kunden gewinnen.
             <br />
             <span>Reden wir darüber.</span>
           </h2>
           <p>
-            Erzählen Sie uns von Ihrer Praxis. Wir besprechen, ob und wie eine
-            KI-Rezeption Sie unterstützen kann.
+            Erzählen Sie uns von Ihrem Unternehmen. Wir besprechen, wie Ihre
+            KI-Rezeption Anrufe auffängt und Ihr Team entlastet.
           </p>
           <div className="offer-line">
             <span>Individuelles Angebot</span>

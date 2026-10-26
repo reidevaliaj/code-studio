@@ -11,19 +11,19 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cod-st.com"),
   title: {
-    default: "cod-st — KI-Telefonassistent für Ihre Praxis",
+    default: "cod-st — KI-Rezeption: Keinen Anruf mehr verpassen",
     template: "%s | cod-st",
   },
   description:
-    "Mehr Zeit für Ihre Patientinnen und Patienten. Entdecken Sie die KI-Rezeption von cod-st und testen Sie drei Praxis-Demos direkt im Browser.",
+    "Keinen Anruf mehr verpassen: Ihre KI-Rezeption nimmt rund um die Uhr Anrufe an, beantwortet Fragen und koordiniert Termine. Für Praxen, Dienstleister und Unternehmen. Jetzt live testen.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "de_DE",
     siteName: "cod-st",
-    title: "Ihre Rezeption. Immer ansprechbar.",
+    title: "Keinen Anruf mehr verpassen. Mit der KI-Rezeption von cod-st.",
     description:
-      "KI-Telefonassistenz für den Praxisalltag. Jetzt im Browser ausprobieren.",
+      "Anrufe annehmen, Termine koordinieren und Kunden helfen – auch wenn Ihr Team gerade nicht erreichbar ist. Jetzt direkt im Browser ausprobieren.",
     images: ["/images/practice-reception.png"],
   },
   robots: { index: true, follow: true },

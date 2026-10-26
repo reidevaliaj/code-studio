@@ -11,13 +11,14 @@ export default function Page() {
         <div className="contact-intro">
           <p className="eyebrow">CODE-STUDIO · PERSÖNLICH FÜR SIE DA</p>
           <h1>
-            Ihre Praxis.
+            Ihr Unternehmen.
             <br />
             Unser Gespräch.
           </h1>
           <p>
-            Sie möchten wissen, ob eine KI-Rezeption zu Ihrer Praxis passt?
-            Schreiben Sie uns. Sie erhalten ein individuelles Angebot.
+            Sie möchten wissen, wie eine KI-Rezeption Ihr Unternehmen
+            unterstützt? Schreiben Sie uns. Sie erhalten ein individuelles
+            Angebot.
           </p>
           <a className="contact-mail" href="mailto:info@cod-st.com">
             info@cod-st.com ↗︎

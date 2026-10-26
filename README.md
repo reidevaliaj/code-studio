@@ -2,6 +2,8 @@
 
 Premium German landing page and three live browser-call demos. The app reuses the existing Code-Studio Next.js/Vercel project. No telephone number is required to try a demo.
 
+The offer targets businesses across industries, led by “Keinen Anruf mehr verpassen”. Twelve capabilities cover reception, round-the-clock availability, appointments, website assistance, information, languages, sales enquiries, calendar coordination, email, WhatsApp and custom setup. The integration section explains busy/no-answer/after-hours/full forwarding of an existing number and optional new numbers. Capabilities depend on the configured integrations; the three clinic demos remain fictional examples without real bookings or messages to callers.
+
 ## Local development
 
 Use Node.js 22+ and npm. Run `npm ci`, provide `DEMO_API_URL` and `DEMO_GATEWAY_KEY` in ignored `.env.local`, then run `npm run dev`. Use the existing Vercel project `futurewealthgroup/code-studio`; the gateway Secret must be supplied from the deployment owner and is never prefixed NEXT_PUBLIC.
