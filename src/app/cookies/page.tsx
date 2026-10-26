@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage } from "@/components/LegalPage";
+import { CookieSettingsButton } from "@/components/Analytics";
 export const metadata: Metadata = {
   title: "Cookies & Einstellungen",
   alternates: { canonical: "/cookies" },
@@ -8,12 +9,13 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <LegalPage title="Cookies & Einstellungen">
-      <h2>Nur das Nötige</h2>
+      <h2>Ihre Auswahl zählt</h2>
       <p>
-        Diese Website verwendet keine Analyse- oder Marketing-Cookies. Google
-        Analytics und Google Tag Manager sind nicht eingebunden. Schriftarten
-        und Bilder werden mit der Website ausgeliefert. Ein Zustimmungsbanner
-        für optionale Tracker ist deshalb nicht erforderlich.
+        Notwendige Funktionen sind immer verfügbar. Google Analytics und Google
+        Tag Manager laden wir erst, wenn Sie „Statistik erlauben“ auswählen.
+        Ohne Zustimmung senden wir keine Statistikdaten an Google. Die Demo und
+        das Kontaktformular funktionieren auch ohne Statistik. Schriftarten und
+        Bilder werden mit der Website ausgeliefert.
       </p>
       <h2>Demo-Sitzung</h2>
       <p>
@@ -27,13 +29,34 @@ export default function Page() {
       </p>
       <h2>Ihre Einstellungen</h2>
       <p>
-        Es gibt keine optionalen Kategorien einzuschalten. Sie können das
-        Gespräch jederzeit mit „Gespräch beenden“ schließen und das Demo-Cookie
-        in den Website-Daten Ihres Browsers löschen. Den Mikrofonzugriff können
-        Sie separat über das Schloss- oder Website-Symbol Ihres Browsers
-        widerrufen. Das Löschen des Cookies während einer laufenden Demo kann
-        die Sitzungszuordnung unterbrechen; die Verbindung wird bei
-        ausbleibendem Lebenszeichen automatisch beendet.
+        Ihre Auswahl speichern wir unter{" "}
+        <strong>codst_analytics_consent_v1</strong> im lokalen Browserspeicher
+        für höchstens 180 Tage. Sie können sie hier jederzeit ändern. Ein
+        Widerruf stoppt die weitere Statistikmessung und entfernt unsere
+        Google-Analytics-Cookies, ohne ein laufendes Gespräch zu beenden.
+        Bereits übermittelte Daten werden dadurch nicht automatisch gelöscht.
+      </p>
+      <CookieSettingsButton />
+      <h2>Optionale Statistik</h2>
+      <p>
+        Mit Ihrer Zustimmung messen wir Seitenaufrufe, ausgewählte
+        Schaltflächen, die Nutzung der drei Browser-Demos, Gesprächsdauer und
+        erfolgreiche Beratungsanfragen. Google Analytics setzt dafür Cookies mit
+        Namen
+        <strong> _ga</strong> und <strong>_ga_…</strong> mit einer
+        konfigurierten Laufzeit von höchstens 90 Tagen. Sie enthalten pseudonyme
+        Kennungen. Formularinhalte und Gesprächsprotokolle senden wir nicht an
+        Google Analytics. Werbe- und Remarketing-Funktionen sind nicht
+        aktiviert.
+      </p>
+      <h2>Demo beenden</h2>
+      <p>
+        Sie können das Gespräch jederzeit mit „Gespräch beenden“ schließen und
+        das Demo-Cookie in den Website-Daten Ihres Browsers löschen. Den
+        Mikrofonzugriff können Sie separat über das Schloss- oder Website-Symbol
+        Ihres Browsers widerrufen. Das Löschen des Cookies während einer
+        laufenden Demo kann die Sitzungszuordnung unterbrechen; die Verbindung
+        wird bei ausbleibendem Lebenszeichen automatisch beendet.
       </p>
       <p>
         Details zur Sprachverarbeitung und zu Ihren Rechten finden Sie in der{" "}

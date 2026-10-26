@@ -1,22 +1,29 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { Icon } from "./Icons";
+import { track } from "@/lib/analytics";
 
 export function ContactForm() {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">(
     "idle",
   );
   const [error, setError] = useState("");
+  const started = useRef(false);
+  const submitting = useRef(false);
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (submitting.current) return;
+    submitting.current = true;
     const form = event.currentTarget;
+    const values = new FormData(form);
+    track("form_submit_click", { form_id: "consultation" });
     setState("sending");
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+        body: JSON.stringify(Object.fromEntries(values)),
       });
       const data = await response.json();
       if (!response.ok || !data.ok)
@@ -25,12 +32,23 @@ export function ContactForm() {
             "Die Nachricht konnte nicht gesendet werden. Bitte schreiben Sie an info@cod-st.com.",
         );
       setState("sent");
+      // The server deliberately returns success for honeypot spam. Those
+      // responses must never become lead conversions.
+      if (!String(values.get("website") || "").trim())
+        track("generate_lead", { form_id: "consultation" });
+      started.current = false;
       form.reset();
     } catch (e) {
+      track("form_error", {
+        form_id: "consultation",
+        error_type: "submission",
+      });
       setError(
         e instanceof Error ? e.message : "Bitte versuchen Sie es erneut.",
       );
       setState("error");
+    } finally {
+      submitting.current = false;
     }
   }
   if (state === "sent")
@@ -51,7 +69,21 @@ export function ContactForm() {
       </div>
     );
   return (
-    <form className="contact-form" onSubmit={submit}>
+    <form
+      className="contact-form"
+      onSubmit={submit}
+      onInput={(event) => {
+        if (
+          !started.current &&
+          event.isTrusted &&
+          event.target instanceof HTMLElement &&
+          event.target.getAttribute("name") !== "website"
+        ) {
+          started.current = true;
+          track("form_start", { form_id: "consultation" });
+        }
+      }}
+    >
       <div className="form-grid">
         <label>
           Ihr Name

@@ -1,4 +1,99 @@
 @import "tailwindcss";
+
+.cookie-banner {
+  position: fixed;
+  inset: auto 20px 20px;
+  z-index: 80;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 30px;
+  align-items: center;
+  padding: 26px 30px;
+  max-width: 1160px;
+  margin-inline: auto;
+  border: 1px solid #b8c6bb;
+  border-radius: 12px;
+  background: #faf9f6;
+  color: #243b37;
+  box-shadow: 0 10px 45px #243b3720;
+  animation: consent-appear 180ms ease-out;
+}
+.cookie-banner h2 {
+  font-size: 18px;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+.cookie-banner p {
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 690px;
+}
+.cookie-banner p a,
+.cookie-actions > a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cookie-banner .cookie-current {
+  margin-top: 6px;
+  font-weight: 600;
+}
+.cookie-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.cookie-choice {
+  background: #335d50;
+  color: #fff;
+  border: 1px solid #335d50;
+  border-radius: 6px;
+  padding: 13px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 150ms ease;
+}
+.cookie-choice:hover {
+  background: #243b37;
+}
+.cookie-actions > a {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 11px;
+}
+@keyframes consent-appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 800px) {
+  .cookie-banner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+    inset: auto 12px 12px;
+    max-height: 70svh;
+    overflow-y: auto;
+  }
+  .cookie-banner h2 {
+    font-size: 17px;
+  }
+  .cookie-banner p {
+    font-size: 11px;
+  }
+  .cookie-choice {
+    padding-inline: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner {
+    animation: none;
+  }
+}
 :root {
   --ink: #243b37;
   --teal: #335d50;

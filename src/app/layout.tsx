@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import { Analytics } from "@/components/Analytics";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -10,6 +11,7 @@ const manrope = Manrope({
 });
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cod-st.com"),
+  referrer: "strict-origin",
   title: {
     default: "cod-st — KI-Rezeption: Keinen Anruf mehr verpassen",
     template: "%s | cod-st",
@@ -33,7 +35,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de">
+    <html lang="de" data-scroll-behavior="smooth">
       <body className={manrope.variable}>
         <a className="skip-link" href="#inhalt">
           Zum Inhalt
@@ -41,6 +43,7 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
