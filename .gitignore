@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local verification and Python demo runtime
+.playwright-cli/
+output/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
