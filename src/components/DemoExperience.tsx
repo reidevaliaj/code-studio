@@ -415,8 +415,9 @@ export function DemoExperience() {
             </h2>
           </div>
           <p>
-            Lernen Sie Mira, Clara und Lea kennen. Drei Beispielpraxen, drei
-            spezialisierte Rezeptionistinnen – und Sie sind der Anrufer.
+            Lernen Sie Mira, Clara und Lea in drei Beispielpraxen kennen. Ihre
+            KI-Rezeption passen wir ebenso an andere Branchen und Ihr
+            Unternehmen an.
           </p>
         </div>
         <div className="demo-explainer">
@@ -697,7 +698,7 @@ export function DemoExperience() {
                   href="#kontakt"
                   onClick={close}
                 >
-                  Über Ihre Praxis sprechen{" "}
+                  Über Ihr Unternehmen sprechen{" "}
                   <Icon name="arrow" width="18" height="18" />
                 </a>
                 <button

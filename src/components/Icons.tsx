@@ -38,6 +38,54 @@ const paths: Record<string, React.ReactNode> = {
       <path d="M12 7v5l3 2" />
     </>
   ),
+  calendar: (
+    <>
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M7 3v4m10-4v4M3 11h18m-13 5 2 2 5-5" />
+    </>
+  ),
+  website: (
+    <>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <path d="M3 9h18M7 6.5h.01M10 6.5h.01m-2 7 2 2-2 2m5 0h3" />
+    </>
+  ),
+  info: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11v6m0-10h.01" />
+    </>
+  ),
+  globe: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <ellipse cx="12" cy="12" rx="4" ry="9" />
+      <path d="M3 12h18" />
+    </>
+  ),
+  briefcase: (
+    <>
+      <rect x="3" y="7" width="18" height="14" rx="2" />
+      <path d="M8 7V4a1 1 0 011-1h6a1 1 0 011 1v3M3 12a22 22 0 0018 0m-9 1v3" />
+    </>
+  ),
+  mail: (
+    <>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m3 7 9 6 9-6" />
+    </>
+  ),
+  message: (
+    <path d="M21 11.5a9 9 0 01-9 9 10 10 0 01-4-.9L3 21l1.4-4.7A9 9 0 1121 11.5zM8 11h.01M12 11h.01M16 11h.01" />
+  ),
+  settings: (
+    <>
+      <path d="M4 6h5m4 0h7M4 12h9m4 0h3M4 18h2m4 0h10" />
+      <circle cx="11" cy="6" r="2" />
+      <circle cx="15" cy="12" r="2" />
+      <circle cx="8" cy="18" r="2" />
+    </>
+  ),
   shield: (
     <>
       <path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6l-8-3z" />
