@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { LocalAudioTrack, Room } from "livekit-client";
 import { Icon } from "./Icons";
+import { track, type DemoType } from "@/lib/analytics";
 
 const profiles = [
   {
@@ -93,9 +94,26 @@ export function DemoExperience() {
   const callDeadline = useRef<number | null>(null);
   const pendingJoin = useRef<Promise<void> | null>(null);
   const pendingCancellation = useRef<Promise<unknown> | null>(null);
+  const callMetrics = useRef<{
+    demo: DemoType;
+    started: number | null;
+    mic: boolean;
+    audio: boolean;
+    engagementTimer: ReturnType<typeof setTimeout> | null;
+  } | null>(null);
 
   const disconnect = useCallback((reason = "hangup") => {
     generation.current++;
+    const metrics = callMetrics.current;
+    callMetrics.current = null;
+    if (metrics?.engagementTimer) clearTimeout(metrics.engagementTimer);
+    if (metrics?.started !== null && metrics?.started !== undefined) {
+      track("demo_call_ended", {
+        demo_type: metrics.demo,
+        call_duration_seconds: (performance.now() - metrics.started) / 1000,
+        call_end_reason: reason,
+      });
+    }
     callDeadline.current = null;
     microphone.current?.stop();
     microphone.current = null;
@@ -193,7 +211,11 @@ export function DemoExperience() {
         }
       } catch {
         if (!cancelled && ++failures >= 3) {
-          disconnect();
+          track("demo_error", {
+            demo_type: selected.id as DemoType,
+            error_type: "status",
+          });
+          disconnect("status_error");
           setError(
             "Die Verbindung wurde unterbrochen. Sie können die Demo erneut starten.",
           );
@@ -235,6 +257,7 @@ export function DemoExperience() {
   }, [stage, data?.remaining, end]);
 
   function open(profile: Profile, event: React.MouseEvent<HTMLButtonElement>) {
+    track("demo_open", { demo_type: profile.id as DemoType });
     opener.current = event.currentTarget;
     setSelected(profile);
     setStage("intro");
@@ -274,8 +297,18 @@ export function DemoExperience() {
         admissionId.current = next.id;
         setData(next);
         setStage(next.state === "reserved" ? "ready" : "waiting");
+        track("demo_start", { demo_type: selected.id as DemoType });
+        if (next.state !== "reserved")
+          track("demo_queued", {
+            demo_type: selected.id as DemoType,
+            queue_position: next.position,
+          });
       } catch (e) {
         if (generation.current === current) {
+          track("demo_error", {
+            demo_type: selected.id as DemoType,
+            error_type: "admission",
+          });
           setError(
             e instanceof Error ? e.message : "Bitte versuchen Sie es erneut.",
           );
@@ -288,7 +321,35 @@ export function DemoExperience() {
     if (pendingJoin.current === pending) pendingJoin.current = null;
   }
   async function connect() {
+    if (!selected) return;
     const current = ++generation.current;
+    track("demo_connect_click", { demo_type: selected.id as DemoType });
+    const metrics = {
+      demo: selected.id as DemoType,
+      started: null as number | null,
+      mic: false,
+      audio: false,
+      engagementTimer: null as ReturnType<typeof setTimeout> | null,
+    };
+    callMetrics.current = metrics;
+    const connected = () => {
+      if (
+        generation.current !== current ||
+        callMetrics.current !== metrics ||
+        !metrics.mic ||
+        !metrics.audio ||
+        metrics.started !== null
+      )
+        return;
+      metrics.started = performance.now();
+      track("demo_call_connected", { demo_type: metrics.demo });
+      metrics.engagementTimer = setTimeout(() => {
+        if (callMetrics.current === metrics)
+          track("demo_call_engaged", {
+            demo_type: metrics.demo,
+          });
+      }, 15_000);
+    };
     setStage("connecting");
     try {
       if (!navigator.mediaDevices?.getUserMedia)
@@ -318,7 +379,10 @@ export function DemoExperience() {
       }
       setData(connection);
       liveRoom.on(RoomEvent.TrackSubscribed, (track) => {
+        if (generation.current !== current) return;
         if (track.kind === Track.Kind.Audio) {
+          metrics.audio = true;
+          connected();
           const element = track.attach();
           audioContainer.current?.appendChild(element);
           void element.play().catch(() => setAudioBlocked(true));
@@ -355,6 +419,8 @@ export function DemoExperience() {
         await liveRoom.disconnect();
         return;
       }
+      metrics.mic = true;
+      connected();
       callDeadline.current = performance.now() + 180_000;
       setVoiceState("listening");
       setStage("live");
@@ -370,6 +436,16 @@ export function DemoExperience() {
       const busy =
         e instanceof Error &&
         ["NotReadableError", "TrackStartError", "AbortError"].includes(e.name);
+      track("demo_error", {
+        demo_type: selected.id as DemoType,
+        error_type: denied
+          ? "microphone_denied"
+          : missing
+            ? "microphone_missing"
+            : busy
+              ? "microphone_busy"
+              : "connection",
+      });
       setError(
         denied
           ? "Ihr Mikrofon ist gesperrt. Erlauben Sie den Zugriff in den Browser-Einstellungen und starten Sie die Demo erneut."

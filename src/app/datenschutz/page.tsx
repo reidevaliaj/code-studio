@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <LegalPage title="Datenschutzerklärung">
       <p>
-        Stand: 25. Oktober 2026. Diese Hinweise beschreiben die Verarbeitung auf
+        Stand: 26. Oktober 2026. Diese Hinweise beschreiben die Verarbeitung auf
         dieser Website und in den öffentlichen Browser-Demos. Für eine spätere
         Einrichtung in einer echten Praxis werden die Datenverarbeitung und
         Verantwortlichkeiten gesondert vereinbart.
@@ -34,11 +34,11 @@ export default function Page() {
       </p>
       <h2>3. Kontakt- und Beratungsanfragen</h2>
       <p>
-        Wenn Sie uns kontaktieren, verarbeiten wir Name, Praxis, E-Mail-Adresse,
-        gegebenenfalls Telefonnummer und Ihre Nachricht, um Ihre Anfrage zu
-        beantworten. Rechtsgrundlage sind Art. 6 Abs. 1 lit. b DSGVO für
-        vorvertragliche Anfragen und gegebenenfalls Art. 6 Abs. 1 lit. f DSGVO
-        für sonstige geschäftliche Kommunikation. Der Versand erfolgt über
+        Wenn Sie uns kontaktieren, verarbeiten wir Name, Unternehmen,
+        E-Mail-Adresse, gegebenenfalls Telefonnummer und Ihre Nachricht, um Ihre
+        Anfrage zu beantworten. Rechtsgrundlage sind Art. 6 Abs. 1 lit. b DSGVO
+        für vorvertragliche Anfragen und gegebenenfalls Art. 6 Abs. 1 lit. f
+        DSGVO für sonstige geschäftliche Kommunikation. Der Versand erfolgt über
         Resend an info@cod-st.com. Eine Anfrage ist keine Newsletter-Anmeldung.
         Bitte senden Sie keine Patientendaten oder medizinischen Unterlagen.
       </p>
@@ -121,8 +121,9 @@ export default function Page() {
       <p>
         Eingesetzte Dienstleister sind Vercel (Website), DigitalOcean
         (Demo-Server), LiveKit (Sprachverbindung), OpenAI
-        (KI-Sprachverarbeitung) und Resend (E-Mail-Versand). Je nach Dienst und
-        Kontoeinstellungen kann die Verarbeitung außerhalb des Europäischen
+        (KI-Sprachverarbeitung), Resend (E-Mail-Versand) und bei Ihrer
+        Zustimmung Google Ireland Limited (Website-Statistik). Je nach Dienst
+        und Kontoeinstellungen kann die Verarbeitung außerhalb des Europäischen
         Wirtschaftsraums, insbesondere in den USA, stattfinden. Wir behaupten
         keine ausschließlich europäische Verarbeitung. Für Auftragsverarbeitung
         und Drittlandübermittlungen sind die jeweiligen Vereinbarungen und
@@ -174,14 +175,60 @@ export default function Page() {
       </p>
       <h2>7. Cookies und lokale Speicherung</h2>
       <p>
-        Wir setzen keine Analyse- oder Marketing-Tracker ein. Für eine von Ihnen
-        gestartete Demo wird ein technisch notwendiges Cookie mit einer
-        zufälligen Kennung für höchstens 24 Stunden verwendet. Es verhindert
-        doppelte Warteschlangeneinträge und ordnet Ihre Verbindung zu. Es
-        enthält keine Gesprächsinhalte. Mehr unter{" "}
+        Für eine von Ihnen gestartete Demo wird ein technisch notwendiges Cookie
+        mit einer zufälligen Kennung für höchstens 24 Stunden verwendet. Es
+        verhindert doppelte Warteschlangeneinträge und ordnet Ihre Verbindung
+        zu. Es enthält keine Gesprächsinhalte. Ihre Statistik-Auswahl speichern
+        wir für höchstens 180 Tage im lokalen Browserspeicher. Mehr unter{" "}
         <Link href="/cookies">Cookies & Einstellungen</Link>.
       </p>
-      <h2>8. Ihre Rechte</h2>
+      <h2>8. Freiwillige Website-Statistik mit Google Analytics</h2>
+      <p>
+        Nur mit Ihrer Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO laden wir
+        Google Tag Manager und Google Analytics 4 von Google Ireland Limited,
+        Gordon House, Barrow Street, Dublin 4, Irland. Wir werten Seitenaufrufe,
+        Kampagnenherkunft, ausgewählte Schaltflächen, Demo-Verbindungen und
+        Gesprächsdauer sowie erfolgreich übermittelte Beratungsanfragen aus.
+        Dabei werden pseudonyme Cookie-Kennungen, Browser- und
+        Geräteinformationen, Zeitpunkte und technische Verbindungsdaten
+        verarbeitet. Die IP-Adresse ist für die Übertragung an Google
+        erforderlich. Eine Verarbeitung in den USA kann stattfinden.
+      </p>
+      <p>
+        Vor Ihrer Zustimmung und nach einer Ablehnung laden wir keine
+        Google-Tags. Wir nutzen keine Werbepersonalisierung, kein Remarketing
+        und keine Google-Signale. Namen, E-Mail-Adressen, Telefonnummern,
+        Formulartexte, Audio und Gesprächsprotokolle übermitteln wir nicht an
+        Analytics. URL-Parameter beschränken wir auf Kampagnenkennzeichnungen;
+        persönliche Empfängerkennungen gehören nicht in solche Kennzeichnungen.
+        Die Analytics-Cookies sind auf höchstens 90 Tage eingestellt. Die
+        Aufbewahrungsdauer für nutzerbezogene Ereignisdaten ist auf zwei Monate
+        eingestellt; zusammengefasste Standardberichte können länger verfügbar
+        sein.
+      </p>
+      <p>
+        Sie können Ihre Einwilligung jederzeit unter{" "}
+        <Link href="/cookies">Cookies & Einstellungen</Link> mit Wirkung für die
+        Zukunft widerrufen. Ihre Anfragen und Demo-Gespräche bleiben auch ohne
+        Statistik möglich. Weitere Informationen gibt Google in seinen{" "}
+        <a
+          href="https://policies.google.com/technologies/partner-sites"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hinweisen zur Verarbeitung auf Partner-Websites
+        </a>{" "}
+        und der{" "}
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Datenschutzerklärung
+        </a>
+        .
+      </p>
+      <h2>9. Ihre Rechte</h2>
       <p>
         Sie haben im gesetzlichen Rahmen Rechte auf Auskunft, Berichtigung,
         Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie
