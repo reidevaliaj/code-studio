@@ -197,7 +197,7 @@ class Reports:
         with self.store.db() as db:
             rows = db.execute(
                 "SELECT r.id,r.messages,s.end_reason FROM call_reports r JOIN sessions s ON r.id=s.id WHERE r.status='active' AND s.state='ended' AND s.ended_at<?",
-                (now - 15,),
+                (now - 45,),
             ).fetchall()
         for row in rows:
             self.finish(
@@ -212,7 +212,9 @@ class Reports:
                 )
             ]
             for session_id in expired:
-                self.audio_path(session_id).unlink(missing_ok=True)
+                audio = self.audio_path(session_id)
+                for path in (audio, audio.with_suffix(".ogg"), audio.with_suffix(".mp3.part")):
+                    path.unlink(missing_ok=True)
             db.execute("DELETE FROM call_reports WHERE started<?", (now - 30 * 86400,))
 
     def import_legacy(self):
@@ -240,7 +242,7 @@ class Reports:
     def audio_path(self, session_id):
         if not re.fullmatch(r"[A-Za-z0-9_-]{20,64}", session_id):
             raise ValueError("Invalid call ID")
-        return self.directory / "recordings" / (session_id + ".ogg")
+        return self.directory / "recordings" / (session_id + ".mp3")
 
     def recover_spool(self):
         for path in (self.directory / "spool").glob("*.json"):
@@ -280,23 +282,34 @@ def format_email(report, sender, directory):
         transcript_text(report["messages"])
         or "Es liegt kein Gesprächstext vor (z. B. Stille, sehr kurzer Anruf oder Verbindungsabbruch)."
     )
-    text = f"Praxis: {profile['business']}\nRezeption: {profile['assistant']}\nBeginn: {date}\nDauer: {duration} Sekunden\nQuelle: {report['source']}\nEnde: {REASONS.get(report['reason'], report['reason'])}\nAnruf-ID: {report['id']}\nAudio: {report['audio_status']}\n\nGESPRÄCHSVERLAUF\n\n{conversation}\n\nAutomatisch erstelltes Transkript; Erkennungsfehler sind möglich. Es wurde kein echter Praxistermin gebucht."
+    path = Path(directory) / "recordings" / (report["id"] + ".mp3")
+    attach_audio = (
+        report["audio_status"] == "recorded"
+        and path.is_file()
+        and not path.is_symlink()
+        and 100 < path.stat().st_size <= 8 * 1024 * 1024
+    )
+    audio_label = (
+        "MP3-Aufnahme im Anhang"
+        if attach_audio
+        else {
+            "disabled": "Nicht aufgenommen (Aufnahme war deaktiviert)",
+            "not_captured": "Keine historische Aufnahme vorhanden",
+            "failed": "Aufnahme oder MP3-Erstellung fehlgeschlagen",
+            "recorded": "Aufnahmedatei fehlt oder überschreitet die Anhangsgrenze",
+        }.get(report["audio_status"], report["audio_status"])
+    )
+    text = f"Praxis: {profile['business']}\nRezeption: {profile['assistant']}\nBeginn: {date}\nDauer: {duration} Sekunden\nQuelle: {report['source']}\nEnde: {REASONS.get(report['reason'], report['reason'])}\nAnruf-ID: {report['id']}\nAudio: {audio_label}\n\nGESPRÄCHSVERLAUF\n\n{conversation}\n\nAutomatisch erstelltes Transkript; Erkennungsfehler sind möglich. Es wurde kein echter Praxistermin gebucht."
     payload = {
         "from": sender,
         "to": ["info@cod-st.com"],
         "subject": "Anrufprotokoll: " + profile["business"],
         "text": text,
     }
-    path = Path(directory) / "recordings" / (report["id"] + ".ogg")
-    if (
-        report["audio_status"] == "recorded"
-        and path.is_file()
-        and not path.is_symlink()
-        and path.stat().st_size <= 8 * 1024 * 1024
-    ):
+    if attach_audio:
         payload["attachments"] = [
             {
-                "filename": "Gespraech-" + report["id"] + ".ogg",
+                "filename": "Gespraech-" + report["id"] + ".mp3",
                 "content": base64.b64encode(path.read_bytes()).decode(),
             }
         ]

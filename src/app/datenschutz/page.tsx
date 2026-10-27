@@ -51,8 +51,8 @@ export default function Page() {
       </p>
       <h2>4. Freiwillige KI-Sprachdemo</h2>
       <p>
-        Die Demo beginnt erst auf Ihre ausdrückliche Auswahl und Bestätigung.
-        Danach entscheiden Sie selbst, ob Sie dem Browser Mikrofonzugriff
+        Sie starten die Demo über „Demo starten“. Über „Jetzt verbinden“
+        entscheiden Sie anschließend selbst, ob Sie dem Browser Mikrofonzugriff
         erlauben. In der Warteschlange wird kein Mikrofon-Audio übertragen.
         Während des Gesprächs wird Ihre Stimme über LiveKit an OpenAI zur
         Spracherkennung und Erzeugung gesprochener Antworten übertragen. Dabei
@@ -63,7 +63,7 @@ export default function Page() {
         Widerruf bleibt davon unberührt.
       </p>
       <p>
-        Mit Ihrer Einwilligung erstellen wir ein textliches Gesprächsprotokoll
+        Für das Gespräch erstellen wir ein textliches Gesprächsprotokoll
         und erfassen Praxisprofil, Zeitpunkt, Dauer und Beendigungsstatus. Das
         Protokoll wird im geschützten Anrufverlauf abgelegt und per E-Mail an
         info@cod-st.com gesendet. Dies dient der Funktionskontrolle und
@@ -72,9 +72,12 @@ export default function Page() {
         Demo-Datenbank löscht Gesprächsprotokolle nach spätestens 30 Tagen.
         Kopien im geschützten Anrufverlauf und im E-Mail-Postfach werden
         regelmäßig auf ihre Erforderlichkeit geprüft und bei Wegfall des Zwecks
-        gelöscht; Sie können eine Löschung unter info@cod-st.com anfragen. In
-        der aktuell freigeschalteten Browser-Demo speichern wir selbst keine
-        Audioaufnahmen. Die Verarbeitung durch Sprach- und Verbindungsanbieter
+        gelöscht; Sie können eine Löschung unter info@cod-st.com anfragen.
+        Wir speichern eine Audioaufnahme beider Gesprächsseiten zur
+        Funktionskontrolle als MP3 und senden sie zusammen mit dem Transkript
+        an info@cod-st.com. Die lokalen Aufnahmen und Arbeitsdateien werden nach
+        spätestens 30 Tagen gelöscht. Für Kopien im E-Mail-Postfach gilt die
+        zuvor beschriebene Zweckprüfung. Die Verarbeitung durch Sprach- und Verbindungsanbieter
         ist weiterhin erforderlich. Anbieter können für Sicherheit,
         Missbrauchsprävention und gesetzliche Pflichten Daten nach ihren
         jeweiligen Bedingungen aufbewahren. Die Demo ist deshalb kein Angebot

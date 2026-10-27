@@ -897,27 +897,6 @@ h1 span {
   height: 4px !important;
   opacity: 0.35;
 }
-.demo-consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 9px;
-  padding: 0 3px;
-  font-size: 9px;
-  color: #a3ba98;
-  line-height: 1.8;
-  margin-bottom: 19px;
-}
-.demo-consent input {
-  margin: 4px 0 0;
-  accent-color: #b9d0a5;
-  flex: none;
-  width: 13px;
-  height: 13px;
-}
-.demo-consent a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
 .phone-primary {
   width: 100%;
   background: #b7cea1;
@@ -1444,9 +1423,6 @@ h1 span {
     min-height: 150px;
     padding-top: 18px;
     padding-bottom: 18px;
-  }
-  .demo-consent {
-    font-size: 10px;
   }
   .phone-footer {
     font-size: 9px;

@@ -50,7 +50,7 @@ def test_worker_crash_preserves_partial_transcript_and_queues_history(tmp_path):
     now[0] += 40
     store.cleanup_rooms()
     store.finish_cleanup(row["id"])
-    now[0] += 20
+    now[0] += 60
     reports.reconcile()
     saved = reports.get(row["id"])
     assert saved["status"] == "ended"
@@ -105,6 +105,40 @@ def test_german_email_contains_full_conversation_and_never_invents_a_transcript(
     assert "Anrufer: Wann öffnen Sie?" in payload["text"]
     assert "Rezeption: Ab acht Uhr." in payload["text"]
     assert "attachments" not in payload
+
+
+def test_recorded_call_email_attaches_mp3_and_missing_file_is_explicit(tmp_path):
+    store = Admission(tmp_path / "queue.db")
+    reports = Reports(store, tmp_path)
+    row = connected(store)
+    reports.start(row)
+    reports.finish(row["id"], [], "close_button", "recorded")
+    report = reports.get(row["id"])
+    missing = format_email(report, "sender@example.invalid", tmp_path)
+    assert "Aufnahmedatei fehlt" in missing["text"]
+    assert "attachments" not in missing
+    path = reports.audio_path(row["id"])
+    path.parent.mkdir()
+    path.write_bytes(b"ID3" + b"x" * 120)
+    payload = format_email(report, "sender@example.invalid", tmp_path)
+    assert payload["attachments"][0]["filename"].endswith(".mp3")
+    assert "MP3-Aufnahme im Anhang" in payload["text"]
+
+
+def test_retention_removes_mp3_original_and_partial_files(tmp_path):
+    now = [1000]
+    store = Admission(tmp_path / "queue.db", clock=lambda: now[0])
+    reports = Reports(store, tmp_path)
+    row = connected(store)
+    reports.start(row)
+    reports.finish(row["id"], [], "hangup", "recorded")
+    mp3 = reports.audio_path(row["id"])
+    mp3.parent.mkdir()
+    for path in (mp3, mp3.with_suffix(".ogg"), mp3.with_suffix(".mp3.part")):
+        path.write_bytes(b"audio")
+    now[0] += 31 * 86400
+    reports.reconcile()
+    assert list(mp3.parent.iterdir()) == []
 
 
 def test_legacy_metadata_import_never_fabricates_audio_or_sends_old_emails(tmp_path):

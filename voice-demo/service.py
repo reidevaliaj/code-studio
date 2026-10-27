@@ -28,6 +28,7 @@ GATEWAY_KEY = os.environ["DEMO_GATEWAY_KEY"]
 WORKER_KEY = os.environ["DEMO_WORKER_KEY"]
 ready = False
 CONSENT_VERSION = "2026-10-25-transcript-v1"
+CALL_START_VERSION = "2026-10-27-direct-start-v1"
 store = Admission(
     os.getenv("DEMO_DATABASE", "/home/rei/apps/codst-demo/data/queue.db"), available=lambda: ready
 )
@@ -37,6 +38,23 @@ reports = Reports(store, os.getenv("DEMO_DATA_DIR", str(Path(store.path).parent)
 def auth(value, key):
     if not value or not hmac.compare_digest(value, "Bearer " + key):
         raise HTTPException(401, "Nicht autorisiert.")
+
+
+def requested_start_version(body):
+    if body.get("startRequested") is True:
+        if body.get("startVersion") != CALL_START_VERSION:
+            raise HTTPException(
+                409, "Bitte laden Sie die Seite neu und starten Sie die Demo erneut."
+            )
+        return CALL_START_VERSION
+    # Support already-open pages using the previous checkbox flow.
+    if body.get("consent") is True:
+        if body.get("consentVersion") != CONSENT_VERSION:
+            raise HTTPException(
+                409, "Bitte laden Sie die Seite neu und starten Sie die Demo erneut."
+            )
+        return CONSENT_VERSION
+    raise HTTPException(400, "Bitte starten Sie die Demo über die Schaltfläche auf der Website.")
 
 
 def public(row):
@@ -140,18 +158,14 @@ async def demo(request: Request, authorization: str = Header(default="")):
             raise HTTPException(
                 503, "Die Demo ist gerade nicht verfügbar. Bitte versuchen Sie es später erneut."
             )
-        if body.get("consent") is not True:
-            raise HTTPException(400, "Bitte bestätigen Sie zuerst die Hinweise zur Demo.")
-        if body.get("consentVersion") != CONSENT_VERSION:
-            raise HTTPException(
-                409,
-                "Bitte laden Sie die Seite neu und bestätigen Sie die aktuellen Datenschutzhinweise.",
-            )
+        start_version = requested_start_version(body)
         row = store.join(
             client,
             str(body.get("ip", "")),
             str(body.get("profile", "")),
-            consent_version=CONSENT_VERSION,
+            # This historical column now records the explicit call-start flow,
+            # not a claim that the visitor checked a consent checkbox.
+            consent_version=start_version,
         )
         if row["state"] in ("connecting", "active", "closing"):
             raise HTTPException(
@@ -170,12 +184,15 @@ async def demo(request: Request, authorization: str = Header(default="")):
         return {"state": "ended"}
     elif action == "connect":
         row = store.connect(client)
-        if row["source"] == "browser" and row["consent_version"] != CONSENT_VERSION:
+        if row["source"] == "browser" and row["consent_version"] not in {
+            CONSENT_VERSION,
+            CALL_START_VERSION,
+        }:
             store.cancel(client, row["id"], "connection_error")
             store.room_ready(row["id"])
             raise HTTPException(
                 409,
-                "Bitte laden Sie die Seite neu und bestätigen Sie die aktuellen Datenschutzhinweise.",
+                "Bitte laden Sie die Seite neu und starten Sie die Demo erneut.",
             )
         if row["source"] != "browser":
             raise HTTPException(403)

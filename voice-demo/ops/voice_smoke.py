@@ -74,7 +74,8 @@ async def check(profile, phrase, expected):
                     "client": client_id,
                     "ip": "synthetic-voice-test-" + client_id,
                     "action": action,
-                    "consentVersion": "2026-10-25-transcript-v1",
+                    "startRequested": True,
+                    "startVersion": "2026-10-27-direct-start-v1",
                     **kwargs,
                 },
             )
@@ -85,7 +86,7 @@ async def check(profile, phrase, expected):
             model="gpt-4o-mini-tts", voice="coral", input=phrase, response_format="wav"
         )
         audio = response.content
-        await gateway("join", profile=profile, consent=True)
+        await gateway("join", profile=profile)
         config = await gateway("connect")
         room = rtc.Room()
         texts = []

@@ -72,6 +72,35 @@ async def test_service_auth_and_invalid_requests(tmp_path, monkeypatch):
         assert response.status_code == 200
         assert service.store.status("a" * 64)["end_reason"] == "close_button"
 
+        direct = {
+            "action": "join",
+            "client": "b" * 64,
+            "ip": "direct-start-ip",
+            "profile": "dental",
+        }
+        assert (await client.post("/v1/demo", json=direct, headers=headers)).status_code == 400
+        direct["startRequested"] = True
+        direct["startVersion"] = "outdated"
+        assert (await client.post("/v1/demo", json=direct, headers=headers)).status_code == 409
+        direct["startVersion"] = service.CALL_START_VERSION
+        response = await client.post("/v1/demo", json=direct, headers=headers)
+        assert response.status_code == 200
+        assert service.store.status("b" * 64)["consent_version"] == service.CALL_START_VERSION
+        assert "consent" not in direct
+        assert "consentVersion" not in direct
+        response = await client.post(
+            "/v1/demo",
+            json={
+                "action": "cancel",
+                "client": "b" * 64,
+                "id": response.json()["id"],
+                "reason": "close_button",
+            },
+            headers=headers,
+        )
+        assert response.status_code == 200
+        assert service.store.status("b" * 64)["end_reason"] == "close_button"
+
 
 def test_public_countdown_uses_server_time_and_cannot_exceed_three_minutes(monkeypatch):
     import service

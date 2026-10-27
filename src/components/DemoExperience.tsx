@@ -75,7 +75,6 @@ async function requestDemo(
 export function DemoExperience() {
   const [selected, setSelected] = useState<Profile | null>(null);
   const [stage, setStage] = useState<Stage>("intro");
-  const [consent, setConsent] = useState(false);
   const [data, setData] = useState<SessionData | null>(null);
   const [error, setError] = useState("");
   const [muted, setMuted] = useState(false);
@@ -261,7 +260,6 @@ export function DemoExperience() {
     opener.current = event.currentTarget;
     setSelected(profile);
     setStage("intro");
-    setConsent(false);
     setError("");
     setData(null);
     setMuted(false);
@@ -270,7 +268,7 @@ export function DemoExperience() {
     setAudioBlocked(false);
   }
   async function join() {
-    if (!selected || !consent) return;
+    if (!selected) return;
     const current = ++generation.current;
     setStage("loading");
     const previous = pendingJoin.current;
@@ -283,8 +281,8 @@ export function DemoExperience() {
       try {
         const next = await requestDemo("join", {
           profile: selected.id,
-          consent,
-          consentVersion: "2026-10-25-transcript-v1",
+          startRequested: true,
+          startVersion: "2026-10-27-direct-start-v1",
         });
         if (generation.current !== current) {
           await requestDemo("cancel", {
@@ -695,28 +693,8 @@ export function DemoExperience() {
               )}
             </div>
             {stage === "intro" && (
-              <label className="demo-consent">
-                <input
-                  type="checkbox"
-                  checked={consent}
-                  onChange={(e) => setConsent(e.target.checked)}
-                />
-                <span>
-                  Ich willige in die Sprachverarbeitung durch LiveKit und OpenAI
-                  für diese Demo ein. Die{" "}
-                  <Link href="/datenschutz" target="_blank" rel="noopener">
-                    Datenschutzhinweise
-                  </Link>{" "}
-                  habe ich gelesen. Das Gesprächsprotokoll darf gespeichert und
-                  an Code-Studio per E-Mail gesendet werden. Ich verwende nur
-                  erfundene Angaben.
-                </span>
-              </label>
-            )}
-            {stage === "intro" && (
               <button
                 className="button phone-primary"
-                disabled={!consent}
                 onClick={join}
               >
                 Demo starten <Icon name="phone" width="19" height="19" />
@@ -800,6 +778,11 @@ export function DemoExperience() {
               </button>
             )}
             <p className="phone-footer">
+              Gespräch wird aufgezeichnet.{" "}
+              <Link href="/datenschutz" target="_blank" rel="noopener">
+                Datenschutz ↗︎
+              </Link>
+              <br />
               Keine medizinische Beratung.{" "}
               <Link href="/demo-hinweise" target="_blank" rel="noopener">
                 Demo-Hinweise ↗︎

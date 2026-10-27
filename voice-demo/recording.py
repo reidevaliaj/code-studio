@@ -1,11 +1,44 @@
-"""Optional private stereo Opus recording using the pinned SDK's audio IO recorder."""
+"""Private stereo recording with a playable MP3 for each completed call."""
 
 import asyncio
 import os
 import re
 from pathlib import Path
 
+import av
 from livekit.agents.voice.recorder_io import RecorderIO
+
+
+def convert_recording(path):
+    """Keep the original private audio and atomically publish its stereo MP3."""
+    target = path.with_suffix(".mp3")
+    temporary = target.with_suffix(".mp3.part")
+    fd = os.open(temporary, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+    os.close(fd)
+    try:
+        with av.open(str(path)) as source, av.open(str(temporary), "w", format="mp3") as output:
+            stream = output.add_stream("libmp3lame", rate=24000)
+            stream.layout = "stereo"
+            stream.bit_rate = 96000
+            resampler = av.AudioResampler(format="fltp", layout="stereo", rate=24000)
+            for frame in source.decode(audio=0):
+                for samples in resampler.resample(frame):
+                    samples.pts = None
+                    for packet in stream.encode(samples):
+                        output.mux(packet)
+            for samples in resampler.resample(None):
+                samples.pts = None
+                for packet in stream.encode(samples):
+                    output.mux(packet)
+            for packet in stream.encode(None):
+                output.mux(packet)
+        with av.open(str(temporary)) as check:
+            if next(check.decode(audio=0), None) is None:
+                raise ValueError("Empty MP3 recording")
+        temporary.replace(target)
+        return target
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 async def start_recording(session, session_id, directory, enabled):
@@ -32,6 +65,9 @@ async def close_recording(recorder):
     try:
         await asyncio.wait_for(recorder.aclose(), timeout=8)
         path = recorder.output_path
-        return "recorded" if path and path.is_file() and path.stat().st_size > 100 else "failed"
-    except (OSError, TimeoutError, RuntimeError):
+        if not path or not path.is_file() or path.stat().st_size <= 100:
+            return "failed"
+        await asyncio.wait_for(asyncio.to_thread(convert_recording, path), timeout=12)
+        return "recorded"
+    except (OSError, TimeoutError, RuntimeError, ValueError, av.FFmpegError):
         return "failed"

@@ -13,7 +13,7 @@ Use GA4 Reports → Acquisition → Traffic acquisition to compare email campaig
 | `site_engaged` | At least 15 visible seconds and a trusted pointer/keyboard interaction |
 | `cta_click` | Demo navigation, consultation navigation or public email link |
 | `demo_open` | One of the three call buttons opened the phone panel |
-| `demo_start` | Demo admission accepted after the separate voice consent |
+| `demo_start` | Demo admission accepted after the visitor clicks “Demo starten” |
 | `demo_queued` | Admission entered the waiting queue |
 | `demo_connect_click` | Visitor attempted microphone/connection setup |
 | `demo_call_connected` | Microphone published and assistant audio subscribed |
@@ -41,11 +41,15 @@ Shlink/MailWizz click totals are upstream link activity, not website leads. Comp
 
 ## Automatic measurement and data minimization
 
-Owner requested automatic measurement on 26 October 2026. New production visitors initialize Google Analytics without accepting a banner; no statistics popup is rendered. `/cookies` provides an explicit opt-out/enable control. Existing rejections remain honored for their original 180-day lifetime. Opting out disables GA4, stops app events, removes `_ga*` cookies and keeps calls connected. Other tabs receive storage changes. Voice-demo consent is separate. This describes technical behavior and is not a claim of legal compliance. Do not reintroduce a required statistics acceptance step without discussing it with the owner.
+Owner requested automatic measurement on 26 October 2026. New production visitors initialize Google Analytics without accepting a banner; no statistics popup is rendered. `/cookies` provides an explicit opt-out/enable control. Existing rejections remain honored for their original 180-day lifetime. Opting out disables GA4, stops app events, removes `_ga*` cookies and keeps calls connected. Other tabs receive storage changes. On 27 October the owner also requested removal of the voice-demo checkbox: visitors now click “Demo starten” directly, then “Jetzt verbinden” to allow microphone access. Call-start requests carry a dedicated flow version and do not assert a checkbox acceptance. This describes technical behavior and is not a claim of legal compliance. Do not reintroduce a required statistics acceptance step without discussing it with the owner.
 
 Only production hosts `cod-st.com` and `www.cod-st.com` can initialize measurement. Preview/local hosts are disabled. GA4 automatic/enhanced interactions and user-provided data collection are off. Google Signals, ads personalization and granular location/device collection are off. GA cookies expire after 90 days without renewal. User and event data retention are two months, with reset on new user activity disabled. Standard aggregate reports can persist longer.
 
 Never send form values, transcripts, audio, call IDs, tokens or error messages into the data layer. `src/lib/analytics.ts` and the GTM trigger both enforce the event allowlist. Legal/cookie pages describe the deployed behavior.
+
+## Finding call recordings
+
+The demo worker saves both sides as a private stereo MP3 under `/home/rei/apps/codst-demo/data/recordings/`. Each completed call email to `info@cod-st.com` includes `Gespraech-<call-id>.mp3` alongside the transcript. Recording is controlled by `DEMO_AUDIO_RECORDING_ENABLED` in the protected server environment. Local MP3s and intermediate audio expire after 30 days. Recordings are not public web files and are not sent to Analytics. Calls made while recording was disabled have no recoverable audio.
 
 ## Verification and maintenance
 
