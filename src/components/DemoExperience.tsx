@@ -778,11 +778,6 @@ export function DemoExperience() {
               </button>
             )}
             <p className="phone-footer">
-              Gespräch wird aufgezeichnet.{" "}
-              <Link href="/datenschutz" target="_blank" rel="noopener">
-                Datenschutz ↗︎
-              </Link>
-              <br />
               Keine medizinische Beratung.{" "}
               <Link href="/demo-hinweise" target="_blank" rel="noopener">
                 Demo-Hinweise ↗︎
