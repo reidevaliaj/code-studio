@@ -9,6 +9,7 @@ const config = {
       { source: "/de/:path*", destination: "/:path*", permanent: true },
       { source: "/en/:path*", destination: "/:path*", permanent: true },
       { source: "/contact", destination: "/kontakt", permanent: true },
+      { source: "/imobiliare", destination: "/immobiliare", permanent: true },
       ...[
         "services",
         "partners",

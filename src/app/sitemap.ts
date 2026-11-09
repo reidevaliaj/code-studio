@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...existingPages,
     {
-      url: "https://www.cod-st.com/imobiliare",
+      url: "https://www.cod-st.com/immobiliare",
       changeFrequency: "monthly",
       priority: 0.7,
     },

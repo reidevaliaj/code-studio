@@ -3,9 +3,9 @@ import Link from "next/link";
 import { Icon } from "@/components/Icons";
 import { Logo } from "@/components/SiteChrome";
 import { SiteDocument } from "@/components/SiteDocument";
-import styles from "./imobiliare.module.css";
+import styles from "./immobiliare.module.css";
 
-const home = "/imobiliare";
+const home = "/immobiliare";
 const title = "Soluzioni per agenzie immobiliari | Code-Studio";
 const description =
   "Siti web, pubblicazione automatica degli annunci, social media, video e assistenza clienti per agenzie immobiliari. Scoprite servizi e prezzi indicativi.";

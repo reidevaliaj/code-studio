@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Icon } from "@/components/Icons";
 import { ServiceExample } from "./ServiceExample";
 import { services } from "./services";
-import styles from "./imobiliare.module.css";
+import styles from "./immobiliare.module.css";
 
 const projectSteps = [
   ["Raccontateci come lavorate", "Partiamo dal sito, dai portali o dagli strumenti che usate oggi e dall’attività che vi fa perdere più tempo."],

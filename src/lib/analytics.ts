@@ -57,7 +57,7 @@ const paths = new Set([
   "/datenschutz",
   "/cookies",
   "/demo-hinweise",
-  "/imobiliare",
+  "/immobiliare",
 ]);
 const endReasons = new Set([
   "hangup",
