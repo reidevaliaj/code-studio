@@ -43,7 +43,10 @@ export default function ImmobiliareLayout({
             Home
           </a>
           <a className={styles.desktopNav} href="#servizi">
-            Servizi e prezzi
+            Servizi
+          </a>
+          <a className={styles.desktopNav} href="#come-lavoriamo">
+            Come lavoriamo
           </a>
           <a className={styles.desktopNav} href="#contatti">
             Contatti
@@ -63,7 +66,8 @@ export default function ImmobiliareLayout({
         </div>
         <nav className="footer-links" aria-label="Collegamenti a piè di pagina">
           <a href="#inizio">Home</a>
-          <a href="#servizi">Servizi e prezzi</a>
+          <a href="#servizi">Servizi</a>
+          <a href="#come-lavoriamo">Come lavoriamo</a>
           <a href="#contatti">Contatti</a>
           <Link href="/datenschutz">Privacy (in tedesco)</Link>
           <Link href="/cookies">Cookie (in tedesco)</Link>

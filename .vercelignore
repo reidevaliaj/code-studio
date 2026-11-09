@@ -6,3 +6,5 @@ public/videos/
 public/images/*
 !public/images/practice-reception.png
 !public/images/immobiliare-hero.webp
+!public/images/immobiliare-interno.webp
+!public/images/immobiliare-assistenza.webp

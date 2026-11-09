@@ -1,0 +1,328 @@
+.figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.figure figcaption {
+  margin-top: 12px;
+  color: #526358;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.board {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 280px;
+  aspect-ratio: 5 / 4;
+  padding: clamp(14px, 3.1vw, 44px);
+  overflow: hidden;
+  border: 1px solid #dae1d6;
+  border-radius: 7px;
+  background: #e6ede2;
+}
+
+.board[data-example="social-media"],
+.board[data-example="email-marketing"] {
+  background: #ece8dd;
+  border-color: #e1dccd;
+}
+
+.board[data-example="video-immobiliari"],
+.board[data-example="receptionist-umano"] {
+  position: relative;
+  padding: 0;
+}
+
+.browser,
+.social,
+.email,
+.call {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #cdd8cb;
+  border-radius: 7px;
+  background: #fbfaf6;
+  box-shadow: 0 12px 24px #243b3710;
+}
+
+.browserBar,
+.socialHeader,
+.emailHeader {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 8px 13px;
+  color: #385648;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.browserBar span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #77947e;
+}
+
+.listingPhoto,
+.socialPhoto,
+.emailPhoto,
+.videoPhoto,
+.supportPhoto {
+  position: relative;
+  overflow: hidden;
+}
+
+.board img {
+  object-fit: cover;
+}
+
+.listingPhoto {
+  aspect-ratio: 2.35;
+}
+
+.listingPhoto img,
+.socialPhoto img {
+  object-position: right center;
+}
+
+.listingCopy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  padding: 13px;
+}
+
+.kicker {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.board strong {
+  display: block;
+  font-size: clamp(15px, 1.9vw, 23px);
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.sampleAction {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 3px;
+  background: var(--teal);
+  color: white;
+  font-size: 9px;
+}
+
+.publish {
+  width: 100%;
+  text-align: center;
+}
+
+.source,
+.channels div,
+.workflow li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 10px;
+  border: 1px solid #c8d4c6;
+  border-radius: 5px;
+  background: #faf9f6;
+  font-size: clamp(11px, 1.1vw, 14px);
+  font-weight: 700;
+}
+
+.source svg,
+.channels svg,
+.workflow svg {
+  flex: none;
+  width: 19px;
+  height: 19px;
+  color: var(--teal);
+}
+
+.source {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.branch {
+  position: relative;
+  width: 50%;
+  height: 26px;
+  margin: 0 auto;
+  border-bottom: 1px solid #70927b;
+}
+
+.branch::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: #70927b;
+  content: "";
+}
+
+.channels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.publish > .kicker {
+  margin-top: 18px;
+}
+
+.social {
+  max-width: 320px;
+}
+
+.socialPhoto {
+  aspect-ratio: 2.25;
+}
+
+.socialCopy,
+.emailCopy {
+  padding: 12px 14px;
+}
+
+.socialCopy p,
+.emailCopy p {
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+.socialChannels,
+.callSteps {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid #dce2d6;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.video,
+.videoPhoto,
+.supportPhoto {
+  position: absolute;
+  inset: 0;
+}
+
+.video::after {
+  position: absolute;
+  inset: 25% 0 0;
+  background: linear-gradient(transparent, #14291dec);
+  content: "";
+}
+
+.videoTitle,
+.scenes {
+  position: absolute;
+  z-index: 1;
+  right: 6%;
+  left: 6%;
+  color: #fff;
+}
+
+.videoTitle {
+  bottom: 24%;
+}
+
+.scenes {
+  bottom: 7%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  padding-top: 10px;
+  border-top: 1px solid #ffffff70;
+  font-size: 10px;
+}
+
+.call {
+  max-width: 400px;
+}
+
+.callHeader {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 15px;
+}
+
+.phoneIcon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dce8dc;
+  color: var(--teal);
+}
+
+.waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(3px, 0.6vw, 9px);
+  min-height: 80px;
+  margin: 0 15px 15px;
+  border-radius: 4px;
+  background: #e9f0e6;
+}
+
+.waveform i {
+  width: 4px;
+  border-radius: 5px;
+  background: #678b72;
+}
+
+.email {
+  max-width: 370px;
+}
+
+.emailPhoto {
+  aspect-ratio: 2.6;
+}
+
+.emailCopy .sampleAction {
+  margin-top: 8px;
+}
+
+.workflow {
+  display: grid;
+  width: min(100%, 320px);
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.workflow li {
+  position: relative;
+  justify-content: flex-start;
+  padding-inline: 17px;
+}
+
+.workflow li + li::before {
+  position: absolute;
+  bottom: 100%;
+  left: 26px;
+  width: 1px;
+  height: 20px;
+  background: #70927b;
+  content: "";
+}

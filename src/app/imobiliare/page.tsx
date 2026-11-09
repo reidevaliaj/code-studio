@@ -1,65 +1,13 @@
 import Image from "next/image";
 import { Icon } from "@/components/Icons";
+import { ServiceExample } from "./ServiceExample";
+import { services } from "./services";
 import styles from "./imobiliare.module.css";
 
-const services = [
-  {
-    name: "Redesign del sito web",
-    price: "500 €",
-    description:
-      "Rinnoviamo grafica e navigazione per presentare meglio la vostra agenzia e i vostri immobili, anche da smartphone.",
-  },
-  {
-    name: "Pubblicazione automatica degli immobili",
-    price: "200–800 €",
-    description: (
-      <>
-        Un unico sistema per pubblicare e aggiornare gli annunci sul vostro sito
-        e sui portali compatibili con i vostri account, come Subito,
-        Immobiliare.it e Idealista. Possiamo includere portali gratuiti per
-        agenzie come{" "}
-        <a href="https://www.tuttocasa.it/">TuttoCasa</a> e{" "}
-        <a href="https://www.cubocasa.it/faq.php">CuboCasa</a>. Eventuali
-        abbonamenti ai portali restano separati.
-      </>
-    ),
-  },
-  {
-    name: "Automazione dei social media",
-    price: "100 €",
-    description:
-      "Pubblicate automaticamente i nuovi immobili su Facebook e Instagram, con immagini e descrizioni.",
-  },
-  {
-    name: "Video immobiliari con AI",
-    price: "50–500 €",
-    description:
-      "Creiamo video per presentare i vostri immobili, anche con avatar AI che ne illustrano caratteristiche e punti di forza.",
-  },
-  {
-    name: "Receptionist AI",
-    price: "200 €",
-    description:
-      "Un assistente telefonico attivo 24 ore su 24 per rispondere alle domande, raccogliere contatti e fissare appuntamenti.",
-  },
-  {
-    name: "Receptionist in outsourcing",
-    price: "1.000 €",
-    description:
-      "Supporto umano da remoto, in italiano, per gestire telefonate, richieste dei clienti e appuntamenti.",
-  },
-  {
-    name: "Email marketing",
-    price: "120 €",
-    description:
-      "Creiamo e gestiamo campagne email per presentare gli immobili e mantenere il contatto con i vostri clienti.",
-  },
-  {
-    name: "Soluzioni personalizzate",
-    price: "Su preventivo",
-    description:
-      "Integriamo il vostro gestionale e sviluppiamo strumenti sulle esigenze della vostra agenzia.",
-  },
+const projectSteps = [
+  ["Raccontateci come lavorate", "Partiamo dal sito, dai portali o dagli strumenti che usate oggi e dall’attività che vi fa perdere più tempo."],
+  ["Definiamo il primo intervento", "Vi proponiamo cosa realizzare, con un preventivo che chiarisce cosa è incluso e quali strumenti servono."],
+  ["Mettiamolo in funzione", "Una volta concordato il lavoro, realizziamo il servizio e lo proviamo insieme su un caso della vostra agenzia."],
 ];
 
 export default function ImmobiliarePage() {
@@ -86,15 +34,15 @@ export default function ImmobiliarePage() {
           <h1 id="hero-title">
             Più tempo per
             <br />
-            <span>i vostri immobili.</span>
+            <span>le visite.</span>
           </h1>
           <p className="hero-description">
-            Siti web, automazioni e intelligenza artificiale per far risparmiare
-            tempo alla vostra agenzia e ridurre i costi.
+            Presentate meglio gli immobili, pubblicate gli annunci una sola
+            volta e gestite le richieste con meno lavoro manuale.
           </p>
           <div className="hero-actions">
             <a className="button" href="#servizi">
-              Scoprite i servizi <Icon name="arrow" />
+              Esplorate i servizi <Icon name="arrow" />
             </a>
             <a className="text-link" href="#contatti">
               Parlate con Rei <Icon name="arrow" width="17" height="17" />
@@ -111,30 +59,88 @@ export default function ImmobiliarePage() {
         <span>Siti web <i /> Automazioni <i /> AI</span>
       </div>
 
-      <section
-        id="servizi"
-        className={`section-pad ${styles.services}`}
-        aria-labelledby="servizi-title"
-      >
+      <section id="servizi" className={`section-pad ${styles.directory}`} aria-labelledby="servizi-title">
         <div className="section-heading horizontal">
           <div>
-            <p className="eyebrow">L’OFFERTA CODE-STUDIO</p>
-            <h2 id="servizi-title">Servizi e prezzi</h2>
+            <p className="eyebrow">SERVIZI PER LA VOSTRA AGENZIA</p>
+            <h2 id="servizi-title">Dall’annuncio alla visita.</h2>
           </div>
           <p>
-            Potete partire anche da un solo servizio. I prezzi sono indicativi
-            e il preventivo dipende dal lavoro concordato.
+            Scegliete da dove partire. Potete affidarci anche un solo servizio,
+            in base alle priorità della vostra agenzia.
           </p>
         </div>
-        <ol className={styles.serviceList} role="list">
-          {services.map(({ name, price, description }, index) => (
-            <li key={name}>
-              <span className={styles.serviceNumber} aria-hidden="true">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <h3>{name}</h3>
+        <nav className={styles.serviceNav} aria-label="Esplora i servizi">
+          {services.map(({ id, menu }, index) => (
+            <a key={id} href={`#${id}`}>
+              <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              {menu}
+              <Icon name="arrow" width="16" height="16" />
+            </a>
+          ))}
+        </nav>
+      </section>
+
+      <div className={styles.services}>
+        {services.map((service, index) => (
+          <section
+            key={service.id}
+            id={service.id}
+            className={styles.service}
+            aria-labelledby={`${service.id}-title`}
+          >
+            <div className={styles.serviceInner}>
+              <div className={styles.serviceCopy}>
+                <p className={`eyebrow ${styles.serviceLabel}`}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  {service.title}
+                </p>
+                <h2 id={`${service.id}-title`}>{service.headline}</h2>
+                <p className={styles.serviceDescription}>{service.description}</p>
+                <ul className={styles.details} role="list">
+                  {service.details.map((detail, detailIndex) => (
+                    <li key={detailIndex}>
+                      <Icon name="check" width="18" height="18" />
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className={styles.note}>{service.note}</p>
+                <div className={styles.serviceOffer}>
+                  <div>
+                    {service.price !== "Su preventivo" && <span>Prezzo indicativo</span>}
+                    <strong>{service.price}</strong>
+                  </div>
+                  <a
+                    className="text-link"
+                    href={`mailto:info@cod-st.com?subject=${encodeURIComponent(service.title)}`}
+                    aria-label={`Chiedete un preventivo per ${service.title}`}
+                  >
+                    Chiedete un preventivo <Icon name="arrow" width="17" height="17" />
+                  </a>
+                </div>
+              </div>
+              <ServiceExample service={service.id} />
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <section
+        id="come-lavoriamo"
+        className={`section-pad ${styles.process}`}
+        aria-labelledby="process-title"
+      >
+        <div className="section-heading">
+          <p className="eyebrow">COME LAVORIAMO</p>
+          <h2 id="process-title">Iniziamo da ciò che vi serve.</h2>
+        </div>
+        <ol className={styles.steps} role="list">
+          {projectSteps.map(([title, description], index) => (
+            <li key={title}>
+              <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              <h3>{title}</h3>
               <p>{description}</p>
-              <span className={styles.price}>{price}</span>
             </li>
           ))}
         </ol>
