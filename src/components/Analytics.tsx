@@ -97,7 +97,9 @@ export function Analytics() {
         track("cta_click", { button_name: "demo_navigation" });
       else if (
         url.origin === window.location.origin &&
-        (url.hash === "#kontakt" || url.pathname === "/kontakt")
+        (url.hash === "#kontakt" ||
+          url.hash === "#contatti" ||
+          url.pathname === "/kontakt")
       )
         track("cta_click", { button_name: "contact_navigation" });
     };

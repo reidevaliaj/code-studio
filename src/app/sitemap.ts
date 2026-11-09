@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const existingPages: MetadataRoute.Sitemap = [
     "",
     "/kontakt",
     "/impressum",
@@ -13,4 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: path ? "yearly" : "monthly",
     priority: path ? 0.4 : 1,
   }));
+  return [
+    ...existingPages,
+    {
+      url: "https://www.cod-st.com/imobiliare",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+  ];
 }

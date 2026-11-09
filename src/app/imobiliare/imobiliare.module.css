@@ -1,0 +1,225 @@
+.header nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.hero :global(.hero-content) {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.hero :global(.hero-description) {
+  color: #495c50;
+}
+
+.hero :global(.hero-actions .text-link) {
+  min-height: 44px;
+}
+
+.hero :global(.hero-actions .text-link svg) {
+  transition: transform 180ms ease;
+}
+
+.hero :global(.hero-actions .text-link:hover svg) {
+  transform: translateX(4px);
+}
+
+.intro {
+  font-size: 12px;
+}
+
+.services {
+  max-width: 1540px;
+  margin-inline: auto;
+}
+
+.serviceList {
+  margin: 42px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.serviceList li {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) minmax(0, 1.55fr) minmax(115px, auto);
+  align-items: baseline;
+  gap: 22px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.serviceList h3 {
+  line-height: 1.35;
+  font-weight: 650;
+}
+
+.serviceList p {
+  color: #4f6056;
+  font-size: 14px;
+}
+
+.serviceList p a {
+  color: var(--teal);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.serviceNumber {
+  color: #586c60;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.price {
+  justify-self: end;
+  color: var(--teal);
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: clamp(40px, 8vw, 140px);
+  color: #f5f4ee;
+  background: #263f37;
+}
+
+.contact :global(.section-heading) {
+  margin: 0;
+}
+
+.contact :global(.section-heading) > p {
+  color: #e1eae0;
+}
+
+.contact h2 + p {
+  margin-top: 16px;
+  max-width: 530px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 6px 0 6px clamp(24px, 4vw, 64px);
+  border-inline-start: 1px solid #e1eae051;
+}
+
+.contactDetails h3 {
+  font-size: 27px;
+}
+
+.contactDetails p {
+  color: #e1eae0;
+  font-size: 13px;
+}
+
+.contactDetails :global(.text-link) {
+  min-height: 44px;
+}
+
+.contactDetails :global(.text-link:hover) {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .serviceList li {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    gap: 10px 18px;
+  }
+
+  .serviceList p {
+    grid-area: 2 / 2 / 3 / 4;
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header nav {
+    display: flex;
+    gap: 0;
+  }
+
+  .header nav .desktopNav {
+    display: none;
+  }
+
+  .hero {
+    height: clamp(505px, calc(91svh - 73px), 650px);
+    min-height: 505px;
+  }
+
+  .hero :global(.hero-image) {
+    object-position: 76% center;
+  }
+
+  .hero :global(.hero-wash) {
+    background: linear-gradient(180deg, #faf9f6fa, #faf9f6e8 49%, #faf9f670 75%, transparent);
+  }
+
+  .hero :global(.hero-content) {
+    justify-content: flex-start;
+    padding-top: 55px;
+  }
+
+  .hero h1 {
+    font-size: clamp(33px, 10.2vw, 62px);
+  }
+
+  .hero :global(.hero-actions) {
+    gap: 12px 16px;
+  }
+
+  .serviceList {
+    margin-top: 32px;
+  }
+
+  .serviceList li {
+    grid-template-columns: 22px minmax(0, 1fr) auto;
+    gap: 9px 11px;
+    padding-block: 20px;
+  }
+
+  .serviceList h3 {
+    font-size: 17px;
+  }
+
+  .serviceList p {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contactDetails {
+    padding: 25px 0 0;
+    border-inline-start: 0;
+    border-top: 1px solid #e1eae051;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero :global(.hero-actions .text-link svg) {
+    transition: none;
+  }
+}

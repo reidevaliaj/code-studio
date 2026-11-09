@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const config = {
   poweredByHeader: false,
+  experimental: { globalNotFound: true },
   async redirects() {
     return [
       { source: "/de", destination: "/", permanent: true },
