@@ -5,3 +5,4 @@ output/
 public/videos/
 public/images/*
 !public/images/practice-reception.png
+!public/images/immobiliare-hero.webp
